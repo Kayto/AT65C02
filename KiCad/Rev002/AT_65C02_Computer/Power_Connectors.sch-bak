@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 8
+Sheet 3 7
 Title "AT_65C02 Hobby Computer"
 Date ""
 Rev ""
@@ -694,14 +694,416 @@ Wire Wire Line
 	4675 5000 5250 5000
 Text GLabel 5250 5000 2    50   Output ~ 0
 AD_EN
+$Comp
+L 65C02_Computer-rescue:Conn_02x16_Odd_Even-Connector_Generic J?
+U 1 1 63785CF4
+P 3400 6225
+AR Path="/5F14295C/63785CF4" Ref="J?"  Part="1" 
+AR Path="/63785CF4" Ref="J?"  Part="1" 
+AR Path="/637561AA/63785CF4" Ref="J21"  Part="1" 
+F 0 "J21" H 3450 7142 50  0000 C CNN
+F 1 "Expansion port" H 3450 7051 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x16_P2.54mm_Vertical" H 3400 6225 50  0001 C CNN
+F 3 "~" H 3400 6225 50  0001 C CNN
+	1    3400 6225
+	1    0    0    -1  
+$EndComp
+Text Label 3000 5525 0    50   ~ 0
+a0
+Text Label 3000 5625 0    50   ~ 0
+a1
+Text Label 3000 5725 0    50   ~ 0
+a2
+Text Label 3000 5825 0    50   ~ 0
+a3
+Text Label 3000 5925 0    50   ~ 0
+a4
+Text Label 3000 6025 0    50   ~ 0
+a5
+Text Label 3000 6125 0    50   ~ 0
+a6
+Text Label 3000 6225 0    50   ~ 0
+a7
+Text Label 3000 6325 0    50   ~ 0
+a8
+Text Label 3000 6425 0    50   ~ 0
+a9
+Text Label 3000 6525 0    50   ~ 0
+a10
+Text Label 3000 6625 0    50   ~ 0
+a11
+Text Label 3000 6725 0    50   ~ 0
+a12
+Text Label 3000 6825 0    50   ~ 0
+a13
+Text Label 3000 6925 0    50   ~ 0
+a14
+Text Label 3000 7025 0    50   ~ 0
+a15
+Wire Wire Line
+	3000 5525 3200 5525
+Wire Wire Line
+	3000 5625 3200 5625
+Wire Wire Line
+	3000 5725 3200 5725
+Wire Wire Line
+	3000 5825 3200 5825
+Wire Wire Line
+	3000 5925 3200 5925
+Wire Wire Line
+	3000 6025 3200 6025
+Wire Wire Line
+	3000 6125 3200 6125
+Wire Wire Line
+	3000 6225 3200 6225
+Wire Wire Line
+	3000 6325 3200 6325
+Wire Wire Line
+	3000 6425 3200 6425
+Wire Wire Line
+	3000 6525 3200 6525
+Wire Wire Line
+	3000 6625 3200 6625
+Wire Wire Line
+	3000 6725 3200 6725
+Wire Wire Line
+	3000 6825 3200 6825
+Wire Wire Line
+	3000 6925 3200 6925
+Wire Wire Line
+	3000 7025 3200 7025
+Entry Wire Line
+	2900 5425 3000 5525
+Entry Wire Line
+	2900 5525 3000 5625
+Entry Wire Line
+	2900 5625 3000 5725
+Entry Wire Line
+	2900 5725 3000 5825
+Entry Wire Line
+	2900 5825 3000 5925
+Entry Wire Line
+	2900 5925 3000 6025
+Entry Wire Line
+	2900 6025 3000 6125
+Entry Wire Line
+	2900 6125 3000 6225
+Entry Wire Line
+	2900 6225 3000 6325
+Entry Wire Line
+	2900 6325 3000 6425
+Entry Wire Line
+	2900 6425 3000 6525
+Entry Wire Line
+	2900 6525 3000 6625
+Entry Wire Line
+	2900 6625 3000 6725
+Entry Wire Line
+	2900 6725 3000 6825
+Entry Wire Line
+	2900 6825 3000 6925
+Entry Wire Line
+	2900 6925 3000 7025
+Text Label 3900 5525 2    50   ~ 0
+d0
+Text Label 3900 5625 2    50   ~ 0
+d1
+Text Label 3900 5725 2    50   ~ 0
+d2
+Text Label 3900 5825 2    50   ~ 0
+d3
+Text Label 3900 5925 2    50   ~ 0
+d4
+Text Label 3900 6025 2    50   ~ 0
+d5
+Text Label 3900 6125 2    50   ~ 0
+d6
+Text Label 3900 6225 2    50   ~ 0
+d7
+Wire Wire Line
+	3700 5525 3900 5525
+Wire Wire Line
+	3700 5625 3900 5625
+Wire Wire Line
+	3700 5725 3900 5725
+Wire Wire Line
+	3700 5825 3900 5825
+Wire Wire Line
+	3700 5925 3900 5925
+Wire Wire Line
+	3700 6025 3900 6025
+Wire Wire Line
+	3700 6125 3900 6125
+Wire Wire Line
+	3700 6225 3900 6225
+Entry Wire Line
+	3900 5525 4000 5425
+Entry Wire Line
+	3900 5625 4000 5525
+Entry Wire Line
+	3900 5725 4000 5625
+Entry Wire Line
+	3900 5825 4000 5725
+Entry Wire Line
+	3900 5925 4000 5825
+Entry Wire Line
+	3900 6025 4000 5925
+Entry Wire Line
+	3900 6125 4000 6025
+Entry Wire Line
+	3900 6225 4000 6125
+Text GLabel 4100 6225 1    50   Input ~ 0
+CLK
+Text GLabel 4250 6225 1    50   Input ~ 0
+R~W
+Text GLabel 3900 7025 2    50   Input ~ 0
++5V
+Text GLabel 3900 6925 2    50   Input ~ 0
+GND
+Wire Wire Line
+	3700 7025 3900 7025
+Wire Wire Line
+	3700 6925 3900 6925
+Wire Wire Line
+	4100 6225 4100 6325
+Wire Wire Line
+	4100 6325 3700 6325
+Text GLabel 4550 6225 1    50   Input ~ 0
+~RES
+Text GLabel 4400 6225 1    50   Input ~ 0
+~IOCS
+Wire Wire Line
+	4250 6225 4250 6425
+Wire Wire Line
+	4250 6425 3700 6425
+Wire Wire Line
+	4400 6225 4400 6525
+Wire Wire Line
+	4400 6525 3700 6525
+Wire Wire Line
+	4550 6225 4550 6625
+Wire Wire Line
+	4550 6625 3700 6625
+Text GLabel 4700 6225 1    50   Output ~ 0
+~IRQX
+Wire Wire Line
+	3700 6725 4700 6725
+Wire Wire Line
+	4700 6725 4700 6225
+NoConn ~ 3700 6825
+$Comp
+L 65C02_Computer-rescue:Conn_02x16_Odd_Even-Connector_Generic J?
+U 1 1 6378B02B
+P 5525 6175
+AR Path="/5F14295C/6378B02B" Ref="J?"  Part="1" 
+AR Path="/6378B02B" Ref="J?"  Part="1" 
+AR Path="/637561AA/6378B02B" Ref="J22"  Part="1" 
+F 0 "J22" H 5575 7092 50  0000 C CNN
+F 1 "Expansion port" H 5575 7001 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x16_P2.54mm_Vertical" H 5525 6175 50  0001 C CNN
+F 3 "~" H 5525 6175 50  0001 C CNN
+	1    5525 6175
+	1    0    0    -1  
+$EndComp
+Text Label 5125 5475 0    50   ~ 0
+a0
+Text Label 5125 5575 0    50   ~ 0
+a1
+Text Label 5125 5675 0    50   ~ 0
+a2
+Text Label 5125 5775 0    50   ~ 0
+a3
+Text Label 5125 5875 0    50   ~ 0
+a4
+Text Label 5125 5975 0    50   ~ 0
+a5
+Text Label 5125 6075 0    50   ~ 0
+a6
+Text Label 5125 6175 0    50   ~ 0
+a7
+Text Label 5125 6275 0    50   ~ 0
+a8
+Text Label 5125 6375 0    50   ~ 0
+a9
+Text Label 5125 6475 0    50   ~ 0
+a10
+Text Label 5125 6575 0    50   ~ 0
+a11
+Text Label 5125 6675 0    50   ~ 0
+a12
+Text Label 5125 6775 0    50   ~ 0
+a13
+Text Label 5125 6875 0    50   ~ 0
+a14
+Text Label 5125 6975 0    50   ~ 0
+a15
+Wire Wire Line
+	5125 5475 5325 5475
+Wire Wire Line
+	5125 5575 5325 5575
+Wire Wire Line
+	5125 5675 5325 5675
+Wire Wire Line
+	5125 5775 5325 5775
+Wire Wire Line
+	5125 5875 5325 5875
+Wire Wire Line
+	5125 5975 5325 5975
+Wire Wire Line
+	5125 6075 5325 6075
+Wire Wire Line
+	5125 6175 5325 6175
+Wire Wire Line
+	5125 6275 5325 6275
+Wire Wire Line
+	5125 6375 5325 6375
+Wire Wire Line
+	5125 6475 5325 6475
+Wire Wire Line
+	5125 6575 5325 6575
+Wire Wire Line
+	5125 6675 5325 6675
+Wire Wire Line
+	5125 6775 5325 6775
+Wire Wire Line
+	5125 6875 5325 6875
+Wire Wire Line
+	5125 6975 5325 6975
+Entry Wire Line
+	5025 5375 5125 5475
+Entry Wire Line
+	5025 5475 5125 5575
+Entry Wire Line
+	5025 5575 5125 5675
+Entry Wire Line
+	5025 5675 5125 5775
+Entry Wire Line
+	5025 5775 5125 5875
+Entry Wire Line
+	5025 5875 5125 5975
+Entry Wire Line
+	5025 5975 5125 6075
+Entry Wire Line
+	5025 6075 5125 6175
+Entry Wire Line
+	5025 6175 5125 6275
+Entry Wire Line
+	5025 6275 5125 6375
+Entry Wire Line
+	5025 6375 5125 6475
+Entry Wire Line
+	5025 6475 5125 6575
+Entry Wire Line
+	5025 6575 5125 6675
+Entry Wire Line
+	5025 6675 5125 6775
+Entry Wire Line
+	5025 6775 5125 6875
+Entry Wire Line
+	5025 6875 5125 6975
+Text Label 6025 5475 2    50   ~ 0
+d0
+Text Label 6025 5575 2    50   ~ 0
+d1
+Text Label 6025 5675 2    50   ~ 0
+d2
+Text Label 6025 5775 2    50   ~ 0
+d3
+Text Label 6025 5875 2    50   ~ 0
+d4
+Text Label 6025 5975 2    50   ~ 0
+d5
+Text Label 6025 6075 2    50   ~ 0
+d6
+Text Label 6025 6175 2    50   ~ 0
+d7
+Wire Wire Line
+	5825 5475 6025 5475
+Wire Wire Line
+	5825 5575 6025 5575
+Wire Wire Line
+	5825 5675 6025 5675
+Wire Wire Line
+	5825 5775 6025 5775
+Wire Wire Line
+	5825 5875 6025 5875
+Wire Wire Line
+	5825 5975 6025 5975
+Wire Wire Line
+	5825 6075 6025 6075
+Wire Wire Line
+	5825 6175 6025 6175
+Entry Wire Line
+	6025 5475 6125 5375
+Entry Wire Line
+	6025 5575 6125 5475
+Entry Wire Line
+	6025 5675 6125 5575
+Entry Wire Line
+	6025 5775 6125 5675
+Entry Wire Line
+	6025 5875 6125 5775
+Entry Wire Line
+	6025 5975 6125 5875
+Entry Wire Line
+	6025 6075 6125 5975
+Entry Wire Line
+	6025 6175 6125 6075
+Text GLabel 6225 6175 1    50   Input ~ 0
+CLK
+Text GLabel 6375 6175 1    50   Input ~ 0
+R~W
+Text GLabel 6025 6975 2    50   Input ~ 0
++5V
+Text GLabel 6025 6875 2    50   Input ~ 0
+GND
+Wire Wire Line
+	5825 6975 6025 6975
+Wire Wire Line
+	5825 6875 6025 6875
+Wire Wire Line
+	6225 6175 6225 6275
+Wire Wire Line
+	6225 6275 5825 6275
+Text GLabel 6675 6175 1    50   Input ~ 0
+~RES
+Text GLabel 6525 6175 1    50   Input ~ 0
+~IOCS
+Wire Wire Line
+	6375 6175 6375 6375
+Wire Wire Line
+	6375 6375 5825 6375
+Wire Wire Line
+	6525 6175 6525 6475
+Wire Wire Line
+	6525 6475 5825 6475
+Wire Wire Line
+	6675 6175 6675 6575
+Wire Wire Line
+	6675 6575 5825 6575
+Text GLabel 6825 6175 1    50   Output ~ 0
+~IRQX
+Wire Wire Line
+	5825 6675 6825 6675
+Wire Wire Line
+	6825 6675 6825 6175
+NoConn ~ 5825 6775
 Wire Bus Line
 	2550 2000 2550 3100
 Wire Bus Line
 	2550 1175 2550 1875
 Wire Bus Line
+	4000 5425 4000 6125
+Wire Bus Line
+	6125 5375 6125 6075
+Wire Bus Line
 	1250 6875 1250 7625
 Wire Bus Line
 	1050 1175 1050 3100
+Wire Bus Line
+	2900 5425 2900 6925
+Wire Bus Line
+	5025 5375 5025 6875
 Wire Bus Line
 	700  6075 700  7625
 $EndSCHEMATC

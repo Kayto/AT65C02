@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 8
+Sheet 1 7
 Title "AT_65C02 Hobby Computer"
 Date ""
 Rev ""
@@ -571,10 +571,6 @@ Wire Wire Line
 	4450 4250 4450 4350
 Wire Wire Line
 	4450 4350 4350 4350
-Wire Wire Line
-	4750 4250 4750 4950
-Wire Wire Line
-	4750 4950 4350 4950
 Text Label 4500 5250 2    50   ~ 0
 d7
 Text Label 4500 5350 2    50   ~ 0
@@ -722,10 +718,7 @@ Wire Wire Line
 Text Label 4900 4550 2    50   ~ 0
 a13
 Wire Wire Line
-	4750 4950 4750 5150
-Wire Wire Line
 	4750 5150 4350 5150
-Connection ~ 4750 4950
 Text GLabel 4600 4250 1    50   Input ~ 0
 R~W
 Wire Wire Line
@@ -1753,6 +1746,31 @@ Wire Wire Line
 	2075 1900 2450 1900
 Text GLabel 1350 2550 3    50   Input ~ 0
 GND
+Wire Wire Line
+	4750 4250 4750 5150
+Wire Wire Line
+	4350 4950 4675 4950
+Wire Wire Line
+	4675 4950 4675 5525
+Wire Wire Line
+	4675 5525 4825 5525
+Text GLabel 4825 5525 2    50   Input ~ 0
+~RAM_OE
+$Comp
+L Jumper:Jumper_2_Open JP11
+U 1 1 639E7BFF
+P 7650 4100
+F 0 "JP11" H 7650 4347 50  0000 C CNN
+F 1 "~OE Low Fixed" H 7650 4249 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7650 4100 50  0001 C CNN
+F 3 "~" H 7650 4100 50  0001 C CNN
+	1    7650 4100
+	1    0    0    -1  
+$EndComp
+Text GLabel 7450 4100 0    50   Input ~ 0
+~RAM_CS
+Text GLabel 7850 4100 2    50   Input ~ 0
+~RAM_OE
 Wire Bus Line
 	3100 5450 3100 5650
 Wire Bus Line
@@ -1781,10 +1799,4 @@ Wire Bus Line
 	2150 2100 2150 3350
 Wire Bus Line
 	5350 4250 5350 5750
-$Sheet
-S 10175 6300 500  150 
-U 63758CB0
-F0 "Floppy" 50
-F1 "Floppy.sch" 50
-$EndSheet
 $EndSCHEMATC

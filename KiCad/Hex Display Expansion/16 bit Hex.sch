@@ -73,7 +73,7 @@ Wire Wire Line
 Wire Wire Line
 	7150 3425 7250 3425
 $Comp
-L Display_Character:HDSP-7801 U?
+L Display_Character:HDSP-7801_test U?
 U 1 1 63CE3723
 P 6850 3125
 AR Path="/63CE3723" Ref="U?"  Part="1" 
@@ -86,7 +86,7 @@ F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 6850 3125 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Display_Character:HDSP-7801 U?
+L Display_Character:HDSP-7801_test U?
 U 1 1 63CE3729
 P 5475 3125
 AR Path="/63CE3729" Ref="U?"  Part="1" 
@@ -113,7 +113,7 @@ Wire Wire Line
 Wire Wire Line
 	8575 3425 8650 3425
 $Comp
-L Display_Character:HDSP-7801 U?
+L Display_Character:HDSP-7801_test U?
 U 1 1 63CE374E
 P 8275 3125
 AR Path="/63CE374E" Ref="U?"  Part="1" 
@@ -126,7 +126,7 @@ F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 8275 3125 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Display_Character:HDSP-7801 U?
+L Display_Character:HDSP-7801_test U?
 U 1 1 63CE3754
 P 9650 3125
 AR Path="/63CE3754" Ref="U?"  Part="1" 
@@ -717,6 +717,48 @@ Connection ~ 5850 3425
 Connection ~ 7250 3425
 Connection ~ 8650 3425
 Connection ~ 10025 3425
+NoConn ~ 2150 1050
+$Comp
+L 74xx:74HC04 U7
+U 6 1 637C9A2B
+P 1850 1600
+F 0 "U7" H 1850 1917 50  0000 C CNN
+F 1 "74HC04" H 1850 1826 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 1850 1600 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 1850 1600 50  0001 C CNN
+	6    1850 1600
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2150 1600
+Wire Wire Line
+	1550 1050 1550 1325
+Wire Wire Line
+	1225 1325 1550 1325
 Wire Bus Line
 	1725 2775 1725 3425
+Connection ~ 1550 1325
+Wire Wire Line
+	1550 1325 1550 1600
+$Comp
+L power:GND #PWR?
+U 1 1 637DBD84
+P 1225 1325
+F 0 "#PWR?" H 1225 1075 50  0001 C CNN
+F 1 "GND" H 1230 1152 50  0000 C CNN
+F 2 "" H 1225 1325 50  0001 C CNN
+F 3 "" H 1225 1325 50  0001 C CNN
+	1    1225 1325
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC04 U7
+U 5 1 637B7F5F
+P 1850 1050
+F 0 "U7" H 1850 1367 50  0000 C CNN
+F 1 "74HC04" H 1850 1276 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 1850 1050 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 1850 1050 50  0001 C CNN
+	5    1850 1050
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

@@ -83,29 +83,29 @@ F 3 "~" H 1875 1975 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Text Label 1150 1275 0    50   ~ 0
-a0
+ab0
 Text Label 1150 1375 0    50   ~ 0
-a1
+ab1
 Text Label 1150 1475 0    50   ~ 0
-a2
+ab2
 Text Label 1150 1575 0    50   ~ 0
-a3
+ab3
 Text Label 1150 1675 0    50   ~ 0
-a4
+ab4
 Text Label 1150 1775 0    50   ~ 0
-a5
+ab5
 Text Label 1150 1875 0    50   ~ 0
-a6
+ab6
 Text Label 1150 1975 0    50   ~ 0
-a7
+ab7
 Text Label 1150 2075 0    50   ~ 0
-a8
+ab8
 Text Label 1150 2175 0    50   ~ 0
-a10
+ab10
 Text Label 1150 2275 0    50   ~ 0
-a12
+ab12
 Text Label 1150 2375 0    50   ~ 0
-a14
+ab14
 Wire Wire Line
 	1150 1275 1575 1275
 Wire Wire Line
@@ -445,110 +445,6 @@ Text GLabel 10575 1425 2    50   Output ~ 0
 PWR_LED
 NoConn ~ 5825 2250
 NoConn ~ 5325 2250
-Text GLabel 800  7625 2    50   Input ~ 0
-a[0..15]
-Text Label 800  5975 0    50   ~ 0
-a0
-Text Label 800  6075 0    50   ~ 0
-a1
-Text Label 800  6175 0    50   ~ 0
-a2
-Text Label 800  6275 0    50   ~ 0
-a3
-Text Label 800  6375 0    50   ~ 0
-a4
-Text Label 800  6475 0    50   ~ 0
-a5
-Text Label 800  6575 0    50   ~ 0
-a6
-Text Label 800  6675 0    50   ~ 0
-a7
-Text Label 800  6775 0    50   ~ 0
-a8
-Text Label 800  6875 0    50   ~ 0
-a9
-Text Label 800  6975 0    50   ~ 0
-a10
-Text Label 800  7075 0    50   ~ 0
-a11
-Entry Wire Line
-	700  6075 800  5975
-Entry Wire Line
-	700  6175 800  6075
-Entry Wire Line
-	700  6275 800  6175
-Entry Wire Line
-	700  6375 800  6275
-Entry Wire Line
-	700  6475 800  6375
-Entry Wire Line
-	700  6575 800  6475
-Entry Wire Line
-	700  6675 800  6575
-Entry Wire Line
-	700  6775 800  6675
-Entry Wire Line
-	700  6875 800  6775
-Entry Wire Line
-	700  6975 800  6875
-Entry Wire Line
-	700  7075 800  6975
-Entry Wire Line
-	700  7175 800  7075
-Text Label 800  7175 0    50   ~ 0
-a12
-Text Label 800  7275 0    50   ~ 0
-a13
-Text Label 800  7375 0    50   ~ 0
-a14
-Text Label 800  7475 0    50   ~ 0
-a15
-Entry Wire Line
-	700  7275 800  7175
-Entry Wire Line
-	700  7375 800  7275
-Entry Wire Line
-	700  7475 800  7375
-Entry Wire Line
-	700  7575 800  7475
-Wire Bus Line
-	700  7625 800  7625
-Text Label 1350 7475 0    50   ~ 0
-d7
-Text Label 1350 7375 0    50   ~ 0
-d6
-Text Label 1350 7275 0    50   ~ 0
-d5
-Text Label 1350 7175 0    50   ~ 0
-d4
-Text Label 1350 7075 0    50   ~ 0
-d3
-Text Label 1350 6975 0    50   ~ 0
-d2
-Text Label 1350 6875 0    50   ~ 0
-d1
-Text Label 1350 6775 0    50   ~ 0
-d0
-Entry Wire Line
-	1350 6775 1250 6875
-Entry Wire Line
-	1350 6875 1250 6975
-Entry Wire Line
-	1350 6975 1250 7075
-Entry Wire Line
-	1350 7075 1250 7175
-Entry Wire Line
-	1350 7175 1250 7275
-Entry Wire Line
-	1350 7275 1250 7375
-Entry Wire Line
-	1350 7375 1250 7475
-Entry Wire Line
-	1350 7475 1250 7575
-Text GLabel 1350 7625 2    50   Input ~ 0
-d[0..7]
-Wire Bus Line
-	1250 7625 1350 7625
 $Comp
 L 6502-computer-cache:Connector_Generic_Conn_02x06_Odd_Even J18
 U 1 1 64939A3B
@@ -597,45 +493,21 @@ Text GLabel 2075 2475 2    50   Input ~ 0
 Text GLabel 1575 2575 0    50   Input ~ 0
 ~RAM_CS
 Text Label 2300 2375 0    50   ~ 0
-a15
+ab15
 Text Label 2300 2275 0    50   ~ 0
-a13
+ab13
 Text Label 2300 2175 0    50   ~ 0
-a11
+ab11
 Text Label 2350 2075 0    50   ~ 0
-a9
+ab9
 Wire Wire Line
 	2075 2375 2450 2375
-Entry Wire Line
-	2450 2375 2550 2475
 Wire Wire Line
 	2075 2275 2450 2275
-Entry Wire Line
-	2450 2275 2550 2375
 Wire Wire Line
 	2075 2175 2450 2175
-Entry Wire Line
-	2450 2175 2550 2275
 Wire Wire Line
 	2075 2075 2450 2075
-Entry Wire Line
-	2450 2075 2550 2175
-Entry Wire Line
-	2450 1975 2550 1875
-Entry Wire Line
-	2450 1875 2550 1775
-Entry Wire Line
-	2450 1775 2550 1675
-Entry Wire Line
-	2450 1675 2550 1575
-Entry Wire Line
-	2450 1575 2550 1475
-Entry Wire Line
-	2450 1475 2550 1375
-Entry Wire Line
-	2450 1375 2550 1275
-Entry Wire Line
-	2450 1275 2550 1175
 Wire Wire Line
 	2075 1975 2450 1975
 Wire Wire Line
@@ -653,23 +525,21 @@ Wire Wire Line
 Wire Wire Line
 	2075 1275 2450 1275
 Text Label 2450 1975 2    50   ~ 0
-d7
+db7
 Text Label 2450 1875 2    50   ~ 0
-d6
+db6
 Text Label 2450 1775 2    50   ~ 0
-d5
+db5
 Text Label 2450 1675 2    50   ~ 0
-d4
+db4
 Text Label 2450 1575 2    50   ~ 0
-d3
+db3
 Text Label 2450 1475 2    50   ~ 0
-d2
+db2
 Text Label 2450 1375 2    50   ~ 0
-d1
+db1
 Text Label 2450 1275 2    50   ~ 0
-d0
-Wire Bus Line
-	1050 3100 2550 3100
+db0
 Text GLabel 4275 3950 0    50   Input ~ 0
 +3.3V
 Wire Wire Line
@@ -694,14 +564,153 @@ Wire Wire Line
 	4675 5000 5250 5000
 Text GLabel 5250 5000 2    50   Output ~ 0
 AD_EN
+Entry Wire Line
+	2450 1275 2550 1375
+Entry Wire Line
+	2450 1375 2550 1475
+Entry Wire Line
+	2450 1475 2550 1575
+Entry Wire Line
+	2450 1575 2550 1675
+Entry Wire Line
+	2450 1675 2550 1775
+Entry Wire Line
+	2450 1775 2550 1875
+Entry Wire Line
+	2450 1875 2550 1975
+Entry Wire Line
+	2450 1975 2550 2075
 Wire Bus Line
-	2550 2000 2550 3100
+	2550 1025 3225 1025
+Text GLabel 750  7650 2    50   Input ~ 0
+a[0..15]
+Text Label 750  6000 0    50   ~ 0
+a0
+Text Label 750  6100 0    50   ~ 0
+a1
+Text Label 750  6200 0    50   ~ 0
+a2
+Text Label 750  6300 0    50   ~ 0
+a3
+Text Label 750  6400 0    50   ~ 0
+a4
+Text Label 750  6500 0    50   ~ 0
+a5
+Text Label 750  6600 0    50   ~ 0
+a6
+Text Label 750  6700 0    50   ~ 0
+a7
+Text Label 750  6800 0    50   ~ 0
+a8
+Text Label 750  6900 0    50   ~ 0
+a9
+Text Label 750  7000 0    50   ~ 0
+a10
+Text Label 750  7100 0    50   ~ 0
+a11
+Entry Wire Line
+	650  6100 750  6000
+Entry Wire Line
+	650  6200 750  6100
+Entry Wire Line
+	650  6300 750  6200
+Entry Wire Line
+	650  6400 750  6300
+Entry Wire Line
+	650  6500 750  6400
+Entry Wire Line
+	650  6600 750  6500
+Entry Wire Line
+	650  6700 750  6600
+Entry Wire Line
+	650  6800 750  6700
+Entry Wire Line
+	650  6900 750  6800
+Entry Wire Line
+	650  7000 750  6900
+Entry Wire Line
+	650  7100 750  7000
+Entry Wire Line
+	650  7200 750  7100
+Text Label 750  7200 0    50   ~ 0
+a12
+Text Label 750  7300 0    50   ~ 0
+a13
+Text Label 750  7400 0    50   ~ 0
+a14
+Text Label 750  7500 0    50   ~ 0
+a15
+Entry Wire Line
+	650  7300 750  7200
+Entry Wire Line
+	650  7400 750  7300
+Entry Wire Line
+	650  7500 750  7400
+Entry Wire Line
+	650  7600 750  7500
 Wire Bus Line
-	2550 1175 2550 1875
+	650  7650 750  7650
+Text Label 2225 7500 0    50   ~ 0
+d7
+Text Label 2225 7400 0    50   ~ 0
+d6
+Text Label 2225 7300 0    50   ~ 0
+d5
+Text Label 2225 7200 0    50   ~ 0
+d4
+Text Label 2225 7100 0    50   ~ 0
+d3
+Text Label 2225 7000 0    50   ~ 0
+d2
+Text Label 2225 6900 0    50   ~ 0
+d1
+Text Label 2225 6800 0    50   ~ 0
+d0
+Entry Wire Line
+	2225 6800 2125 6900
+Entry Wire Line
+	2225 6900 2125 7000
+Entry Wire Line
+	2225 7000 2125 7100
+Entry Wire Line
+	2225 7100 2125 7200
+Entry Wire Line
+	2225 7200 2125 7300
+Entry Wire Line
+	2225 7300 2125 7400
+Entry Wire Line
+	2225 7400 2125 7500
+Entry Wire Line
+	2225 7500 2125 7600
+Text GLabel 2225 7650 2    50   Input ~ 0
+d[0..7]
 Wire Bus Line
-	1250 6875 1250 7625
+	2125 7650 2225 7650
+Text GLabel 3225 1025 2    50   Input ~ 0
+db[0..7]
+Entry Wire Line
+	2450 2075 2550 2175
+Entry Wire Line
+	2450 2175 2550 2275
+Entry Wire Line
+	2450 2275 2550 2375
+Entry Wire Line
+	2450 2375 2550 2475
+Wire Bus Line
+	2550 3100 1050 3100
+Wire Bus Line
+	2550 3100 2700 3100
+Connection ~ 2550 3100
+Text GLabel 2700 3100 2    50   Input ~ 0
+ab[0..15]
+Wire Bus Line
+	2550 2175 2550 3100
+Wire Bus Line
+	2550 1025 2550 2075
+Wire Bus Line
+	2125 6900 2125 7650
 Wire Bus Line
 	1050 1175 1050 3100
 Wire Bus Line
-	700  6075 700  7625
+	650  6100 650  7650
 $EndSCHEMATC
