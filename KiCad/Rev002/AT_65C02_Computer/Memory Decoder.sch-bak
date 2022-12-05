@@ -276,7 +276,7 @@ U 1 1 63D3BDA9
 P 5025 1550
 F 0 "JP15" H 5025 1754 50  0000 C CNN
 F 1 "V1_CS1_Select" H 5025 1663 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 5025 1550 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 5025 1550 50  0001 C CNN
 F 3 "" H 5025 1550 50  0001 C CNN
 	1    5025 1550
 	1    0    0    -1  
@@ -289,22 +289,20 @@ U 1 1 63D3DCD1
 P 5025 2300
 F 0 "JP16" H 5025 2504 50  0000 C CNN
 F 1 "V2_CS1_Select" H 5025 2413 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 5025 2300 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 5025 2300 50  0001 C CNN
 F 3 "" H 5025 2300 50  0001 C CNN
 	1    5025 2300
 	1    0    0    -1  
 $EndComp
 Text GLabel 5025 2450 3    50   Input ~ 0
 V2CS1
-Wire Wire Line
-	5275 2300 5675 2300
 $Comp
 L blinken:Jumper_Jumper_3_Bridged12 JP17
 U 1 1 63DC2D91
 P 5050 3025
 F 0 "JP17" H 5050 3229 50  0000 C CNN
 F 1 "A_CS0_Select" H 5050 3138 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 5050 3025 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 5050 3025 50  0001 C CNN
 F 3 "" H 5050 3025 50  0001 C CNN
 	1    5050 3025
 	1    0    0    -1  
@@ -316,161 +314,153 @@ Wire Wire Line
 $Comp
 L blinken:Jumper_Jumper_3_Bridged12 JP18
 U 1 1 63DC2EAC
-P 6450 1550
-F 0 "JP18" H 6450 1754 50  0000 C CNN
-F 1 "V1_CS2_Select" H 6450 1663 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 6450 1550 50  0001 C CNN
-F 3 "" H 6450 1550 50  0001 C CNN
-	1    6450 1550
+P 8250 1500
+F 0 "JP18" H 8250 1704 50  0000 C CNN
+F 1 "V1_CS2_Select" H 8250 1613 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 8250 1500 50  0001 C CNN
+F 3 "" H 8250 1500 50  0001 C CNN
+	1    8250 1500
 	1    0    0    -1  
 $EndComp
-Text GLabel 6450 1700 3    50   Input ~ 0
+Text GLabel 8250 1650 3    50   Input ~ 0
 ~IOCS_V1
 Wire Wire Line
-	6700 1550 7100 1550
-NoConn ~ 5675 1550
-NoConn ~ 5675 2300
-NoConn ~ 5700 2975
-Text GLabel 6200 1550 0    50   Output ~ 0
+	8500 1500 8900 1500
+Text GLabel 8000 1500 0    50   Output ~ 0
 ~IOCS
 $Comp
 L blinken:Jumper_Jumper_3_Bridged12 JP19
 U 1 1 63DCD78D
-P 6450 2300
-F 0 "JP19" H 6450 2504 50  0000 C CNN
-F 1 "V2_CS2_Select" H 6450 2413 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 6450 2300 50  0001 C CNN
-F 3 "" H 6450 2300 50  0001 C CNN
-	1    6450 2300
+P 8250 2250
+F 0 "JP19" H 8250 2454 50  0000 C CNN
+F 1 "V2_CS2_Select" H 8250 2363 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 8250 2250 50  0001 C CNN
+F 3 "" H 8250 2250 50  0001 C CNN
+	1    8250 2250
 	1    0    0    -1  
 $EndComp
-Text GLabel 6450 2450 3    50   Input ~ 0
+Text GLabel 8250 2400 3    50   Input ~ 0
 ~IOCS_V2
-Wire Wire Line
-	6700 2300 7100 2300
 $Comp
 L blinken:Jumper_Jumper_3_Bridged12 JP20
 U 1 1 63DCF636
-P 6450 3100
-F 0 "JP20" H 6450 3304 50  0000 C CNN
-F 1 "A_CS1_Select" H 6450 3213 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 6450 3100 50  0001 C CNN
-F 3 "" H 6450 3100 50  0001 C CNN
-	1    6450 3100
+P 8250 3050
+F 0 "JP20" H 8250 3254 50  0000 C CNN
+F 1 "A_CS1_Select" H 8250 3163 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 8250 3050 50  0001 C CNN
+F 3 "" H 8250 3050 50  0001 C CNN
+	1    8250 3050
 	1    0    0    -1  
 $EndComp
-Text GLabel 6450 3250 3    50   Input ~ 0
+Text GLabel 8250 3200 3    50   Input ~ 0
 ~IOCS_A
 Wire Wire Line
-	6700 3100 7100 3100
-NoConn ~ 7100 1550
-NoConn ~ 7100 2300
-NoConn ~ 7075 2975
-Text Label 7975 1725 0    50   ~ 0
+	8500 3050 8925 3050
+Text Label 4800 4325 0    50   ~ 0
 a0
-Text Label 7975 1825 0    50   ~ 0
+Text Label 4800 4425 0    50   ~ 0
 a1
-Text Label 7975 1925 0    50   ~ 0
+Text Label 4800 4525 0    50   ~ 0
 a2
-Text Label 7975 2025 0    50   ~ 0
+Text Label 4800 4625 0    50   ~ 0
 a3
-Text Label 7975 2125 0    50   ~ 0
+Text Label 4800 4725 0    50   ~ 0
 a4
-Text Label 7975 2225 0    50   ~ 0
+Text Label 4800 4825 0    50   ~ 0
 a5
-Text Label 7975 2325 0    50   ~ 0
+Text Label 4800 4925 0    50   ~ 0
 a6
-Text Label 7975 2425 0    50   ~ 0
+Text Label 4800 5025 0    50   ~ 0
 a7
-Text Label 7975 2525 0    50   ~ 0
+Text Label 4800 5125 0    50   ~ 0
 a8
-Text Label 7975 2625 0    50   ~ 0
+Text Label 4800 5225 0    50   ~ 0
 a9
-Text Label 7975 2725 0    50   ~ 0
+Text Label 4800 5325 0    50   ~ 0
 a10
-Text Label 7975 2825 0    50   ~ 0
+Text Label 4800 5425 0    50   ~ 0
 a11
-Text Label 7975 2925 0    50   ~ 0
+Text Label 4800 5525 0    50   ~ 0
 a12
-Text Label 7975 3025 0    50   ~ 0
+Text Label 4800 5625 0    50   ~ 0
 a13
-Text Label 7975 3125 0    50   ~ 0
+Text Label 4800 5725 0    50   ~ 0
 a14
-Text Label 7975 3225 0    50   ~ 0
+Text Label 4800 5825 0    50   ~ 0
 a15
 Wire Wire Line
-	7975 1725 8175 1725
+	4800 4325 5000 4325
 Wire Wire Line
-	7975 1825 8175 1825
+	4800 4425 5000 4425
 Wire Wire Line
-	7975 1925 8175 1925
+	4800 4525 5000 4525
 Wire Wire Line
-	7975 2025 8175 2025
+	4800 4625 5000 4625
 Wire Wire Line
-	7975 2125 8175 2125
+	4800 4725 5000 4725
 Wire Wire Line
-	7975 2225 8175 2225
+	4800 4825 5000 4825
 Wire Wire Line
-	7975 2325 8175 2325
+	4800 4925 5000 4925
 Wire Wire Line
-	7975 2425 8175 2425
+	4800 5025 5000 5025
 Wire Wire Line
-	7975 2525 8175 2525
+	4800 5125 5000 5125
 Wire Wire Line
-	7975 2625 8175 2625
+	4800 5225 5000 5225
 Wire Wire Line
-	7975 2725 8175 2725
+	4800 5325 5000 5325
 Wire Wire Line
-	7975 2825 8175 2825
+	4800 5425 5000 5425
 Wire Wire Line
-	7975 2925 8175 2925
+	4800 5525 5000 5525
 Wire Wire Line
-	7975 3025 8175 3025
+	4800 5625 5000 5625
 Wire Wire Line
-	7975 3125 8175 3125
+	4800 5725 5000 5725
 Wire Wire Line
-	7975 3225 8175 3225
+	4800 5825 5000 5825
 Entry Wire Line
-	7875 1625 7975 1725
+	4700 4225 4800 4325
 Entry Wire Line
-	7875 1725 7975 1825
+	4700 4325 4800 4425
 Entry Wire Line
-	7875 1825 7975 1925
+	4700 4425 4800 4525
 Entry Wire Line
-	7875 1925 7975 2025
+	4700 4525 4800 4625
 Entry Wire Line
-	7875 2025 7975 2125
+	4700 4625 4800 4725
 Entry Wire Line
-	7875 2125 7975 2225
+	4700 4725 4800 4825
 Entry Wire Line
-	7875 2225 7975 2325
+	4700 4825 4800 4925
 Entry Wire Line
-	7875 2325 7975 2425
+	4700 4925 4800 5025
 Entry Wire Line
-	7875 2425 7975 2525
+	4700 5025 4800 5125
 Entry Wire Line
-	7875 2525 7975 2625
+	4700 5125 4800 5225
 Entry Wire Line
-	7875 2625 7975 2725
+	4700 5225 4800 5325
 Entry Wire Line
-	7875 2725 7975 2825
+	4700 5325 4800 5425
 Entry Wire Line
-	7875 2825 7975 2925
+	4700 5425 4800 5525
 Entry Wire Line
-	7875 2925 7975 3025
+	4700 5525 4800 5625
 Entry Wire Line
-	7875 3025 7975 3125
+	4700 5625 4800 5725
 Entry Wire Line
-	7875 3125 7975 3225
+	4700 5725 4800 5825
 $Comp
 L Connector_Generic:Conn_01x16 J23
 U 1 1 63DFADCC
-P 8375 2425
-F 0 "J23" H 8455 2417 50  0000 L CNN
-F 1 "Address" H 8455 2326 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x16_P2.54mm_Vertical" H 8375 2425 50  0001 C CNN
-F 3 "~" H 8375 2425 50  0001 C CNN
-	1    8375 2425
+P 5200 5025
+F 0 "J23" H 5280 5017 50  0000 L CNN
+F 1 "Address" H 5280 4926 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x16_P2.54mm_Vertical" H 5200 5025 50  0001 C CNN
+F 3 "~" H 5200 5025 50  0001 C CNN
+	1    5200 5025
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -508,35 +498,81 @@ F 3 "" H 4800 3025 50  0001 C CNN
 	1    4800 3025
 	0    -1   -1   0   
 $EndComp
-Text GLabel 6200 2300 0    50   Output ~ 0
+Text GLabel 8000 2250 0    50   Output ~ 0
 ~IOCS
-Text GLabel 6200 3100 0    50   Output ~ 0
+Text GLabel 8000 3050 0    50   Output ~ 0
 ~IOCS
 $Comp
-L Connector_Generic:Conn_02x02_Odd_Even J24
+L Connector_Generic:Conn_01x04 J24
 U 1 1 63BA23E0
-P 9775 2275
-F 0 "J24" H 9825 2492 50  0000 C CNN
-F 1 "Conn_02x02_Odd_Even" H 9825 2401 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_2x02_P2.54mm_Vertical" H 9775 2275 50  0001 C CNN
-F 3 "~" H 9775 2275 50  0001 C CNN
-	1    9775 2275
+P 6725 4850
+F 0 "J24" H 6725 5175 50  0000 C CNN
+F 1 "Conn_02x02_Odd_Even" H 6725 5100 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 6725 4850 50  0001 C CNN
+F 3 "~" H 6725 4850 50  0001 C CNN
+	1    6725 4850
 	1    0    0    -1  
 $EndComp
-Text GLabel 10075 2275 2    50   Input ~ 0
+Text GLabel 6525 4750 0    50   Input ~ 0
 ~IO1
+Text GLabel 6175 4850 0    50   Input ~ 0
+~IO2
+Text GLabel 6175 5050 0    50   Input ~ 0
+~IO4
+Text GLabel 6525 4950 0    50   Input ~ 0
+~IO3
+Wire Wire Line
+	6525 4850 6175 4850
+Wire Wire Line
+	6175 5050 6525 5050
+$Comp
+L Connector_Generic:Conn_01x03 J25
+U 1 1 63D140F5
+P 6400 2300
+F 0 "J25" H 6480 2342 50  0000 L CNN
+F 1 "Conn_01x03" H 6480 2251 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 6400 2300 50  0001 C CNN
+F 3 "~" H 6400 2300 50  0001 C CNN
+	1    6400 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5275 2300 6200 2300
+Wire Wire Line
+	5675 1550 5675 2200
+Wire Wire Line
+	5675 2200 6200 2200
+Wire Wire Line
+	5700 3025 5700 2400
+Wire Wire Line
+	5700 2400 6200 2400
+$Comp
+L Connector_Generic:Conn_01x03 J26
+U 1 1 63D19DCF
+P 9625 2250
+F 0 "J26" H 9705 2292 50  0000 L CNN
+F 1 "Conn_01x03" H 9705 2201 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 9625 2250 50  0001 C CNN
+F 3 "~" H 9625 2250 50  0001 C CNN
+	1    9625 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8900 1500 8900 2150
+Wire Wire Line
+	8900 2150 9425 2150
+Wire Wire Line
+	8925 3050 8925 2350
+Wire Wire Line
+	8925 2350 9425 2350
+Wire Wire Line
+	8500 2250 9425 2250
 Wire Bus Line
 	3325 2100 3325 3725
 Wire Bus Line
 	750  1400 750  3725
 Wire Bus Line
-	7875 1625 7875 3125
+	4700 4225 4700 5725
 Wire Bus Line
 	800  5975 800  7525
-Text GLabel 10075 2375 2    50   Input ~ 0
-~IO2
-Text GLabel 9575 2275 0    50   Input ~ 0
-~IO4
-Text GLabel 9575 2375 0    50   Input ~ 0
-~IO3
 $EndSCHEMATC
