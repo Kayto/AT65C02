@@ -13,15 +13,15 @@ I cant really credit myself with "designing" the AT65C02 - it borrows heavily fr
 
 Credits and thanks are worthy of being up front especially as I have leaned heavily on the work of others. Please follow the links to their respective documentation, they are far better at explaining and documenting than I can ever provide.
 
-* **Ben Eater's 6502 breadboard computer** - the original inspiration as introduced to me by _C64_customs_
-* **Dawid Buchwald's** DB6502 - this is brilliantly described and the designs form the basis for the AT65C02. The code examples and build environment are also the best for getting a solid base for coding. I recommend the github and hackaday report entries to really provide a deeper explanation of the design.
-* **Daryl Rictor** - for the DEC-1 design. The overall site also provides some great hobby computer examples.
-* **Michael Billington** 65C02 computer - my first 65C02 build, super compact and a great starter for this journey.
+* **[Ben Eater's 8 bit computer](https://eater.net/8bit/)** - the original inspiration.
+* **[Dawid Buchwald's](https://github.com/dbuchwald/6502)** DB6502 - this is brilliantly described and the designs form the basis for the AT65C02. The code examples and build environment are also the best for getting a solid base for coding. I recommend the github and [hackaday](https://hackaday.io/project/174128-db6502) report entries to really provide a deeper explanation of the design.
+* **[Daryl Rictor](https://sbc.rictor.org/decoder.html)** - for the DEC-1 design. The overall site also provides some great hobby computer examples.
+* **[Michael Billington](https://github.com/mike42/6502-computer)** 65C02 computer - my first 65C02 build, super compact and a great starter for this journey.
 
 ## General Aims
 
 * A 6502 build, as I am most familiar with this CPU and have at least a start at knowing some code and hardware requisities.
-* Provide a learning platform for both the hardware and software. Ideally have a ready code base to get started quick with.
+* Provide a learning platform for both the hardware and software. Ideally have a ready code base to get started with quickly.
 * Avoid the hassles of masses of wiring and connections. To suit limited space, no mass of breadboards and able to tuck away in a cupboard to pick up quick.
 * No great purist aspirations on the hardware, readily available components and no need to learn other code to get things running.
 
@@ -100,10 +100,13 @@ The repository provides the files for you to create your very own AT65C02.
 
 ## Software
 
-As stated earlier Dawid Buchwald provides a suite of ROM and loadable sources in his github repo. This will get you on yor way to coding quickly. If you are struggling with a build environment then he also has great tutorial examples and even provides a docker image! Great work. 
+As stated earlier Dawid Buchwald provides a suite of ROM and loadable sources in his github repo. This will get you on yor way to coding quickly. If you are struggling with a build environment then he also has great tutorial examples and even provides a [docker image](https://github.com/dbuchwald/cc65-tools)! Great work. 
 
 I have created a small repo of code examples I used to test and debug the rev002 board.
 
-Memory test
+| Reference | Description | 
+|-----------|-------------|
+| 04b_blink | blinks VIA1 onboard LED and an added LED on VIA2 |
+| 50_mem_read | memory test, lights blink on VIA1 if in error||
 
 
