@@ -1,4 +1,6 @@
-#Attiny4313
+# Attiny4313
+
+The code is available from Dawid Buchwald's DB6502 project. I include a precompiled file in this my repo for ease.
 
 I must admit this chip can be quite elusive and perhaps breaks one of my aims of using readily available chips. That said its not critical to have it - it just allows connection of a PS/2 keyboard directly to the board. You can still interact via terminal keyboard if you dont have it.
 
