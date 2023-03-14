@@ -1,0 +1,101 @@
+Name            G16V8_2LEDs;
+Partno          GAL1;
+Revision        01;
+Date            22.03.2021;
+Designer        vladk;
+Company         @home;
+Assembly        v1;
+Location        RU;
+Device          G16V8AS;
+
+/** Inputs **/
+
+pin  1 = EN_H;       /* Enable Hihg nibble decoding (low level)       */
+
+pin  2 = A2;		/* High nibble */
+pin  3 = B2;
+pin  4 = C2;
+pin  5 = D2;
+
+pin  6 = A1;		/* Low nibble */
+pin  7 = B1;
+pin  8 = C1;
+pin  9 = D1;
+
+/** Outputs **/
+
+pin 19 = EN_L;		/* Enable Low nibble decoding  (low level)        */
+
+pin 18 = Segm_A;		/* LED Segments */
+pin 17 = Segm_B;		/* You can change "Segment to Pin" assignment     */
+pin 16 = Segm_C;		/*   in any order according to your LED pinout    */
+pin 15 = Segm_D;		/*   and/or board layout                          */
+pin 14 = Segm_E;
+pin 13 = Segm_F;
+pin 12 = Segm_G;
+
+/** Declarations and Intermediate Variable Definitions  **/
+LED1 =   EN_H & !EN_L;
+LED2 =   EN_L & !EN_H;
+
+/** Logic Equations **/
+
+/* Make EN_L from EN_H signal */
+EN_L   = !EN_H;		/* Comment it out if EN_L is external signal      */
+
+Segm_A = LED1 & !A1 & !B1 & !C1 &  D1
+       # LED1 & !A1 &  B1 & !C1 & !D1
+       # LED1 &  A1 &  B1 & !C1 &  D1
+       # LED1 &  A1 & !B1 &  C1 &  D1
+       # LED2 & !A2 & !B2 & !C2 &  D2
+       # LED2 & !A2 &  B2 & !C2 & !D2
+       # LED2 &  A2 &  B2 & !C2 &  D2
+       # LED2 &  A2 & !B2 &  C2 &  D2;
+
+Segm_B = LED1 &  A1       &  C1 &  D1
+       # LED1 &  A1 &  B1       & !D1
+       # LED1 &        B1 &  C1 & !D1
+       # LED1 & !A1 &  B1 & !C1 &  D1
+       # LED2 &  A2       &  C2 &  D2
+       # LED2 &  A2 &  B2       & !D2
+       # LED2 &        B2 &  C2 & !D2
+       # LED2 & !A2 &  B2 & !C2 &  D2;
+
+Segm_C = LED1 &  A1 &  B1 &  C1
+       # LED1 &  A1 &  B1       & !D1
+       # LED1 & !A1 & !B1 &  C1 & !D1
+       # LED2 &  A2 &  B2 &  C2
+       # LED2 &  A2 &  B2       & !D2
+       # LED2 & !A2 & !B2 &  C2 & !D2;
+
+Segm_D = LED1 &        B1 &  C1 &  D1
+       # LED1 & !A1 & !B1 & !C1 &  D1
+       # LED1 & !A1 &  B1 & !C1 & !D1
+       # LED1 &  A1 & !B1 &  C1 & !D1
+       # LED2 &        B2 &  C2 &  D2
+       # LED2 & !A2 & !B2 & !C2 &  D2
+       # LED2 & !A2 &  B2 & !C2 & !D2
+       # LED2 &  A2 & !B2 &  C2 & !D2;
+
+Segm_E = LED1 & !A1             &  D1
+       # LED1 & !A1 &  B1 & !C1
+       # LED1 &       !B1 & !C1 &  D1
+       # LED2 & !A2             &  D2
+       # LED2 & !A2 &  B2 & !C2
+       # LED2 &       !B2 & !C2 &  D2;
+
+Segm_F = LED1 & !A1       &  C1 &  D1
+       # LED1 & !A1 & !B1       &  D1
+       # LED1 & !A1 & !B1 &  C1
+       # LED1 &  A1 &  B1 & !C1 &  D1
+       # LED2 & !A2       &  C2 &  D2
+       # LED2 & !A2 & !B2       &  D2
+       # LED2 & !A2 & !B2 &  C2
+       # LED2 &  A2 &  B2 & !C2 &  D2;
+
+Segm_G = LED1 & !A1 & !B1 & !C1
+       # LED1 & !A1 &  B1 &  C1 &  D1
+       # LED1 &  A1 &  B1 & !C1 & !D1
+       # LED2 & !A2 & !B2 & !C2
+       # LED2 & !A2 &  B2 &  C2 &  D2
+       # LED2 &  A2 &  B2 & !C2 & !D2;
