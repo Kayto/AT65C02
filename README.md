@@ -96,11 +96,14 @@ The repository provides the files for you to create your very own AT65C02.
 * Schematics - multiple sheets
 * KiCad project files
 * Gerber files
+* BOM
 
 ## Software
 
-I have created a small repo of code for some examples I used to test and debug the rev002 board.
+As stated earlier Dawid Buchwald provides a suite of ROM and loadable sources in his github repo. This will get you on yor way to coding quickly. If you are struggling with a build environment then he also has great tutorial examples and even provides a docker image! Great work. 
+
+I have created a small repo of code examples I used to test and debug the rev002 board.
 
 Memory test
 
-As stated earlier Dawid Buchwald provides a suite of ROM and loadable sources in his github repo. This will get you on yor way to coding quickly. If you are struggling with a build environment then he also has great tutorial examples and even provides a docker image! Great work.
+
