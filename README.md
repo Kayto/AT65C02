@@ -86,7 +86,7 @@ Given I can be indecisive and to allow some experimentation with alernative memo
 | ROM | $8000-$FFFF | 32K |
 
 ## AT65C02 Build
-The final rev003 PCB corrected the errors in my first build. This first (rev002) build was documented on twitter. Feel free to check out those posts. 
+The final rev003 PCB corrected the errors in my first build. This first (rev002) build was documented on [twitter](https://twitter.com/AdamT117). Feel free to check out those posts. 
 
 Spolier alert -The issues I found were mainly related to incorporating the adjustable address decoder. In trying to incorporate both a fixed and programmable GAL decoder I inadvertently bridged the RAM and ROM OE/CS lines. This was fixed with a trace cut and bodge but rendered the programmable memory decoder useless. Troubleshooting for the rev003 modifications involved temporary wires and jumpers.
 
@@ -109,4 +109,4 @@ I have created a small repo of code examples I used to test and debug the rev002
 | 04b_blink | blinks VIA1 onboard LED and an added LED on VIA2 |
 | 50_mem_read | memory test, lights blink on VIA1 if in error||
 
-
+The only other code requirement is for the ATTiny4313, for the onboard keybard controller. An explanation of this is in the [Arduino](https://github.com/Kayto/AT65C02/tree/main/Software/Arduino) folder.
