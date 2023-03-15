@@ -496,27 +496,6 @@ Wire Wire Line
 	8975 4575 9275 4575
 Text GLabel 8475 4775 0    50   Input ~ 0
 +3.3V
-Wire Wire Line
-	8975 4875 8975 4775
-$Comp
-L 65C02_Computer-cache:65C02_Computer-rescue_Conn_01x03_Male-Connector J19
-U 1 1 636B4BF6
-P 8675 5825
-F 0 "J19" H 8775 6175 50  0000 C CNN
-F 1 "Address Decoder Enable" H 8775 6100 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 8675 5825 50  0001 C CNN
-F 3 "" H 8675 5825 50  0001 C CNN
-	1    8675 5825
-	1    0    0    -1  
-$EndComp
-Text GLabel 8875 5725 2    50   Input ~ 0
-GND
-Text GLabel 8875 5925 2    50   Input ~ 0
-+5V
-Wire Wire Line
-	8875 5825 9450 5825
-Text GLabel 9450 5825 2    50   Output ~ 0
-AD_EN
 $Comp
 L 65C02_Computer-rescue:Conn_02x16_Odd_Even-Connector_Generic J?
 U 1 1 63785CF4
@@ -1099,6 +1078,14 @@ F 3 "~" H 2100 5025 50  0001 C CNN
 $EndComp
 Text Notes 1000 3875 0    50   ~ 0
 Port via blinky latches for display expansion (HEX board)
+Text Notes 2400 2475 0    50   ~ 0
+Level shifter and ESP pin order may need adjustment to suit layout\n** Note Level shifter mirror error to correct
+Text Notes 6650 2775 0    50   ~ 0
+L7805\nCurrent consumption with full blinky \nand HEX display @0.4amps\n\nTemperature 60 degrees C
+Text GLabel 9225 4775 2    50   Input ~ 0
+ROM~WE
+Wire Wire Line
+	8975 4775 9225 4775
 Wire Bus Line
 	2775 5225 2775 6150
 Wire Bus Line
@@ -1117,8 +1104,6 @@ Wire Bus Line
 	1275 4225 1275 6150
 Wire Bus Line
 	750  6100 750  7650
-Text Notes 2400 2475 0    50   ~ 0
-Level shifter and ESP pin order may need adjustment to suit layout\n** Note Level shifter mirror error to correct
-Text Notes 6650 2775 0    50   ~ 0
-L7805\nCurrent consumption with full blinky \nand HEX display @0.4amps\n\nTemperature 60 degrees C
+Text Notes 8575 5200 0    50   ~ 0
+Added header for useful signals\nCPU and ROM
 $EndSCHEMATC

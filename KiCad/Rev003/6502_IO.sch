@@ -4,12 +4,12 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 7
-Title "AT_65C02 Hobby Computer"
-Date "2020-02-17"
-Rev "v001"
+Title "AT65C02 Hobby Computer"
+Date "2023-03-15"
+Rev "Rev003"
 Comp ""
 Comment1 ""
-Comment2 "This AT6502 version by AdamT117. Revision to Dawid Buchwald's design as marked"
+Comment2 "This AT65C02 version by AdamT117. Revisions to DB design as marked"
 Comment3 "Based on Ben Eater's design"
 Comment4 "Author: Dawid Buchwald"
 $EndDescr
@@ -1460,6 +1460,12 @@ Wire Wire Line
 	5350 4750 5500 4750
 Wire Wire Line
 	5500 4750 5500 4675
+Text Notes 2625 5825 0    50   ~ 0
+Jumper for VIA1 memory location \nadjustment
+Text Notes 5275 5675 0    50   ~ 0
+Jumper for VIA2 memory location \nadjustment
+Text Notes 6400 650  0    50   ~ 0
+Jumper for ACIA memory location \nadjustment
 Wire Bus Line
 	5250 3000 5250 3400
 Wire Bus Line
@@ -1496,10 +1502,4 @@ Wire Bus Line
 	2800 950  2800 1850
 Wire Bus Line
 	700  6050 700  7600
-Text Notes 2625 5825 0    50   ~ 0
-Jumper for VIA1 memory location \nadjustment
-Text Notes 5275 5675 0    50   ~ 0
-Jumper for VIA2 memory location \nadjustment
-Text Notes 6400 650  0    50   ~ 0
-Jumper for ACIA memory location \nadjustment
 $EndSCHEMATC

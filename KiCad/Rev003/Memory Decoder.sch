@@ -4,20 +4,22 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 7 7
-Title ""
-Date ""
-Rev ""
+Title "AT65C02 Hobby Computer"
+Date "2023-03-15"
+Rev "Rev003"
 Comp ""
 Comment1 ""
-Comment2 ""
+Comment2 "This AT65C02 version by AdamT117. Revisions to DB design as marked"
 Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Logic_Programmable:PAL20RS10 U29
+L Logic_Programmable:PAL20RS10 U?
 U 1 1 6375689A
 P 2075 2000
-F 0 "U29" H 2075 3175 50  0000 C CNN
+AR Path="/637561AA/6416C0D1/6375689A" Ref="U?"  Part="1" 
+AR Path="/637551A1/6375689A" Ref="U29"  Part="1" 
+F 0 "U?" H 2075 3175 50  0000 C CNN
 F 1 "Flexible Memory Decoder" H 2075 3100 50  0000 C CNN
 F 2 "Package_DIP:DIP-24_W7.62mm_Socket" H 2075 2000 50  0001 C CNN
 F 3 "" H 2075 2000 50  0001 C CNN
@@ -121,10 +123,12 @@ Text GLabel 2825 2100 2    50   Output ~ 0
 Wire Bus Line
 	3325 3725 750  3725
 $Comp
-L 65C02_Computer-rescue:GND-power #PWR0136
+L 65C02_Computer-rescue:GND-power #PWR?
 U 1 1 6377B54D
 P 2075 2800
-F 0 "#PWR0136" H 2075 2550 50  0001 C CNN
+AR Path="/637561AA/6416C0D1/6377B54D" Ref="#PWR?"  Part="1" 
+AR Path="/637551A1/6377B54D" Ref="#PWR0136"  Part="1" 
+F 0 "#PWR?" H 2075 2550 50  0001 C CNN
 F 1 "GND-power" H 2080 2627 50  0000 C CNN
 F 2 "" H 2075 2800 50  0001 C CNN
 F 3 "" H 2075 2800 50  0001 C CNN
@@ -132,10 +136,12 @@ F 3 "" H 2075 2800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 65C02_Computer-rescue:+5V-power #PWR0137
+L 65C02_Computer-rescue:+5V-power #PWR?
 U 1 1 6377B8E5
 P 2075 1200
-F 0 "#PWR0137" H 2075 1050 50  0001 C CNN
+AR Path="/637561AA/6416C0D1/6377B8E5" Ref="#PWR?"  Part="1" 
+AR Path="/637551A1/6377B8E5" Ref="#PWR0137"  Part="1" 
+F 0 "#PWR?" H 2075 1050 50  0001 C CNN
 F 1 "+5V-power" H 2090 1373 50  0000 C CNN
 F 2 "" H 2075 1200 50  0001 C CNN
 F 3 "" H 2075 1200 50  0001 C CNN
@@ -149,10 +155,12 @@ a6
 Wire Wire Line
 	1150 3000 850  3000
 $Comp
-L Jumper:Jumper_3_Bridged12 JP10
+L Jumper:Jumper_3_Bridged12 JP?
 U 1 1 6378398A
 P 1300 3000
-F 0 "JP10" V 1254 3067 50  0000 L CNN
+AR Path="/637561AA/6416C0D1/6378398A" Ref="JP?"  Part="1" 
+AR Path="/637551A1/6378398A" Ref="JP10"  Part="1" 
+F 0 "JP?" V 1254 3067 50  0000 L CNN
 F 1 "Jumper_3_Bridged12" V 1345 3067 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 1300 3000 50  0001 C CNN
 F 3 "~" H 1300 3000 50  0001 C CNN
@@ -162,10 +170,12 @@ $EndComp
 Wire Wire Line
 	1300 2750 1300 2600
 $Comp
-L Device:R R39
+L Device:R R?
 U 1 1 639CCDA8
 P 1725 3475
-F 0 "R39" V 1518 3475 50  0000 C CNN
+AR Path="/637561AA/6416C0D1/639CCDA8" Ref="R?"  Part="1" 
+AR Path="/637551A1/639CCDA8" Ref="R39"  Part="1" 
+F 0 "R?" V 1518 3475 50  0000 C CNN
 F 1 "4k7" V 1609 3475 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 1655 3475 50  0001 C CNN
 F 3 "~" H 1725 3475 50  0001 C CNN
@@ -173,10 +183,12 @@ F 3 "~" H 1725 3475 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L 65C02_Computer-rescue:+5V-power #PWR0138
+L 65C02_Computer-rescue:+5V-power #PWR?
 U 1 1 639CD484
 P 2150 3475
-F 0 "#PWR0138" H 2150 3325 50  0001 C CNN
+AR Path="/637561AA/6416C0D1/639CD484" Ref="#PWR?"  Part="1" 
+AR Path="/637551A1/639CD484" Ref="#PWR0138"  Part="1" 
+F 0 "#PWR?" H 2150 3325 50  0001 C CNN
 F 1 "+5V-power" V 2165 3603 50  0000 L CNN
 F 2 "" H 2150 3475 50  0001 C CNN
 F 3 "" H 2150 3475 50  0001 C CNN
@@ -269,10 +281,12 @@ Wire Wire Line
 Text GLabel 3150 725  2    50   Output ~ 0
 ~ROM_OE
 $Comp
-L blinken:Jumper_Jumper_3_Bridged12 JP15
+L blinken:Jumper_Jumper_3_Bridged12 JP?
 U 1 1 63D3BDA9
 P 5025 1550
-F 0 "JP15" H 5025 1754 50  0000 C CNN
+AR Path="/637561AA/6416C0D1/63D3BDA9" Ref="JP?"  Part="1" 
+AR Path="/637551A1/63D3BDA9" Ref="JP15"  Part="1" 
+F 0 "JP?" H 5025 1754 50  0000 C CNN
 F 1 "V1_CS1_Select" H 5025 1663 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 5025 1550 50  0001 C CNN
 F 3 "" H 5025 1550 50  0001 C CNN
@@ -282,10 +296,12 @@ $EndComp
 Wire Wire Line
 	5275 1550 5675 1550
 $Comp
-L blinken:Jumper_Jumper_3_Bridged12 JP16
+L blinken:Jumper_Jumper_3_Bridged12 JP?
 U 1 1 63D3DCD1
 P 5025 2300
-F 0 "JP16" H 5025 2504 50  0000 C CNN
+AR Path="/637561AA/6416C0D1/63D3DCD1" Ref="JP?"  Part="1" 
+AR Path="/637551A1/63D3DCD1" Ref="JP16"  Part="1" 
+F 0 "JP?" H 5025 2504 50  0000 C CNN
 F 1 "V2_CS1_Select" H 5025 2413 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 5025 2300 50  0001 C CNN
 F 3 "" H 5025 2300 50  0001 C CNN
@@ -295,10 +311,12 @@ $EndComp
 Text GLabel 5025 2450 3    50   Input ~ 0
 V2CS1
 $Comp
-L blinken:Jumper_Jumper_3_Bridged12 JP17
+L blinken:Jumper_Jumper_3_Bridged12 JP?
 U 1 1 63DC2D91
 P 5050 3025
-F 0 "JP17" H 5050 3229 50  0000 C CNN
+AR Path="/637561AA/6416C0D1/63DC2D91" Ref="JP?"  Part="1" 
+AR Path="/637551A1/63DC2D91" Ref="JP17"  Part="1" 
+F 0 "JP?" H 5050 3229 50  0000 C CNN
 F 1 "A_CS0_Select" H 5050 3138 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 5050 3025 50  0001 C CNN
 F 3 "" H 5050 3025 50  0001 C CNN
@@ -310,10 +328,12 @@ A_CSO
 Wire Wire Line
 	5300 3025 5700 3025
 $Comp
-L blinken:Jumper_Jumper_3_Bridged12 JP18
+L blinken:Jumper_Jumper_3_Bridged12 JP?
 U 1 1 63DC2EAC
 P 8250 1500
-F 0 "JP18" H 8250 1704 50  0000 C CNN
+AR Path="/637561AA/6416C0D1/63DC2EAC" Ref="JP?"  Part="1" 
+AR Path="/637551A1/63DC2EAC" Ref="JP18"  Part="1" 
+F 0 "JP?" H 8250 1704 50  0000 C CNN
 F 1 "V1_CS2_Select" H 8250 1613 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 8250 1500 50  0001 C CNN
 F 3 "" H 8250 1500 50  0001 C CNN
@@ -327,10 +347,12 @@ Wire Wire Line
 Text GLabel 8000 1500 0    50   Output ~ 0
 ~IOCS
 $Comp
-L blinken:Jumper_Jumper_3_Bridged12 JP19
+L blinken:Jumper_Jumper_3_Bridged12 JP?
 U 1 1 63DCD78D
 P 8250 2250
-F 0 "JP19" H 8250 2454 50  0000 C CNN
+AR Path="/637561AA/6416C0D1/63DCD78D" Ref="JP?"  Part="1" 
+AR Path="/637551A1/63DCD78D" Ref="JP19"  Part="1" 
+F 0 "JP?" H 8250 2454 50  0000 C CNN
 F 1 "V2_CS2_Select" H 8250 2363 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 8250 2250 50  0001 C CNN
 F 3 "" H 8250 2250 50  0001 C CNN
@@ -340,10 +362,12 @@ $EndComp
 Text GLabel 8250 2400 3    50   Input ~ 0
 ~IOCS_V2
 $Comp
-L blinken:Jumper_Jumper_3_Bridged12 JP20
+L blinken:Jumper_Jumper_3_Bridged12 JP?
 U 1 1 63DCF636
 P 8250 3050
-F 0 "JP20" H 8250 3254 50  0000 C CNN
+AR Path="/637561AA/6416C0D1/63DCF636" Ref="JP?"  Part="1" 
+AR Path="/637551A1/63DCF636" Ref="JP20"  Part="1" 
+F 0 "JP?" H 8250 3254 50  0000 C CNN
 F 1 "A_CS1_Select" H 8250 3163 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 8250 3050 50  0001 C CNN
 F 3 "" H 8250 3050 50  0001 C CNN
@@ -451,10 +475,12 @@ Entry Wire Line
 Entry Wire Line
 	4700 5725 4800 5825
 $Comp
-L Connector_Generic:Conn_01x16 J23
+L Connector_Generic:Conn_01x16 J?
 U 1 1 63DFADCC
 P 5200 5025
-F 0 "J23" H 5280 5017 50  0000 L CNN
+AR Path="/637561AA/6416C0D1/63DFADCC" Ref="J?"  Part="1" 
+AR Path="/637551A1/63DFADCC" Ref="J23"  Part="1" 
+F 0 "J?" H 5280 5017 50  0000 L CNN
 F 1 "Address" H 5280 4926 50  0000 L CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x16_P2.54mm_Vertical" H 5200 5025 50  0001 C CNN
 F 3 "~" H 5200 5025 50  0001 C CNN
@@ -462,10 +488,12 @@ F 3 "~" H 5200 5025 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 65C02_Computer-rescue:+5V-power #PWR0148
+L 65C02_Computer-rescue:+5V-power #PWR?
 U 1 1 63807385
 P 4775 1550
-F 0 "#PWR0148" H 4775 1400 50  0001 C CNN
+AR Path="/637561AA/6416C0D1/63807385" Ref="#PWR?"  Part="1" 
+AR Path="/637551A1/63807385" Ref="#PWR0148"  Part="1" 
+F 0 "#PWR?" H 4775 1400 50  0001 C CNN
 F 1 "+5V-power" H 4790 1723 50  0000 C CNN
 F 2 "" H 4775 1550 50  0001 C CNN
 F 3 "" H 4775 1550 50  0001 C CNN
@@ -475,10 +503,12 @@ $EndComp
 Text GLabel 5025 1700 3    50   Input ~ 0
 V1CS1
 $Comp
-L 65C02_Computer-rescue:+5V-power #PWR0149
+L 65C02_Computer-rescue:+5V-power #PWR?
 U 1 1 6380B6B6
 P 4775 2300
-F 0 "#PWR0149" H 4775 2150 50  0001 C CNN
+AR Path="/637561AA/6416C0D1/6380B6B6" Ref="#PWR?"  Part="1" 
+AR Path="/637551A1/6380B6B6" Ref="#PWR0149"  Part="1" 
+F 0 "#PWR?" H 4775 2150 50  0001 C CNN
 F 1 "+5V-power" H 4790 2473 50  0000 C CNN
 F 2 "" H 4775 2300 50  0001 C CNN
 F 3 "" H 4775 2300 50  0001 C CNN
@@ -486,10 +516,12 @@ F 3 "" H 4775 2300 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L 65C02_Computer-rescue:+5V-power #PWR0150
+L 65C02_Computer-rescue:+5V-power #PWR?
 U 1 1 6380E385
 P 4800 3025
-F 0 "#PWR0150" H 4800 2875 50  0001 C CNN
+AR Path="/637561AA/6416C0D1/6380E385" Ref="#PWR?"  Part="1" 
+AR Path="/637551A1/6380E385" Ref="#PWR0150"  Part="1" 
+F 0 "#PWR?" H 4800 2875 50  0001 C CNN
 F 1 "+5V-power" H 4815 3198 50  0000 C CNN
 F 2 "" H 4800 3025 50  0001 C CNN
 F 3 "" H 4800 3025 50  0001 C CNN
@@ -501,10 +533,12 @@ Text GLabel 8000 2250 0    50   Output ~ 0
 Text GLabel 8000 3050 0    50   Output ~ 0
 ~IOCS
 $Comp
-L Connector_Generic:Conn_01x04 J24
+L Connector_Generic:Conn_01x04 J?
 U 1 1 63BA23E0
 P 6725 4850
-F 0 "J24" H 6725 5175 50  0000 C CNN
+AR Path="/637561AA/6416C0D1/63BA23E0" Ref="J?"  Part="1" 
+AR Path="/637551A1/63BA23E0" Ref="J24"  Part="1" 
+F 0 "J?" H 6725 5175 50  0000 C CNN
 F 1 "Conn_02x02_Odd_Even" H 6725 5100 50  0000 C CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 6725 4850 50  0001 C CNN
 F 3 "~" H 6725 4850 50  0001 C CNN
@@ -524,10 +558,12 @@ Wire Wire Line
 Wire Wire Line
 	6175 5050 6525 5050
 $Comp
-L Connector_Generic:Conn_01x03 J25
+L Connector_Generic:Conn_01x03 J?
 U 1 1 63D140F5
 P 6400 2300
-F 0 "J25" H 6480 2342 50  0000 L CNN
+AR Path="/637561AA/6416C0D1/63D140F5" Ref="J?"  Part="1" 
+AR Path="/637551A1/63D140F5" Ref="J25"  Part="1" 
+F 0 "J?" H 6480 2342 50  0000 L CNN
 F 1 "Conn_01x03" H 6480 2251 50  0000 L CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 6400 2300 50  0001 C CNN
 F 3 "~" H 6400 2300 50  0001 C CNN
@@ -545,10 +581,12 @@ Wire Wire Line
 Wire Wire Line
 	5700 2400 6200 2400
 $Comp
-L Connector_Generic:Conn_01x03 J26
+L Connector_Generic:Conn_01x03 J?
 U 1 1 63D19DCF
 P 9625 2250
-F 0 "J26" H 9705 2292 50  0000 L CNN
+AR Path="/637561AA/6416C0D1/63D19DCF" Ref="J?"  Part="1" 
+AR Path="/637551A1/63D19DCF" Ref="J26"  Part="1" 
+F 0 "J?" H 9705 2292 50  0000 L CNN
 F 1 "Conn_01x03" H 9705 2201 50  0000 L CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 9625 2250 50  0001 C CNN
 F 3 "~" H 9625 2250 50  0001 C CNN
@@ -571,7 +609,8 @@ U 1 1 64149E10
 P 2050 4350
 AR Path="/64149E10" Ref="JP?"  Part="1" 
 AR Path="/637551A1/64149E10" Ref="JP11"  Part="1" 
-F 0 "JP11" H 2050 4597 50  0000 C CNN
+AR Path="/637561AA/6416C0D1/64149E10" Ref="JP?"  Part="1" 
+F 0 "JP?" H 2050 4597 50  0000 C CNN
 F 1 "~OE Low Fixed" H 2050 4499 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2050 4350 50  0001 C CNN
 F 3 "~" H 2050 4350 50  0001 C CNN
@@ -592,7 +631,8 @@ U 1 1 6415A9F1
 P 2975 1000
 AR Path="/6415A9F1" Ref="JP?"  Part="1" 
 AR Path="/637551A1/6415A9F1" Ref="JP21"  Part="1" 
-F 0 "JP21" H 2975 1247 50  0000 C CNN
+AR Path="/637561AA/6416C0D1/6415A9F1" Ref="JP?"  Part="1" 
+F 0 "JP?" H 2975 1247 50  0000 C CNN
 F 1 "~OE Adjustable" H 2975 1149 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2975 1000 50  0001 C CNN
 F 3 "~" H 2975 1000 50  0001 C CNN
@@ -611,7 +651,8 @@ U 1 1 64277894
 P 1925 4975
 AR Path="/637561AA/64277894" Ref="J?"  Part="1" 
 AR Path="/637551A1/64277894" Ref="J19"  Part="1" 
-F 0 "J19" H 2025 5325 50  0000 C CNN
+AR Path="/637561AA/6416C0D1/64277894" Ref="J?"  Part="1" 
+F 0 "J?" H 2025 5325 50  0000 C CNN
 F 1 "Address Decoder Enable" H 2025 5250 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 1925 4975 50  0001 C CNN
 F 3 "" H 1925 4975 50  0001 C CNN

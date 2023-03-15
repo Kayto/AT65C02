@@ -603,6 +603,29 @@ Wire Wire Line
 	2975 800  2975 725 
 Wire Wire Line
 	2975 725  3150 725 
+Text Notes 3075 1025 0    50   ~ 0
+Adjustable Decoder
+$Comp
+L 65C02_Computer-cache:65C02_Computer-rescue_Conn_01x03_Male-Connector J?
+U 1 1 64277894
+P 1925 4975
+AR Path="/637561AA/64277894" Ref="J?"  Part="1" 
+AR Path="/637551A1/64277894" Ref="J19"  Part="1" 
+F 0 "J19" H 2025 5325 50  0000 C CNN
+F 1 "Address Decoder Enable" H 2025 5250 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 1925 4975 50  0001 C CNN
+F 3 "" H 1925 4975 50  0001 C CNN
+	1    1925 4975
+	1    0    0    -1  
+$EndComp
+Text GLabel 2125 4875 2    50   Input ~ 0
+GND
+Text GLabel 2125 5075 2    50   Input ~ 0
++5V
+Wire Wire Line
+	2125 4975 2700 4975
+Text GLabel 2700 4975 2    50   Output ~ 0
+AD_EN
 Wire Bus Line
 	3325 2100 3325 3725
 Wire Bus Line
@@ -611,6 +634,4 @@ Wire Bus Line
 	4700 4225 4700 5725
 Wire Bus Line
 	800  5975 800  7525
-Text Notes 3075 1025 0    50   ~ 0
-Adjustable Decoder
 $EndSCHEMATC

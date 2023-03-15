@@ -4,12 +4,12 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 7
-Title "AT_65C02 Hobby Computer"
-Date ""
-Rev ""
+Title "AT65C02 Hobby Computer"
+Date "2023-03-15"
+Rev "Rev003"
 Comp ""
 Comment1 ""
-Comment2 "This AT6502 version by AdamT117. Revision to DB design as marked"
+Comment2 "This AT65C02 version by AdamT117. Revisions to DB design as marked"
 Comment3 "Based on Ben Eater's design"
 Comment4 "Author: Dawid Buchwald"
 $EndDescr

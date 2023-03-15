@@ -4,12 +4,12 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 5 7
-Title "AT_65C02 Hobby Computer"
-Date ""
-Rev ""
+Title "AT65C02 Hobby Computer"
+Date "2023-03-15"
+Rev "Rev003"
 Comp ""
 Comment1 ""
-Comment2 "This AT6502 version by AdamT117. Revision to DB design as marked"
+Comment2 "This AT65C02 version by AdamT117. Revisions to DB design as marked"
 Comment3 "Based on Ben Eater's design"
 Comment4 "Author: Dawid Buchwald"
 $EndDescr
@@ -18,10 +18,12 @@ Wire Wire Line
 Wire Wire Line
 	11225 1925 11225 1850
 $Comp
-L blinken:Device_C_Small C25
+L blinken:Device_C_Small C?
 U 1 1 60B3A1C9
 P 4525 6675
-F 0 "C25" V 4575 6700 50  0000 L CNN
+AR Path="/637561AA/6416C0CD/60B3A1C9" Ref="C?"  Part="1" 
+AR Path="/636160DB/60B3A1C9" Ref="C25"  Part="1" 
+F 0 "C?" V 4575 6700 50  0000 L CNN
 F 1 "0.1uF" V 4425 6550 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 4525 6675 50  0001 C CNN
 F 3 "~" H 4525 6675 50  0001 C CNN
@@ -29,10 +31,12 @@ F 3 "~" H 4525 6675 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 65C02_Computer-rescue:GND-power #PWR0131
+L 65C02_Computer-rescue:GND-power #PWR?
 U 1 1 63979E1F
 P 5275 6925
-F 0 "#PWR0131" H 5275 6675 50  0001 C CNN
+AR Path="/637561AA/6416C0CD/63979E1F" Ref="#PWR?"  Part="1" 
+AR Path="/636160DB/63979E1F" Ref="#PWR0131"  Part="1" 
+F 0 "#PWR?" H 5275 6675 50  0001 C CNN
 F 1 "GND-power" H 5280 6752 50  0000 C CNN
 F 2 "" H 5275 6925 50  0001 C CNN
 F 3 "" H 5275 6925 50  0001 C CNN
@@ -40,10 +44,12 @@ F 3 "" H 5275 6925 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 6502-computer-cache:power_+5V #PWR0132
+L 6502-computer-cache:power_+5V #PWR?
 U 1 1 63979E20
 P 4025 6425
-F 0 "#PWR0132" H 4025 6275 50  0001 C CNN
+AR Path="/637561AA/6416C0CD/63979E20" Ref="#PWR?"  Part="1" 
+AR Path="/636160DB/63979E20" Ref="#PWR0132"  Part="1" 
+F 0 "#PWR?" H 4025 6275 50  0001 C CNN
 F 1 "power_+5V" H 4040 6598 50  0000 C CNN
 F 2 "" H 4025 6425 50  0001 C CNN
 F 3 "" H 4025 6425 50  0001 C CNN
@@ -51,10 +57,12 @@ F 3 "" H 4025 6425 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L blinken:Device_C_Small C26
+L blinken:Device_C_Small C?
 U 1 1 63979E21
 P 4775 6675
-F 0 "C26" V 4825 6700 50  0000 L CNN
+AR Path="/637561AA/6416C0CD/63979E21" Ref="C?"  Part="1" 
+AR Path="/636160DB/63979E21" Ref="C26"  Part="1" 
+F 0 "C?" V 4825 6700 50  0000 L CNN
 F 1 "0.1uF" V 4675 6550 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 4775 6675 50  0001 C CNN
 F 3 "~" H 4775 6675 50  0001 C CNN
@@ -62,10 +70,12 @@ F 3 "~" H 4775 6675 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L blinken:Device_C_Small C27
+L blinken:Device_C_Small C?
 U 1 1 63979E22
 P 5025 6675
-F 0 "C27" V 5075 6700 50  0000 L CNN
+AR Path="/637561AA/6416C0CD/63979E22" Ref="C?"  Part="1" 
+AR Path="/636160DB/63979E22" Ref="C27"  Part="1" 
+F 0 "C?" V 5075 6700 50  0000 L CNN
 F 1 "0.1uF" V 4925 6550 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 5025 6675 50  0001 C CNN
 F 3 "~" H 5025 6675 50  0001 C CNN
@@ -73,10 +83,12 @@ F 3 "~" H 5025 6675 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L blinken:Device_C_Small C28
+L blinken:Device_C_Small C?
 U 1 1 63979E23
 P 5275 6675
-F 0 "C28" V 5325 6700 50  0000 L CNN
+AR Path="/637561AA/6416C0CD/63979E23" Ref="C?"  Part="1" 
+AR Path="/636160DB/63979E23" Ref="C28"  Part="1" 
+F 0 "C?" V 5325 6700 50  0000 L CNN
 F 1 "0.1uF" V 5175 6550 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 5275 6675 50  0001 C CNN
 F 3 "~" H 5275 6675 50  0001 C CNN
@@ -84,10 +96,12 @@ F 3 "~" H 5275 6675 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 6502-computer-cache:power_PWR_FLAG #FLG0101
+L 6502-computer-cache:power_PWR_FLAG #FLG?
 U 1 1 63979E1D
 P 2000 2575
-F 0 "#FLG0101" H 2000 2650 50  0001 C CNN
+AR Path="/637561AA/6416C0CD/63979E1D" Ref="#FLG?"  Part="1" 
+AR Path="/636160DB/63979E1D" Ref="#FLG0101"  Part="1" 
+F 0 "#FLG?" H 2000 2650 50  0001 C CNN
 F 1 "power_PWR_FLAG" V 2000 2702 50  0001 L CNN
 F 2 "" H 2000 2575 50  0001 C CNN
 F 3 "~" H 2000 2575 50  0001 C CNN
@@ -95,10 +109,12 @@ F 3 "~" H 2000 2575 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L 6502-computer-cache:power_+5V #PWR0133
+L 6502-computer-cache:power_+5V #PWR?
 U 1 1 63979E1C
 P 1675 2975
-F 0 "#PWR0133" H 1675 2825 50  0001 C CNN
+AR Path="/637561AA/6416C0CD/63979E1C" Ref="#PWR?"  Part="1" 
+AR Path="/636160DB/63979E1C" Ref="#PWR0133"  Part="1" 
+F 0 "#PWR?" H 1675 2825 50  0001 C CNN
 F 1 "power_+5V" H 1690 3148 50  0000 C CNN
 F 2 "" H 1675 2975 50  0001 C CNN
 F 3 "" H 1675 2975 50  0001 C CNN
@@ -106,10 +122,12 @@ F 3 "" H 1675 2975 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L blinken:Jumper_Jumper_3_Bridged12 JP1
+L blinken:Jumper_Jumper_3_Bridged12 JP?
 U 1 1 63979E1B
 P 2000 3050
-F 0 "JP1" H 2000 3161 50  0000 C CNN
+AR Path="/637561AA/6416C0CD/63979E1B" Ref="JP?"  Part="1" 
+AR Path="/636160DB/63979E1B" Ref="JP1"  Part="1" 
+F 0 "JP?" H 2000 3161 50  0000 C CNN
 F 1 "EN_SIGNAL" H 2000 3252 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 2000 3050 50  0001 C CNN
 F 3 "~" H 2000 3050 50  0001 C CNN
@@ -117,10 +135,12 @@ F 3 "~" H 2000 3050 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L 65C02_Computer-rescue:GND-power #PWR0134
+L 65C02_Computer-rescue:GND-power #PWR?
 U 1 1 608534B3
 P 2575 3125
-F 0 "#PWR0134" H 2575 2875 50  0001 C CNN
+AR Path="/637561AA/6416C0CD/608534B3" Ref="#PWR?"  Part="1" 
+AR Path="/636160DB/608534B3" Ref="#PWR0134"  Part="1" 
+F 0 "#PWR?" H 2575 2875 50  0001 C CNN
 F 1 "GND-power" H 2580 2952 50  0000 C CNN
 F 2 "" H 2575 3125 50  0001 C CNN
 F 3 "" H 2575 3125 50  0001 C CNN
@@ -128,10 +148,12 @@ F 3 "" H 2575 3125 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 6502-computer-cache:power_+5V #PWR0135
+L 6502-computer-cache:power_+5V #PWR?
 U 1 1 63979E19
 P 2575 1375
-F 0 "#PWR0135" H 2575 1225 50  0001 C CNN
+AR Path="/637561AA/6416C0CD/63979E19" Ref="#PWR?"  Part="1" 
+AR Path="/636160DB/63979E19" Ref="#PWR0135"  Part="1" 
+F 0 "#PWR?" H 2575 1225 50  0001 C CNN
 F 1 "power_+5V" H 2590 1548 50  0000 C CNN
 F 2 "" H 2575 1375 50  0001 C CNN
 F 3 "" H 2575 1375 50  0001 C CNN
@@ -150,7 +172,8 @@ U 1 1 63979E24
 P 1725 4500
 AR Path="/63979E24" Ref="U21"  Part="1" 
 AR Path="/636160DB/63979E24" Ref="U21"  Part="1" 
-F 0 "U21" H 1500 5150 50  0000 C CNN
+AR Path="/637561AA/6416C0CD/63979E24" Ref="U?"  Part="1" 
+F 0 "U?" H 1500 5150 50  0000 C CNN
 F 1 "74HCT573" V 1725 4500 50  0000 C CNN
 F 2 "Package_DIP:DIP-20_W7.62mm_Socket_LongPads" H 1725 4500 50  0001 C CNN
 F 3 "74xx/74hc573.pdf" H 1725 4500 50  0001 C CNN
@@ -158,10 +181,12 @@ F 3 "74xx/74hc573.pdf" H 1725 4500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 6502-computer-cache:power_+5V #PWR0119
+L 6502-computer-cache:power_+5V #PWR?
 U 1 1 60C9CB36
 P 825 5300
-F 0 "#PWR0119" H 825 5150 50  0001 C CNN
+AR Path="/637561AA/6416C0CD/60C9CB36" Ref="#PWR?"  Part="1" 
+AR Path="/636160DB/60C9CB36" Ref="#PWR0119"  Part="1" 
+F 0 "#PWR?" H 825 5150 50  0001 C CNN
 F 1 "power_+5V" H 840 5473 50  0000 C CNN
 F 2 "" H 825 5300 50  0001 C CNN
 F 3 "" H 825 5300 50  0001 C CNN
@@ -169,10 +194,12 @@ F 3 "" H 825 5300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L blinken:Jumper_Jumper_3_Bridged12 JP2
+L blinken:Jumper_Jumper_3_Bridged12 JP?
 U 1 1 63979E26
 P 1150 5375
-F 0 "JP2" H 1150 5486 50  0000 C CNN
+AR Path="/637561AA/6416C0CD/63979E26" Ref="JP?"  Part="1" 
+AR Path="/636160DB/63979E26" Ref="JP2"  Part="1" 
+F 0 "JP?" H 1150 5486 50  0000 C CNN
 F 1 "EN_DATA" H 1150 5577 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 1150 5375 50  0001 C CNN
 F 3 "~" H 1150 5375 50  0001 C CNN
@@ -180,10 +207,12 @@ F 3 "~" H 1150 5375 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L 65C02_Computer-rescue:GND-power #PWR0120
+L 65C02_Computer-rescue:GND-power #PWR?
 U 1 1 63979E27
 P 1725 5450
-F 0 "#PWR0120" H 1725 5200 50  0001 C CNN
+AR Path="/637561AA/6416C0CD/63979E27" Ref="#PWR?"  Part="1" 
+AR Path="/636160DB/63979E27" Ref="#PWR0120"  Part="1" 
+F 0 "#PWR?" H 1725 5200 50  0001 C CNN
 F 1 "GND-power" H 1730 5277 50  0000 C CNN
 F 2 "" H 1725 5450 50  0001 C CNN
 F 3 "" H 1725 5450 50  0001 C CNN
@@ -221,10 +250,12 @@ d1
 Text Label 850  4700 0    50   ~ 0
 d0
 $Comp
-L 6502-computer-cache:power_+5V #PWR0122
+L 6502-computer-cache:power_+5V #PWR?
 U 1 1 63979E28
 P 1725 3700
-F 0 "#PWR0122" H 1725 3550 50  0001 C CNN
+AR Path="/637561AA/6416C0CD/63979E28" Ref="#PWR?"  Part="1" 
+AR Path="/636160DB/63979E28" Ref="#PWR0122"  Part="1" 
+F 0 "#PWR?" H 1725 3550 50  0001 C CNN
 F 1 "power_+5V" H 1740 3873 50  0000 C CNN
 F 2 "" H 1725 3700 50  0001 C CNN
 F 3 "" H 1725 3700 50  0001 C CNN
@@ -237,7 +268,8 @@ U 1 1 63979E29
 P 6900 4500
 AR Path="/63979E29" Ref="U23"  Part="1" 
 AR Path="/636160DB/63979E29" Ref="U23"  Part="1" 
-F 0 "U23" H 6675 5150 50  0000 C CNN
+AR Path="/637561AA/6416C0CD/63979E29" Ref="U?"  Part="1" 
+F 0 "U?" H 6675 5150 50  0000 C CNN
 F 1 "74HCT573" V 6900 4500 50  0000 C CNN
 F 2 "Package_DIP:DIP-20_W7.62mm_Socket_LongPads" H 6900 4500 50  0001 C CNN
 F 3 "74xx/74hc573.pdf" H 6900 4500 50  0001 C CNN
@@ -245,10 +277,12 @@ F 3 "74xx/74hc573.pdf" H 6900 4500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 65C02_Computer-rescue:GND-power #PWR0124
+L 65C02_Computer-rescue:GND-power #PWR?
 U 1 1 63979E2A
 P 6900 5450
-F 0 "#PWR0124" H 6900 5200 50  0001 C CNN
+AR Path="/637561AA/6416C0CD/63979E2A" Ref="#PWR?"  Part="1" 
+AR Path="/636160DB/63979E2A" Ref="#PWR0124"  Part="1" 
+F 0 "#PWR?" H 6900 5200 50  0001 C CNN
 F 1 "GND-power" H 6905 5277 50  0000 C CNN
 F 2 "" H 6900 5450 50  0001 C CNN
 F 3 "" H 6900 5450 50  0001 C CNN
@@ -272,10 +306,12 @@ Entry Wire Line
 Entry Wire Line
 	6000 4200 5900 4300
 $Comp
-L 6502-computer-cache:power_+5V #PWR0126
+L 6502-computer-cache:power_+5V #PWR?
 U 1 1 63979E2B
 P 6900 3700
-F 0 "#PWR0126" H 6900 3550 50  0001 C CNN
+AR Path="/637561AA/6416C0CD/63979E2B" Ref="#PWR?"  Part="1" 
+AR Path="/636160DB/63979E2B" Ref="#PWR0126"  Part="1" 
+F 0 "#PWR?" H 6900 3550 50  0001 C CNN
 F 1 "power_+5V" H 6915 3873 50  0000 C CNN
 F 2 "" H 6900 3700 50  0001 C CNN
 F 3 "" H 6900 3700 50  0001 C CNN
@@ -304,7 +340,8 @@ U 1 1 60FD2195
 P 6900 2175
 AR Path="/60FD2195" Ref="U22"  Part="1" 
 AR Path="/636160DB/60FD2195" Ref="U22"  Part="1" 
-F 0 "U22" H 6675 2825 50  0000 C CNN
+AR Path="/637561AA/6416C0CD/60FD2195" Ref="U?"  Part="1" 
+F 0 "U?" H 6675 2825 50  0000 C CNN
 F 1 "74HCT573" V 6900 2175 50  0000 C CNN
 F 2 "Package_DIP:DIP-20_W7.62mm_Socket_LongPads" H 6900 2175 50  0001 C CNN
 F 3 "74xx/74hc573.pdf" H 6900 2175 50  0001 C CNN
@@ -312,10 +349,12 @@ F 3 "74xx/74hc573.pdf" H 6900 2175 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 6502-computer-cache:power_+5V #PWR0127
+L 6502-computer-cache:power_+5V #PWR?
 U 1 1 63979E2D
 P 6000 2975
-F 0 "#PWR0127" H 6000 2825 50  0001 C CNN
+AR Path="/637561AA/6416C0CD/63979E2D" Ref="#PWR?"  Part="1" 
+AR Path="/636160DB/63979E2D" Ref="#PWR0127"  Part="1" 
+F 0 "#PWR?" H 6000 2825 50  0001 C CNN
 F 1 "power_+5V" H 6015 3148 50  0000 C CNN
 F 2 "" H 6000 2975 50  0001 C CNN
 F 3 "" H 6000 2975 50  0001 C CNN
@@ -323,10 +362,12 @@ F 3 "" H 6000 2975 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L blinken:Jumper_Jumper_3_Bridged12 JP3
+L blinken:Jumper_Jumper_3_Bridged12 JP?
 U 1 1 63979E2E
 P 6325 3050
-F 0 "JP3" H 6325 3161 50  0000 C CNN
+AR Path="/637561AA/6416C0CD/63979E2E" Ref="JP?"  Part="1" 
+AR Path="/636160DB/63979E2E" Ref="JP3"  Part="1" 
+F 0 "JP?" H 6325 3161 50  0000 C CNN
 F 1 "EN_ADDR" H 6325 3252 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 6325 3050 50  0001 C CNN
 F 3 "~" H 6325 3050 50  0001 C CNN
@@ -334,10 +375,12 @@ F 3 "~" H 6325 3050 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L 65C02_Computer-rescue:GND-power #PWR0128
+L 65C02_Computer-rescue:GND-power #PWR?
 U 1 1 60FD21AD
 P 6900 3125
-F 0 "#PWR0128" H 6900 2875 50  0001 C CNN
+AR Path="/637561AA/6416C0CD/60FD21AD" Ref="#PWR?"  Part="1" 
+AR Path="/636160DB/60FD21AD" Ref="#PWR0128"  Part="1" 
+F 0 "#PWR?" H 6900 2875 50  0001 C CNN
 F 1 "GND-power" H 6905 2952 50  0000 C CNN
 F 2 "" H 6900 3125 50  0001 C CNN
 F 3 "" H 6900 3125 50  0001 C CNN
@@ -361,10 +404,12 @@ Entry Wire Line
 Entry Wire Line
 	6000 1875 5900 1975
 $Comp
-L 6502-computer-cache:power_+5V #PWR0130
+L 6502-computer-cache:power_+5V #PWR?
 U 1 1 60FD2255
 P 6900 1375
-F 0 "#PWR0130" H 6900 1225 50  0001 C CNN
+AR Path="/637561AA/6416C0CD/60FD2255" Ref="#PWR?"  Part="1" 
+AR Path="/636160DB/60FD2255" Ref="#PWR0130"  Part="1" 
+F 0 "#PWR?" H 6900 1225 50  0001 C CNN
 F 1 "power_+5V" H 6915 1548 50  0000 C CNN
 F 2 "" H 6900 1375 50  0001 C CNN
 F 3 "" H 6900 1375 50  0001 C CNN
@@ -388,10 +433,12 @@ a14
 Text Label 6025 1675 0    50   ~ 0
 a15
 $Comp
-L 6502-computer-cache:power_PWR_FLAG #FLG0102
+L 6502-computer-cache:power_PWR_FLAG #FLG?
 U 1 1 612AACF9
 P 1150 5000
-F 0 "#FLG0102" H 1150 5075 50  0001 C CNN
+AR Path="/637561AA/6416C0CD/612AACF9" Ref="#FLG?"  Part="1" 
+AR Path="/636160DB/612AACF9" Ref="#FLG0102"  Part="1" 
+F 0 "#FLG?" H 1150 5075 50  0001 C CNN
 F 1 "power_PWR_FLAG" V 1150 5127 50  0001 L CNN
 F 2 "" H 1150 5000 50  0001 C CNN
 F 3 "~" H 1150 5000 50  0001 C CNN
@@ -399,10 +446,12 @@ F 3 "~" H 1150 5000 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L 6502-computer-cache:power_PWR_FLAG #FLG0103
+L 6502-computer-cache:power_PWR_FLAG #FLG?
 U 1 1 612CA01C
 P 6325 5000
-F 0 "#FLG0103" H 6325 5075 50  0001 C CNN
+AR Path="/637561AA/6416C0CD/612CA01C" Ref="#FLG?"  Part="1" 
+AR Path="/636160DB/612CA01C" Ref="#FLG0103"  Part="1" 
+F 0 "#FLG?" H 6325 5075 50  0001 C CNN
 F 1 "power_PWR_FLAG" V 6325 5127 50  0001 L CNN
 F 2 "" H 6325 5000 50  0001 C CNN
 F 3 "~" H 6325 5000 50  0001 C CNN
@@ -410,10 +459,12 @@ F 3 "~" H 6325 5000 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L 6502-computer-cache:power_PWR_FLAG #FLG0104
+L 6502-computer-cache:power_PWR_FLAG #FLG?
 U 1 1 612E99FB
 P 6325 2675
-F 0 "#FLG0104" H 6325 2750 50  0001 C CNN
+AR Path="/637561AA/6416C0CD/612E99FB" Ref="#FLG?"  Part="1" 
+AR Path="/636160DB/612E99FB" Ref="#FLG0104"  Part="1" 
+F 0 "#FLG?" H 6325 2750 50  0001 C CNN
 F 1 "power_PWR_FLAG" V 6325 2802 50  0001 L CNN
 F 2 "" H 6325 2675 50  0001 C CNN
 F 3 "~" H 6325 2675 50  0001 C CNN
@@ -421,10 +472,12 @@ F 3 "~" H 6325 2675 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L blinken:Device_R_Network08 RN1
+L blinken:Device_R_Network08 RN?
 U 1 1 63979E34
 P 4925 4400
-F 0 "RN1" V 4308 4400 50  0000 C CNN
+AR Path="/637561AA/6416C0CD/63979E34" Ref="RN?"  Part="1" 
+AR Path="/636160DB/63979E34" Ref="RN1"  Part="1" 
+F 0 "RN?" V 4308 4400 50  0000 C CNN
 F 1 "330x8" V 4399 4400 50  0000 C CNN
 F 2 "Resistor_THT:R_Array_SIP9" V 5400 4400 50  0001 C CNN
 F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 4925 4400 50  0001 C CNN
@@ -432,10 +485,12 @@ F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 4925 4400 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L blinken:Device_R_Network08 RN4
+L blinken:Device_R_Network08 RN?
 U 1 1 63979E35
 P 10275 4400
-F 0 "RN4" V 9658 4400 50  0000 C CNN
+AR Path="/637561AA/6416C0CD/63979E35" Ref="RN?"  Part="1" 
+AR Path="/636160DB/63979E35" Ref="RN4"  Part="1" 
+F 0 "RN?" V 9658 4400 50  0000 C CNN
 F 1 "330x8" V 9749 4400 50  0000 C CNN
 F 2 "Resistor_THT:R_Array_SIP9" V 10750 4400 50  0001 C CNN
 F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 10275 4400 50  0001 C CNN
@@ -443,10 +498,12 @@ F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 10275 4400 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L blinken:Device_R_Network08 RN2
+L blinken:Device_R_Network08 RN?
 U 1 1 63979E36
 P 5100 2075
-F 0 "RN2" V 4483 2075 50  0000 C CNN
+AR Path="/637561AA/6416C0CD/63979E36" Ref="RN?"  Part="1" 
+AR Path="/636160DB/63979E36" Ref="RN2"  Part="1" 
+F 0 "RN?" V 4483 2075 50  0000 C CNN
 F 1 "330x8" V 4574 2075 50  0000 C CNN
 F 2 "Resistor_THT:R_Array_SIP9" V 5575 2075 50  0001 C CNN
 F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 5100 2075 50  0001 C CNN
@@ -454,10 +511,12 @@ F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 5100 2075 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L blinken:Device_R_Network08 RN3
+L blinken:Device_R_Network08 RN?
 U 1 1 63979E37
 P 10350 2075
-F 0 "RN3" V 9733 2075 50  0000 C CNN
+AR Path="/637561AA/6416C0CD/63979E37" Ref="RN?"  Part="1" 
+AR Path="/636160DB/63979E37" Ref="RN3"  Part="1" 
+F 0 "RN?" V 9733 2075 50  0000 C CNN
 F 1 "330x8" V 9824 2075 50  0000 C CNN
 F 2 "Resistor_THT:R_Array_SIP9" V 10825 2075 50  0001 C CNN
 F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 10350 2075 50  0001 C CNN
@@ -465,10 +524,12 @@ F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 10350 2075 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L blinken:74xx_74LS540 U20
+L blinken:74xx_74LS540 U?
 U 1 1 6065CE14
 P 2575 2175
-F 0 "U20" H 2325 2825 50  0000 C CNN
+AR Path="/637561AA/6416C0CD/6065CE14" Ref="U?"  Part="1" 
+AR Path="/636160DB/6065CE14" Ref="U20"  Part="1" 
+F 0 "U?" H 2325 2825 50  0000 C CNN
 F 1 "74HCT540" H 2575 1875 50  0000 C CNN
 F 2 "Package_DIP:DIP-20_W7.62mm_Socket_LongPads" H 2575 2175 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/sn74ls240.pdf" H 2575 2175 50  0001 C CNN
@@ -680,10 +741,12 @@ Connection ~ 6325 2875
 Wire Wire Line
 	6325 2875 6325 2675
 $Comp
-L blinken:10_LED_Array U26
+L blinken:10_LED_Array U?
 U 1 1 63979E38
 P 9075 2175
-F 0 "U26" H 9093 3023 50  0000 C CNN
+AR Path="/637561AA/6416C0CD/63979E38" Ref="U?"  Part="1" 
+AR Path="/636160DB/63979E38" Ref="U26"  Part="1" 
+F 0 "U?" H 9093 3023 50  0000 C CNN
 F 1 "10_LED_Array" H 9093 2932 50  0000 C CNN
 F 2 "Package_DIP:DIP-20_W7.62mm_Socket" H 9075 2175 50  0001 C CNN
 F 3 "" H 9075 2175 50  0001 C CNN
@@ -745,10 +808,12 @@ Wire Wire Line
 Wire Bus Line
 	725  5850 5900 5850
 $Comp
-L blinken:10_LED_Array U27
+L blinken:10_LED_Array U?
 U 1 1 63979E39
 P 9075 4500
-F 0 "U27" H 9093 5348 50  0000 C CNN
+AR Path="/637561AA/6416C0CD/63979E39" Ref="U?"  Part="1" 
+AR Path="/636160DB/63979E39" Ref="U27"  Part="1" 
+F 0 "U?" H 9093 5348 50  0000 C CNN
 F 1 "10_LED_Array" H 9093 5257 50  0000 C CNN
 F 2 "Package_DIP:DIP-20_W7.62mm_Socket" H 9075 4500 50  0001 C CNN
 F 3 "" H 9075 4500 50  0001 C CNN
@@ -808,10 +873,12 @@ Wire Wire Line
 Wire Wire Line
 	1750 5375 6900 5375
 $Comp
-L blinken:10_LED_Array U24
+L blinken:10_LED_Array U?
 U 1 1 63C4DD8F
 P 4000 2175
-F 0 "U24" H 4018 3023 50  0000 C CNN
+AR Path="/637561AA/6416C0CD/63C4DD8F" Ref="U?"  Part="1" 
+AR Path="/636160DB/63C4DD8F" Ref="U24"  Part="1" 
+F 0 "U?" H 4018 3023 50  0000 C CNN
 F 1 "10_LED_Array" H 4018 2932 50  0000 C CNN
 F 2 "Package_DIP:DIP-20_W7.62mm_Socket" H 4000 2175 50  0001 C CNN
 F 3 "" H 4000 2175 50  0001 C CNN
@@ -887,10 +954,12 @@ Wire Wire Line
 Wire Wire Line
 	2900 4300 3325 4300
 $Comp
-L blinken:10_LED_Array U25
+L blinken:10_LED_Array U?
 U 1 1 63D98739
 P 3825 4500
-F 0 "U25" H 3843 5348 50  0000 C CNN
+AR Path="/637561AA/6416C0CD/63D98739" Ref="U?"  Part="1" 
+AR Path="/636160DB/63D98739" Ref="U25"  Part="1" 
+F 0 "U?" H 3843 5348 50  0000 C CNN
 F 1 "10_LED_Array" H 3843 5257 50  0000 C CNN
 F 2 "Package_DIP:DIP-20_W7.62mm_Socket" H 3825 4500 50  0001 C CNN
 F 3 "" H 3825 4500 50  0001 C CNN
@@ -958,10 +1027,12 @@ Wire Wire Line
 Wire Wire Line
 	4650 4700 4725 4700
 $Comp
-L Clock:Device_R_POT RV3
+L Clock:Device_R_POT RV?
 U 1 1 63979E3C
 P 5875 6625
-F 0 "RV3" H 5806 6671 50  0000 R CNN
+AR Path="/637561AA/6416C0CD/63979E3C" Ref="RV?"  Part="1" 
+AR Path="/636160DB/63979E3C" Ref="RV3"  Part="1" 
+F 0 "RV?" H 5806 6671 50  0000 R CNN
 F 1 "150k" H 5806 6580 50  0000 R CNN
 F 2 "Potentiometer_THT:Potentiometer_Piher_PT-10-V10_Vertical" H 5875 6625 50  0001 C CNN
 F 3 "" H 5875 6625 50  0001 C CNN
@@ -969,10 +1040,12 @@ F 3 "" H 5875 6625 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 65C02_Computer-rescue:GND-power #PWR0121
+L 65C02_Computer-rescue:GND-power #PWR?
 U 1 1 63E1C8C1
 P 5875 6900
-F 0 "#PWR0121" H 5875 6650 50  0001 C CNN
+AR Path="/637561AA/6416C0CD/63E1C8C1" Ref="#PWR?"  Part="1" 
+AR Path="/636160DB/63E1C8C1" Ref="#PWR0121"  Part="1" 
+F 0 "#PWR?" H 5875 6650 50  0001 C CNN
 F 1 "GND-power" H 5880 6727 50  0000 C CNN
 F 2 "" H 5875 6900 50  0001 C CNN
 F 3 "" H 5875 6900 50  0001 C CNN
@@ -1395,10 +1468,12 @@ Entry Wire Line
 Text GLabel 8125 5225 2    50   Output ~ 0
 ab[0..15]
 $Comp
-L 65C02_Computer-rescue:Conn_01x03_Male-Connector J27
+L 65C02_Computer-rescue:Conn_01x03_Male-Connector J?
 U 1 1 641F9CD9
 P 6050 6275
-F 0 "J27" H 6158 6556 50  0000 C CNN
+AR Path="/637561AA/6416C0CD/641F9CD9" Ref="J?"  Part="1" 
+AR Path="/636160DB/641F9CD9" Ref="J27"  Part="1" 
+F 0 "J?" H 6158 6556 50  0000 C CNN
 F 1 "LED SWITCH" H 6158 6465 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 6050 6275 50  0001 C CNN
 F 3 "" H 6050 6275 50  0001 C CNN

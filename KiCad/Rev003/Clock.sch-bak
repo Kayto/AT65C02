@@ -220,9 +220,6 @@ Wire Wire Line
 Wire Wire Line
 	10175 3800 10175 3850
 Wire Wire Line
-	10175 3850 9875 3850
-Connection ~ 9875 3850
-Wire Wire Line
 	9425 2200 9425 2150
 Wire Wire Line
 	9425 2150 9075 2150
@@ -431,8 +428,6 @@ Wire Wire Line
 Wire Wire Line
 	3875 3750 3875 3800
 Wire Wire Line
-	3875 3800 2225 3800
-Wire Wire Line
 	2225 3850 2225 3800
 Text GLabel 3975 3050 2    50   Output ~ 0
 AUTO
@@ -551,8 +546,6 @@ $EndComp
 Wire Wire Line
 	6825 3750 6825 3800
 Wire Wire Line
-	6825 3800 6225 3800
-Wire Wire Line
 	6825 3350 6825 3450
 Wire Wire Line
 	6825 3050 6825 2950
@@ -581,7 +574,6 @@ Wire Wire Line
 	6225 3350 6225 3450
 Wire Wire Line
 	6225 3750 6225 3800
-Connection ~ 6225 3800
 Wire Wire Line
 	6225 3800 5625 3800
 Wire Wire Line
@@ -704,17 +696,6 @@ F 4 "RED" H 10550 4825 50  0001 C CNN "Value"
 	1    10550 4825
 	0    -1   -1   0   
 $EndComp
-$Comp
-L Clock:power_GND #PWR018
-U 1 1 5E1985A2
-P 10550 5525
-F 0 "#PWR018" H 10550 5275 50  0001 C CNN
-F 1 "power_GND" H 10555 5352 50  0000 C CNN
-F 2 "" H 10550 5525 50  0001 C CNN
-F 3 "" H 10550 5525 50  0001 C CNN
-	1    10550 5525
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	10550 5525 10550 5425
 Wire Wire Line
@@ -785,12 +766,12 @@ Wire Wire Line
 $Comp
 L Clock:power_GND #PWR07
 U 1 1 5E1E396D
-P 5450 6475
-F 0 "#PWR07" H 5450 6225 50  0001 C CNN
-F 1 "power_GND" H 5455 6302 50  0000 C CNN
-F 2 "" H 5450 6475 50  0001 C CNN
-F 3 "" H 5450 6475 50  0001 C CNN
-	1    5450 6475
+P 3375 7275
+F 0 "#PWR07" H 3375 7025 50  0001 C CNN
+F 1 "power_GND" H 3380 7102 50  0000 C CNN
+F 2 "" H 3375 7275 50  0001 C CNN
+F 3 "" H 3375 7275 50  0001 C CNN
+	1    3375 7275
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1104,14 +1085,38 @@ Connection ~ 5125 2950
 Connection ~ 9075 3650
 Text Notes 6500 6375 0    50   ~ 0
 AdamT117 Revision: Added the Ben Eater Step Clock module design (as modified by David Buchwald) to the same PCB!
-Text Label 2800 3800 0    50   ~ 0
+Text GLabel 3875 3800 3    50   Output ~ 0
 CLOCK_LED_GND
-Text Label 6825 3800 0    50   ~ 0
+Text GLabel 6825 3800 3    50   Output ~ 0
 CLOCK_LED_GND
-Text Label 10175 3850 0    50   ~ 0
+Text GLabel 10175 3850 3    50   Output ~ 0
 CLOCK_LED_GND
-Text Label 5450 6400 0    50   ~ 0
+Text GLabel 5450 6475 3    50   Output ~ 0
 CLOCK_LED_GND
-Text Label 10550 5475 0    50   ~ 0
+Text GLabel 10550 5525 3    50   Output ~ 0
 CLOCK_LED_GND
+Wire Wire Line
+	3375 7275 3375 7025
+Text GLabel 4175 7025 2    50   Input ~ 0
+CLOCK_LED_GND
+Text Notes 3775 7275 0    50   ~ 0
+Jumper for switching LEDs On|Off
+$Comp
+L Jumper:Jumper_2_Open JP?
+U 1 1 642F42B0
+P 3775 7025
+AR Path="/642F42B0" Ref="JP?"  Part="1" 
+AR Path="/637551A1/642F42B0" Ref="JP?"  Part="1" 
+AR Path="/6379D6C5/642F42B0" Ref="JP22"  Part="1" 
+F 0 "JP22" H 3775 7272 50  0000 C CNN
+F 1 "Clock LED" H 3775 7174 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3775 7025 50  0001 C CNN
+F 3 "~" H 3775 7025 50  0001 C CNN
+	1    3775 7025
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3375 7025 3575 7025
+Wire Wire Line
+	3975 7025 4175 7025
 $EndSCHEMATC

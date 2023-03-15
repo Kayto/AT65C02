@@ -995,7 +995,7 @@ Wire Wire Line
 Text GLabel 6250 6275 2    50   Input ~ 0
 LED_bright
 Text Notes 4700 7500 0    50   ~ 0
-AdamT117 Revision: Added Blinkenlights to board!
+Added Blinkenlights to board!
 NoConn ~ 2075 1675
 NoConn ~ 3075 1675
 Wire Wire Line

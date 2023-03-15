@@ -389,27 +389,22 @@ F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/doc0006.pdf" H 1550 5000 50
 $EndComp
 Text GLabel 2150 4250 1    50   Input ~ 0
 +5V
-Text GLabel 2300 4250 1    50   Input ~ 0
+Text GLabel 2475 4250 1    50   Input ~ 0
 ~ROM_OE
-Text GLabel 2450 4250 1    50   Input ~ 0
+Text GLabel 2625 4250 1    50   Input ~ 0
 ~ROM_CS
 Wire Wire Line
 	2150 4250 2150 4350
 Wire Wire Line
 	2150 4350 2050 4350
 Wire Wire Line
-	2050 4450 2150 4450
+	2475 4250 2475 4950
 Wire Wire Line
-	2150 4450 2150 4350
-Connection ~ 2150 4350
+	2475 4950 2050 4950
 Wire Wire Line
-	2300 4250 2300 4950
+	2625 4250 2625 5150
 Wire Wire Line
-	2300 4950 2050 4950
-Wire Wire Line
-	2450 4250 2450 5150
-Wire Wire Line
-	2450 5150 2050 5150
+	2625 5150 2050 5150
 Text Label 2200 5250 2    50   ~ 0
 d7
 Text Label 2200 5350 2    50   ~ 0
@@ -484,26 +479,26 @@ Text Label 900  5150 0    50   ~ 0
 a1
 Text Label 900  5250 0    50   ~ 0
 a0
-Text Label 2600 4550 2    50   ~ 0
+Text Label 2825 4550 2    50   ~ 0
 a13
-Text Label 2600 4650 2    50   ~ 0
+Text Label 2825 4650 2    50   ~ 0
 a8
-Text Label 2600 4750 2    50   ~ 0
+Text Label 2825 4750 2    50   ~ 0
 a9
-Text Label 2600 4850 2    50   ~ 0
+Text Label 2825 4850 2    50   ~ 0
 a11
-Text Label 2600 5050 2    50   ~ 0
+Text Label 2825 5050 2    50   ~ 0
 a10
 Wire Wire Line
-	2050 4550 2600 4550
+	2050 4550 2825 4550
 Wire Wire Line
-	2050 4650 2600 4650
+	2050 4650 2825 4650
 Wire Wire Line
-	2050 4750 2600 4750
+	2050 4750 2825 4750
 Wire Wire Line
-	2050 4850 2600 4850
+	2050 4850 2825 4850
 Wire Wire Line
-	2050 5050 2600 5050
+	2050 5050 2825 5050
 Wire Wire Line
 	1050 4350 900  4350
 Wire Wire Line
@@ -545,15 +540,15 @@ Entry Wire Line
 Entry Wire Line
 	800  5150 900  5250
 Entry Wire Line
-	2600 4550 2700 4650
+	2825 4550 2925 4650
 Entry Wire Line
-	2600 4650 2700 4750
+	2825 4650 2925 4750
 Entry Wire Line
-	2600 4750 2700 4850
+	2825 4750 2925 4850
 Entry Wire Line
-	2600 4850 2700 4950
+	2825 4850 2925 4950
 Entry Wire Line
-	2600 5050 2700 5150
+	2825 5050 2925 5150
 $Comp
 L 6502:62256 U9
 U 1 1 5E37B16A
@@ -1758,6 +1753,16 @@ Text GLabel 4825 5525 2    50   Input ~ 0
 ~RAM_OE
 Text Notes 675  2925 0    50   ~ 0
 Breakout all CPU pins to headers
+Text Notes 1800 3825 0    50   ~ 0
+RAM and ROM OE CS seperated for adjustable decoder option.\nROM WE breakout for onboard ROM programming
+Text Notes 6050 2650 0    50   ~ 0
+Jumper for 1Mhz or onboard step clock
+Text GLabel 2300 4250 1    50   Input ~ 0
+ROM~WE
+Wire Wire Line
+	2050 4450 2300 4450
+Wire Wire Line
+	2300 4450 2300 4250
 Wire Bus Line
 	3100 5450 3100 5650
 Wire Bus Line
@@ -1769,7 +1774,7 @@ Wire Bus Line
 Wire Bus Line
 	4600 5350 4600 5750
 Wire Bus Line
-	2700 4650 2700 5150
+	2925 4650 2925 5150
 Wire Bus Line
 	2300 5350 2300 5750
 Wire Bus Line
@@ -1786,8 +1791,4 @@ Wire Bus Line
 	2150 2100 2150 3350
 Wire Bus Line
 	5350 4250 5350 5750
-Text Notes 1800 3825 0    50   ~ 0
-RAM and ROM OE CS seperated for adjustable decoder option.\nROM WE breakout for onboard ROM programming
-Text Notes 6050 2650 0    50   ~ 0
-Jumper for 1Mhz or onboard step clock
 $EndSCHEMATC

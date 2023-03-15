@@ -1337,7 +1337,7 @@ Wire Notes Line
 Wire Notes Line
 	2125 600  4825 600 
 Text Notes 2300 2775 0    50   ~ 0
-AdamT117 Revision: Added single header to increase space on the board
+Added single VIA2 header to increase space on the board
 Wire Notes Line
 	6275 2575 6675 2575
 Wire Notes Line
@@ -1347,7 +1347,7 @@ Wire Notes Line
 Wire Notes Line
 	6275 2900 6275 2575
 Text Notes 5875 3000 0    50   ~ 0
-AdamT117 Rev: Additional lines to allow for an ESP Interface
+Additional TX/RX routes to allow for an ESP Interface
 Wire Notes Line
 	3300 6200 6650 6200
 Wire Notes Line
@@ -1357,7 +1357,7 @@ Wire Notes Line
 Wire Notes Line
 	3300 7575 3300 6200
 Text Notes 4150 6900 0    50   ~ 0
-AdamT117 Rev: Removal of onboard programmer.
+ Removal of onboard FTDI serial.
 NoConn ~ 1750 6200
 Wire Wire Line
 	6250 4775 6650 4775
@@ -1500,4 +1500,6 @@ Text Notes 2625 5825 0    50   ~ 0
 Jumper for VIA1 memory location \nadjustment
 Text Notes 5275 5675 0    50   ~ 0
 Jumper for VIA2 memory location \nadjustment
+Text Notes 6400 650  0    50   ~ 0
+Jumper for ACIA memory location \nadjustment
 $EndSCHEMATC

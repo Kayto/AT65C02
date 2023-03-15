@@ -4,12 +4,12 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 7
-Title "AT_65C02 Hobby Computer"
-Date ""
-Rev ""
+Title "AT65C02 Hobby Computer"
+Date "2023-03-15"
+Rev "Rev003"
 Comp ""
 Comment1 ""
-Comment2 "This AT6502 version by AdamT117. Revision to DB design as marked"
+Comment2 "This AT65C02 version by AdamT117. Revisions to DB design as marked"
 Comment3 "Based on Ben Eater's design"
 Comment4 "Author: Dawid Buchwald"
 $EndDescr
@@ -1086,6 +1086,8 @@ Text GLabel 9225 4775 2    50   Input ~ 0
 ROM~WE
 Wire Wire Line
 	8975 4775 9225 4775
+Text Notes 8575 5200 0    50   ~ 0
+Added header for useful signals\nCPU and ROM
 Wire Bus Line
 	2775 5225 2775 6150
 Wire Bus Line
@@ -1104,6 +1106,4 @@ Wire Bus Line
 	1275 4225 1275 6150
 Wire Bus Line
 	750  6100 750  7650
-Text Notes 8575 5200 0    50   ~ 0
-Added header for useful signals\nCPU and ROM
 $EndSCHEMATC
