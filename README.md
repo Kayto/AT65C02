@@ -17,7 +17,7 @@ Credits and thanks are worthy of being up front especially as I have leaned heav
 * **[Dawid Buchwald's](https://github.com/dbuchwald/6502)** DB6502 - this is brilliantly described and the designs form the basis for the AT65C02. The code examples and build environment are also the best for getting a solid base for coding. I recommend the github and [hackaday](https://hackaday.io/project/174128-db6502) report entries to really provide a deeper explanation of the design.
 * **[Daryl Rictor](https://sbc.rictor.org/decoder.html)** - for the DEC-1 design. The overall site also provides some great hobby computer examples.
 * **[AndersBNielsen](https://github.com/AndersBNielsen/SimpleModem)** for the "Simple Universal Modem" design.
-* **[Tor https://github.com/tebl/C64-BlinkenDiag
+* **[TEBL](https://github.com/tebl/C64-BlinkenDiag)** for the basis of the Blinkenlights.
 * **[Michael Billington](https://github.com/mike42/6502-computer)** 65C02 computer - my first 65C02 build, super compact and a great starter for this journey.
 
 ## General Aims
