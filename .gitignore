@@ -15,6 +15,7 @@
 
 # ignore doc/notes.txt, but not doc/server/arch.txt
 KiCad/*.zip
+Gerbers/*.zip
 
 # ignore all .pdf files in the doc/ directory and any of its subdirectories
 #doc/**/*.pdf
