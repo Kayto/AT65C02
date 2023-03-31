@@ -1,3 +1,0 @@
-(fp_lib_table
-  (lib (name 65C02_Computer)(type KiCad)(uri ${KIPRJMOD}/65C02_Computer.pretty)(options "")(descr ""))
-)
