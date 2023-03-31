@@ -9,9 +9,9 @@
 
 # ignore all files in any directory named build
 #build/
-KiCad/Rev002
-KiCad/Rev001
-KiCad/Floppy
+#KiCad/Rev002
+#KiCad/Rev001
+#KiCad/Floppy
 
 # ignore doc/notes.txt, but not doc/server/arch.txt
 KiCad/*.zip
