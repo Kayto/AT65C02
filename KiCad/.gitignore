@@ -1,12 +1,6 @@
 
 # ignore all files in any directory named build
 
-/Rev002
-/Rev001
-/Floppy
-
-# ignore doc/notes.txt, but not doc/server/arch.txt
-KiCad/*.zip
-
-# ignore all .pdf files in the doc/ directory and any of its subdirectories
-#doc/**/*.pdf
+Rev002
+Rev001
+Floppy
