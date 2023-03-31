@@ -1,0 +1,86 @@
+Name            Memory Map Decoder;
+Partno          DEC-1;
+Revision        01;
+Date            10/19/10;
+Designer        Daryl Rictor;
+Company         ;
+Location        USA;
+Assembly        None;
+Device          p22v10;
+
+/*********************************************************************************/
+/*                                                                               */
+/*  This program and its associated documentation are provided for your personal */
+/*  use only and appear here exclusively by permission of the copyright holder.  */
+/*  Please contact the copyright holder before re-distributing, re-publishing    */
+/*  or disseminating this copyrighted work. This code is not GPL or in the       */ 
+/*  public domain. Please respect the author's copyright.                        */
+/*                                                                               */
+/*  No waranty, either expressed or implied, are given.  I assume no liability   */
+/*  for its use in any project or device.                                        */
+/*                                                                               */
+/*  Your use of this program indicates your acceptance of all license terms.     */
+/*  This particular version is freeware as long as the copyright messages are    */
+/*  left intact.                                                                 */  
+/*                                                                               */
+/*********************************************************************************/
+
+/* Pin Map 
+       --------
+PHI2  |1     24| Vcc
+RW    |2     23| /OE
+A15   |3     22| /WE
+A14   |4     21| /RAM
+A13   |5     20| /ROM
+A12   |6     19| /IO1
+A11   |7     18| /IO2
+A10   |8     17| /IO3
+A9    |9     16| /IO4
+A8    |10    15| A4
+A7    |11    14| A5
+Gnd   |12    13| A6 
+       --------
+*/
+
+/*
+ * Inputs:  All are signals from the 6502, 65C02, 65816
+ */
+
+Pin 1  =  PHI2;
+Pin 2  =  RW;
+Pin 3  =  A15;
+Pin 4  =  A14;
+Pin 5  =  A13;
+Pin 6  =  A12;
+Pin 7  =  A11;
+Pin 8  =  A10;
+Pin 9  =  A9;
+Pin 10 =  A8;
+Pin 11 =  A7;
+Pin 13 =  A6;
+Pin 14 =  A5;
+Pin 15 =  A4;
+/*
+ * Outputs:  define outputs - all are simple combinatorial
+ */
+Pin 23 = OE;     /* to RAM and ROM chips */
+Pin 22 = WE;     /* to RAM and ROM chips */
+Pin 21 = RAM;    /* to RAM /CS pin */
+Pin 20 = ROM;    /* to ROM /CS pin */
+Pin 19 = CS1;    /* to IO Device #1 /CS */
+Pin 18 = CS2;    /* to IO Device #2 /CS */
+Pin 17 = CS3;    /* to IO Device #3 /CS */
+Pin 16 = CS4;    /* to IO Device #4 /CS */
+
+/*
+ * Logic:  All outputs are active low signals in the target system.
+ */
+
+ROM = !A15;
+RAM = A15 # (!A14 & !A13 & !A12 & !A11 & !A10 & A9 & !A8);
+CS1 = !(!A15 & !A14 & !A13 & !A12 & !A11 & !A10 & A9 & !A8 & !A7 & !A6 & !A5 & !A4);
+CS2 = !(!A15 & !A14 & !A13 & !A12 & !A11 & !A10 & A9 & !A8 & !A7 & !A6 & !A5 & A4);
+CS3 = !(!A15 & !A14 & !A13 & !A12 & !A11 & !A10 & A9 & !A8 & !A7 & !A6 & A5 & !A4);
+CS4 = !(!A15 & !A14 & !A13 & !A12 & !A11 & !A10 & A9 & !A8 & !A7 & !A6 & A5 & A4);
+WE = !(PHI2 & !RW);
+OE = !(PHI2 & RW);

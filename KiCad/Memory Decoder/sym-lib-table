@@ -1,0 +1,9 @@
+(sym_lib_table
+  (lib (name 65C02_Computer-rescue)(type Legacy)(uri C:/Users/Adam/Documents/GitHub/AT_65C02/KiCad/Rev003_1/65C02_Computer-rescue.lib)(options "")(descr ""))
+  (lib (name 6502)(type Legacy)(uri C:/Users/Adam/Documents/GitHub/AT_65C02/KiCad/Rev003_1/6502.lib)(options "")(descr ""))
+  (lib (name 6502-computer-cache)(type Legacy)(uri C:/Users/Adam/Desktop/6502/6502-computer-main/6502-computer-main/hardware/kicad/6502-computer-cache.lib)(options "")(descr ""))
+  (lib (name blinken)(type Legacy)(uri "C:/Users/Adam/Desktop/6502/C64-BlinkenDiag-main/C64 BlinkenDiag/C64 BlinkenDiag-cache.lib")(options "")(descr ""))
+  (lib (name AT_65C02_Computer-rescue)(type Legacy)(uri C:/Users/Adam/Documents/GitHub/AT_65C02/KiCad/Rev003_1/AT_65C02_Computer-rescue.lib)(options "")(descr ""))
+  (lib (name Clock)(type Legacy)(uri C:/Users/Adam/Desktop/6502/6502-master/Schematics/Clock_module/Clock_module-cache.lib)(options "")(descr ""))
+  (lib (name 65C02_Computer-cache)(type Legacy)(uri C:/Users/Adam/Documents/GitHub/AT_65C02/KiCad/Rev003_1/65C02_Computer-cache.lib)(options "")(descr ""))
+)
