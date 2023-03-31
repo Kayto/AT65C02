@@ -115,8 +115,8 @@ The only other code requirement is for the ATTiny4313, for the onboard keybard c
 
 ### Hex Board
 
-An expansion board is preovided in this repo that plugs into the expansion port next to the blinkies. It provides hexidecmal display output aligned with the blinkenlights. A seperate folder is provided in the Software folder for the .jed files for programming the GALs.
+Gerbers and KiCad is provided in this repo for an expansion board. This PCB plugs into the expansion port next to the blinkies. It provides hexidecmal display output aligned with the blinkenlights. Look in the software folder for the .jed files for programming the GALs.
 
 ### Programmable IO and mmory decoder
-This is now a seperate board that plugs into the relevant marked ports. Allows tinkering with IO and memory maps. The design is based on the DEC-1 so refer to the links to Daryl Rictor's site for the .jed file for the GAL. 
+This is now a seperate PCB that plugs into the relevant marked ports. Gerbers and KiCad provided. Allows tinkering with IO and memory maps. The design is based on the DEC-1 so refer to the links to Daryl Rictor's site for the .jed file for the GAL. 
 
