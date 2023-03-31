@@ -49,7 +49,7 @@ In no particular order the main features in the final board are as follows.
 - ESP interface for wireless UART interface.
 - Level shifter port for 5v and 3.3v signal conversion.
 - Onboard 3.3v power regulator.
-- Flexible IO and memory decoder via programable GAL.
+- Flexible IO and memory decoder via programable GAL. (this is now an add on board - it was too much to include on the same board).
 - 2No VIAs - one for Keyboard, LCB and Blink LED - one spare for projects.
 - Keyboard interface port (nice to have).
 - LCD interface port.
@@ -109,6 +109,14 @@ I have created a small repo of code examples I used to test and debug the rev002
 | Reference | Description | 
 |-----------|-------------|
 | 04b_blink | blinks VIA1 onboard LED and an added LED on VIA2 |
-| 50_mem_read | memory test, lights blink on VIA1 if in error||
+| 50_mem_read | memory test, lights blink on VIA1 if in error|
 
 The only other code requirement is for the ATTiny4313, for the onboard keybard controller. An explanation of this is in the [Arduino](https://github.com/Kayto/AT65C02/tree/main/Software/Arduino) folder.
+
+### Hex Board
+
+An expansion board is preovided in this repo that plugs into the expansion port next to the blinkies. It provides hexidecmal display output aligned with the blinkenlights. A seperate folder is provided in the Software folder for the .jed files for programming the GALs.
+
+### Programmable IO and mmory decoder
+This is now a seperate board that plugs into the relevant marked ports. Allows tinkering with IO and memory maps. The design is based on the DEC-1 so refer to the links to Daryl Rictor's site for the .jed file for the GAL. 
+
