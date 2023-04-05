@@ -93,8 +93,8 @@ Text GLabel 4125 1650 0    50   Input ~ 0
 ~RAM_CS
 Text GLabel 4750 1650 2    50   Input ~ 0
 ~RAM_OE
-Text Notes 5525 1725 0    50   ~ 0
-Standard Decoder $a000
+Text Notes 4000 2225 0    50   ~ 0
+Standard Decoder $a000\nV1,V2,A to IOCS\nRAMCS to RAM OE\nRAMWE to RW
 Text Notes 7850 6000 0    50   ~ 0
 Breakouts for Programmable Memory Decoder Expansion board 
 $Comp
@@ -184,22 +184,22 @@ Wire Wire Line
 	4675 1650 4750 1650
 Wire Wire Line
 	4125 1650 4175 1650
-Text GLabel 4100 2500 0    50   Input ~ 0
+Text GLabel 4075 2750 0    50   Input ~ 0
 +5V
 Wire Wire Line
-	4100 2500 4200 2500
+	4075 2750 4175 2750
 Wire Wire Line
-	4700 2400 5050 2400
-Text GLabel 5050 2400 2    50   Input ~ 0
+	4675 2650 5025 2650
+Text GLabel 5025 2650 2    50   Input ~ 0
 GND
 Wire Wire Line
-	4200 2400 3775 2400
-Text GLabel 3775 2400 0    50   Input ~ 0
+	4175 2650 3750 2650
+Text GLabel 3750 2650 0    50   Input ~ 0
 ~IRQX
-Text GLabel 4750 2500 2    50   Input ~ 0
+Text GLabel 4725 2750 2    50   Input ~ 0
 ~RES
 Wire Wire Line
-	4700 2500 4750 2500
+	4675 2750 4725 2750
 $Comp
 L Connector:Conn_01x06_Female J31
 U 1 1 6475A8E0
@@ -252,12 +252,12 @@ Wire Wire Line
 $Comp
 L Connector_Generic:Conn_02x02_Odd_Even J32
 U 1 1 6479E481
-P 4400 2400
-F 0 "J32" H 4400 2725 50  0000 C CNN
-F 1 "Decoder Expansion" H 4450 2650 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_2x02_P2.54mm_Vertical" H 4400 2400 50  0001 C CNN
-F 3 "~" H 4400 2400 50  0001 C CNN
-	1    4400 2400
+P 4375 2650
+F 0 "J32" H 4375 2975 50  0000 C CNN
+F 1 "Decoder Expansion" H 4425 2900 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x02_P2.54mm_Vertical" H 4375 2650 50  0001 C CNN
+F 3 "~" H 4375 2650 50  0001 C CNN
+	1    4375 2650
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -280,12 +280,6 @@ RAM~WE~
 Wire Wire Line
 	4675 1750 5125 1750
 Wire Notes Line
-	5425 1575 5500 1575
-Wire Notes Line
-	5500 1575 5500 1850
-Wire Notes Line
-	5500 1850 5425 1850
-Wire Notes Line
 	4350 1850 4350 1900
 Wire Notes Line
 	4350 1900 4500 1900
@@ -293,6 +287,8 @@ Wire Notes Line
 	4500 1900 4500 1850
 Wire Wire Line
 	3750 1750 4175 1750
+Text Notes 7125 2475 0    50   ~ 0
+a0 to a3 not available here.\na10 to a15 available from standard decoder header
 Wire Bus Line
 	6625 1325 6625 2875
 Wire Bus Line

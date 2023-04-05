@@ -1061,7 +1061,7 @@ $EndComp
 Text Notes 1000 3875 0    50   ~ 0
 Port is via blinky latches for display expansion (HEX board)
 Text Notes 2400 2475 0    50   ~ 0
-Level shifter and ESP pin order may need adjustment to suit layout\n** Note Level shifter mirror error to correct
+Level shifter and ESP port
 Text Notes 6650 2775 0    50   ~ 0
 L7805\nCurrent consumption with full blinky \nand HEX display @0.4amps\n\nTemperature 60 degrees C
 Text GLabel 9225 4775 2    50   Input ~ 0
@@ -1069,7 +1069,7 @@ ROM~WE
 Wire Wire Line
 	8975 4775 9225 4775
 Text Notes 8575 5325 0    50   ~ 0
-Added header for the additional signals\nCPU and ROM
+Added header for the additional signals\nfrom CPU and ROM
 Wire Notes Line
 	9825 3375 10350 3375
 Wire Notes Line
@@ -1107,6 +1107,7 @@ Wire Wire Line
 	9725 3300 9725 3450
 Wire Wire Line
 	9450 3300 9450 3400
+Connection ~ 9450 3300
 Wire Bus Line
 	2775 5225 2775 6150
 Wire Bus Line
@@ -1125,5 +1126,4 @@ Wire Bus Line
 	1275 4225 1275 6150
 Wire Bus Line
 	750  6100 750  7650
-Connection ~ 9450 3300
 $EndSCHEMATC

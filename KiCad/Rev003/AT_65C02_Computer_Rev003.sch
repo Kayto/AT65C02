@@ -868,38 +868,38 @@ Wire Wire Line
 $Comp
 L AT_65C02_Computer_Rev003-rescue:74LS21-74xx-65C02_Computer-rescue-AT_65C02_Computer_Rev003_1-rescue U1
 U 1 1 5E23A6D1
-P 9200 5400
-F 0 "U1" H 9200 5775 50  0000 C CNN
-F 1 "74HC21" H 9200 5684 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 9200 5400 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS21" H 9200 5400 50  0001 C CNN
-	1    9200 5400
+P 8700 6000
+F 0 "U1" H 8700 6375 50  0000 C CNN
+F 1 "74HC21" H 8700 6284 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 8700 6000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS21" H 8700 6000 50  0001 C CNN
+	1    8700 6000
 	1    0    0    -1  
 $EndComp
-Text GLabel 8800 5050 1    50   Input ~ 0
+Text GLabel 8300 5650 1    50   Input ~ 0
 ~V1IRQ
-Text GLabel 8650 5050 1    50   Input ~ 0
+Text GLabel 8150 5650 1    50   Input ~ 0
 ~V2IRQ
-Text GLabel 8500 5050 1    50   Input ~ 0
+Text GLabel 8000 5650 1    50   Input ~ 0
 ~AIRQ
 Wire Wire Line
-	8800 5050 8800 5250
+	8300 5650 8300 5850
 Wire Wire Line
-	8800 5250 8900 5250
+	8300 5850 8400 5850
 Wire Wire Line
-	8650 5050 8650 5350
+	8150 5650 8150 5950
 Wire Wire Line
-	8650 5350 8900 5350
+	8150 5950 8400 5950
 Wire Wire Line
-	8500 5050 8500 5450
+	8000 5650 8000 6050
 Wire Wire Line
-	8500 5450 8900 5450
+	8000 6050 8400 6050
 Wire Wire Line
-	8200 5050 8200 5550
-Text GLabel 9600 5400 2    50   Output ~ 0
+	7700 5650 7700 6150
+Text GLabel 9100 6000 2    50   Output ~ 0
 ~IRQ
 Wire Wire Line
-	9500 5400 9600 5400
+	9000 6000 9100 6000
 Wire Wire Line
 	3200 1400 3750 1400
 Wire Wire Line
@@ -1296,42 +1296,42 @@ Wire Wire Line
 	6150 5550 7150 5550
 Wire Wire Line
 	7150 5550 7150 5050
-Text GLabel 8200 5050 1    50   Input ~ 0
+Text GLabel 7700 5650 1    50   Input ~ 0
 ~IRQX
-Text GLabel 8050 5050 1    50   Input ~ 0
+Text GLabel 7550 5650 1    50   Input ~ 0
 +5V
 $Comp
 L AT_65C02_Computer_Rev003-rescue:R-Device-65C02_Computer-rescue-AT_65C02_Computer_Rev003_1-rescue R4
 U 1 1 5E451554
-P 8050 5300
-F 0 "R4" V 7950 5300 50  0000 C CNN
-F 1 "4K7" V 8050 5300 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7980 5300 50  0001 C CNN
-F 3 "~" H 8050 5300 50  0001 C CNN
-	1    8050 5300
+P 7550 5900
+F 0 "R4" V 7450 5900 50  0000 C CNN
+F 1 "4K7" V 7550 5900 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7480 5900 50  0001 C CNN
+F 3 "~" H 7550 5900 50  0001 C CNN
+	1    7550 5900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8050 5050 8050 5150
+	7550 5650 7550 5750
 $Comp
 L AT_65C02_Computer_Rev003-rescue:Conn_01x03_Male-Connector-65C02_Computer-rescue-AT_65C02_Computer_Rev003_1-rescue J1
 U 1 1 5E49655D
-P 9300 4025
-F 0 "J1" H 9272 3907 50  0000 R CNN
-F 1 "CLK Jumper" H 9272 3998 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 9300 4025 50  0001 C CNN
-F 3 "~" H 9300 4025 50  0001 C CNN
-	1    9300 4025
+P 9100 4750
+F 0 "J1" H 9072 4632 50  0000 R CNN
+F 1 "CLK Jumper" H 9072 4723 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 9100 4750 50  0001 C CNN
+F 3 "~" H 9100 4750 50  0001 C CNN
+	1    9100 4750
 	-1   0    0    1   
 $EndComp
-Text GLabel 9000 3925 0    50   Input ~ 0
+Text GLabel 8800 4650 0    50   Input ~ 0
 CLKOUT
-Text GLabel 9000 4025 0    50   Output ~ 0
+Text GLabel 8800 4750 0    50   Output ~ 0
 CLK
 Wire Wire Line
-	9000 3925 9100 3925
+	8800 4650 8900 4650
 Wire Wire Line
-	9000 4025 9100 4025
+	8800 4750 8900 4750
 NoConn ~ 6150 5650
 Wire Bus Line
 	1900 3550 3500 3550
@@ -1399,35 +1399,35 @@ Wire Wire Line
 	2850 7350 2850 7450
 Wire Wire Line
 	2850 6350 2850 6250
-Text GLabel 8350 5050 1    50   Input ~ 0
+Text GLabel 7850 5650 1    50   Input ~ 0
 +5V
 $Comp
 L AT_65C02_Computer_Rev003-rescue:R-Device-65C02_Computer-rescue-AT_65C02_Computer_Rev003_1-rescue R5
 U 1 1 5E47EC64
-P 8350 5300
-F 0 "R5" V 8250 5300 50  0000 C CNN
-F 1 "4K7" V 8350 5300 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8280 5300 50  0001 C CNN
-F 3 "~" H 8350 5300 50  0001 C CNN
-	1    8350 5300
+P 7850 5900
+F 0 "R5" V 7750 5900 50  0000 C CNN
+F 1 "4K7" V 7850 5900 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7780 5900 50  0001 C CNN
+F 3 "~" H 7850 5900 50  0001 C CNN
+	1    7850 5900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8350 5050 8350 5150
+	7850 5650 7850 5750
 Wire Wire Line
-	8200 5550 8900 5550
+	7700 6150 8400 6150
 Wire Wire Line
-	8050 5450 8050 5550
+	7550 6050 7550 6150
 Wire Wire Line
-	8050 5550 8200 5550
-Connection ~ 8200 5550
+	7550 6150 7700 6150
+Connection ~ 7700 6150
 Wire Wire Line
-	8350 5450 8500 5450
-Connection ~ 8500 5450
-Text GLabel 9000 4125 0    50   Input ~ 0
+	7850 6050 8000 6050
+Connection ~ 8000 6050
+Text GLabel 8800 4850 0    50   Input ~ 0
 CLKx
 Wire Wire Line
-	9000 4125 9100 4125
+	8800 4850 8900 4850
 $Comp
 L AT_65C02_Computer_Rev003-rescue:74LS21-74xx-65C02_Computer-rescue-AT_65C02_Computer_Rev003_1-rescue U1
 U 2 1 5E539F2D
@@ -1643,11 +1643,11 @@ Wire Wire Line
 	4675 5525 4825 5525
 Text GLabel 4825 5525 2    50   Input ~ 0
 ~RAM_OE
-Text Notes 575  2950 0    50   ~ 0
-Breakout all CPU pins to headers\nDefault:NMI and RDY tied High
+Text Notes 550  3075 0    50   ~ 0
+Breakout all CPU pins to headers\nDefault:NMI and RDY \ndefault tied High
 Text Notes 1800 3825 0    50   ~ 0
 RAM and ROM OE CS seperated for adjustable decoder option.\nROM WE breakout for onboard ROM programming
-Text Notes 8550 4425 0    50   ~ 0
+Text Notes 8350 5150 0    50   ~ 0
 Jumper for 1Mhz \nor onboard step clock
 Text GLabel 2300 4250 1    50   Input ~ 0
 ROM~WE
@@ -1802,37 +1802,37 @@ Wire Wire Line
 Wire Wire Line
 	6550 2300 6625 2300
 $Sheet
-S 9975 5425 575  150 
+S 9800 5425 575  150 
 U 6375BF12
 F0 "Modem" 50
 F1 "Modem.sch" 50
 $EndSheet
 $Sheet
-S 9975 5025 500  150 
+S 9800 5025 500  150 
 U 636160DB
 F0 "AT65C02_Blinkenlights" 50
 F1 "AT65C02_Blinkenlights.sch" 50
 $EndSheet
 $Sheet
-S 9975 4650 500  150 
+S 9800 4650 500  150 
 U 6379D6C5
 F0 "Clock" 50
 F1 "Clock.sch" 50
 $EndSheet
 $Sheet
-S 9975 4275 500  150 
+S 9800 4275 500  150 
 U 637561AA
 F0 "Power_Connectors" 50
 F1 "Power_Connectors.sch" 50
 $EndSheet
 $Sheet
-S 9975 3925 500  150 
+S 9800 3925 500  150 
 U 5F14295C
 F0 "6502 Peripherals" 50
 F1 "6502_IO.sch" 50
 $EndSheet
 $Sheet
-S 9800 5850 550  150 
+S 9800 5775 550  150 
 U 64174D8D
 F0 "memory decoder_expansion" 50
 F1 "memory decoder_expansion.sch" 50
@@ -1852,7 +1852,7 @@ Wire Notes Line
 Wire Notes Line
 	6950 1025 6950 1125
 Text Notes 6425 975  0    50   ~ 0
-Standard decoder $a000
+Standard decoder $a000\n jumper across rows
 $Comp
 L Jumper:Jumper_3_Bridged12 JP10
 U 1 1 64265DBA
@@ -1910,7 +1910,7 @@ Text GLabel 3750 825  1    50   Output ~ 0
 Text GLabel 4225 825  1    50   Output ~ 0
 BE
 Text Notes 3800 3275 0    50   ~ 0
-Breakout all CPU pins to headers\nDefault:BE and ~SO~ tied High
+Breakout all CPU pins to headers\nDefault:BE and ~SO~ default tied High
 Wire Bus Line
 	3100 5450 3100 5650
 Wire Bus Line

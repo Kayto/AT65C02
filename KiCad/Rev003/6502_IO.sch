@@ -1329,7 +1329,7 @@ v2pa1
 Text Label 2050 1025 0    50   ~ 0
 v2pa0
 Text Notes 3075 2525 0    50   ~ 0
-Added modem to via
+Added modem to VIA2 PORT B
 Wire Notes Line
 	6275 2575 6675 2575
 Wire Notes Line
@@ -1349,7 +1349,7 @@ Wire Notes Line
 Wire Notes Line
 	3300 7575 3300 6200
 Text Notes 4150 6900 0    50   ~ 0
- Removal of onboard FTDI serial.
+ Removal of onboard FTDI serial from the DB design
 NoConn ~ 1750 6200
 Wire Wire Line
 	6250 4775 6650 4775
