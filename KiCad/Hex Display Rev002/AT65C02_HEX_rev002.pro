@@ -1,4 +1,4 @@
-update=02/04/2023 18:49:52
+update=05/04/2023 15:58:46
 version=1
 last_client=kicad
 [general]
@@ -15,7 +15,7 @@ LibDir=
 [pcbnew]
 version=1
 PageLayoutDescrFile=
-LastNetListRead=AT_HEX.net
+LastNetListRead=AT65C02_HEX_rev002.net
 CopperLayerCount=2
 BoardThickness=1.6
 AllowMicroVias=0
@@ -43,10 +43,19 @@ TrackWidth12=1
 TrackWidth13=1
 TrackWidth14=1
 TrackWidth15=1
+TrackWidth16=0.25
+TrackWidth17=0.3048
+TrackWidth18=0.508
+TrackWidth19=1
+TrackWidth20=1
+TrackWidth21=1
+TrackWidth22=1
 ViaDiameter1=0.8
 ViaDrill1=0.4
 ViaDiameter2=1
 ViaDrill2=0.508
+ViaDiameter3=1
+ViaDrill3=0.508
 dPairWidth1=0.2
 dPairGap1=0.25
 dPairViaGap1=0.25
@@ -73,7 +82,7 @@ OthersTextUpright=1
 SolderMaskClearance=0.051
 SolderMaskMinWidth=0.25
 SolderPasteClearance=0
-SolderPasteRatio=-0
+SolderPasteRatio=0
 [pcbnew/Layer.F.Cu]
 Name=F.Cu
 Type=0
