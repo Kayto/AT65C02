@@ -113,6 +113,8 @@ I have created a small repo of code examples I used to test and debug the rev002
 
 The only other code requirement is for the ATTiny4313, for the onboard keybard controller. An explanation of this is in the [Arduino](https://github.com/Kayto/AT65C02/tree/main/Software/Arduino) folder.
 
+## Expansion
+
 ### Hex Board
 
 Gerbers and KiCad is provided in this repo for an expansion board. This PCB plugs into the expansion port next to the blinkies. It provides hexidecmal display output aligned with the blinkenlights. Look in the software folder for the .jed files for programming the GALs.
