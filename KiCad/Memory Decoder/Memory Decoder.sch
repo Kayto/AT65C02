@@ -3,15 +3,15 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 2
-Title ""
-Date ""
-Rev ""
-Comp ""
+Sheet 1 1
+Title "AT65C02 Programmable Memory Decoder"
+Date "2023-04-05"
+Rev "Rev001"
+Comp "by AdamT117"
 Comment1 ""
 Comment2 ""
 Comment3 ""
-Comment4 ""
+Comment4 "Expansion board for AT65C02"
 $EndDescr
 Text GLabel 1100 950  0    50   Input ~ 0
 ~IOCS_V1
@@ -119,12 +119,6 @@ F 3 "~" H 1825 1150 50  0001 C CNN
 	1    1825 1150
 	-1   0    0    -1  
 $EndComp
-$Sheet
-S 10325 675  500  150 
-U 647F3D88
-F0 "Sheet647F3D87" 50
-F1 "file647F3D87.sch" 50
-$EndSheet
 Text Label 2150 3275 2    50   ~ 0
 a15
 Text Label 2150 3375 2    50   ~ 0
@@ -271,7 +265,7 @@ Text GLabel 8550 2125 2    50   Output ~ 0
 Wire Bus Line
 	9000 3200 6725 3200
 $Comp
-L 65C02_Computer-rescue:GND-power #PWR?
+L Memory-Decoder-rescue:GND-power-65C02_Computer-rescue #PWR?
 U 1 1 64860E97
 P 7800 2825
 AR Path="/637561AA/6416C0D1/64860E97" Ref="#PWR?"  Part="1" 
@@ -285,7 +279,7 @@ F 3 "" H 7800 2825 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 65C02_Computer-rescue:+5V-power #PWR?
+L Memory-Decoder-rescue:+5V-power-65C02_Computer-rescue #PWR?
 U 1 1 64860E9D
 P 7800 1225
 AR Path="/637561AA/6416C0D1/64860E9D" Ref="#PWR?"  Part="1" 
@@ -362,7 +356,7 @@ R~W
 Wire Wire Line
 	8700 1200 8700 1425
 $Comp
-L 65C02_Computer-rescue:+5V-power #PWR?
+L Memory-Decoder-rescue:+5V-power-65C02_Computer-rescue #PWR?
 U 1 1 641E664E
 P 3425 4425
 AR Path="/637561AA/6416C0D1/641E664E" Ref="#PWR?"  Part="1" 
@@ -565,7 +559,7 @@ Wire Wire Line
 Wire Wire Line
 	950  7525 950  7575
 $Comp
-L 65C02_Computer-rescue:C-Device C?
+L Memory-Decoder-rescue:C-Device-65C02_Computer-rescue C?
 U 1 1 641CA3DF
 P 950 7375
 AR Path="/647F3D88/641CA3DF" Ref="C?"  Part="1" 
@@ -578,10 +572,10 @@ F 3 "~" H 950 7375 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 65C02_Computer-rescue:+5V-power #PWR?
+L Memory-Decoder-rescue:+5V-power-65C02_Computer-rescue #PWR0104
 U 1 1 641CA3E5
 P 950 7125
-F 0 "#PWR?" H 950 6975 50  0001 C CNN
+F 0 "#PWR0104" H 950 6975 50  0001 C CNN
 F 1 "+5V" H 965 7298 50  0000 C CNN
 F 2 "" H 950 7125 50  0001 C CNN
 F 3 "" H 950 7125 50  0001 C CNN

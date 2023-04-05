@@ -6,4 +6,5 @@
   (lib (name AT_65C02_Computer-rescue)(type Legacy)(uri C:/Users/Adam/Documents/GitHub/AT_65C02/KiCad/Rev003_1/AT_65C02_Computer-rescue.lib)(options "")(descr ""))
   (lib (name Clock)(type Legacy)(uri C:/Users/Adam/Desktop/6502/6502-master/Schematics/Clock_module/Clock_module-cache.lib)(options "")(descr ""))
   (lib (name 65C02_Computer-cache)(type Legacy)(uri C:/Users/Adam/Documents/GitHub/AT_65C02/KiCad/Rev003_1/65C02_Computer-cache.lib)(options "")(descr ""))
+  (lib (name Memory-Decoder-rescue)(type Legacy)(uri "${KIPRJMOD}/Memory Decoder-rescue.lib")(options "")(descr ""))
 )

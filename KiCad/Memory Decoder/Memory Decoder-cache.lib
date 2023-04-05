@@ -1,52 +1,6 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# 65C02_Computer-rescue_+5V-power
-#
-DEF 65C02_Computer-rescue_+5V-power #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -150 50 H I C CNN
-F1 "65C02_Computer-rescue_+5V-power" 0 140 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 2 0 1 0 -30 50 0 100 N
-P 2 0 1 0 0 0 0 100 N
-P 2 0 1 0 0 100 30 50 N
-X +5V 1 0 0 0 U 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# 65C02_Computer-rescue_C-Device
-#
-DEF 65C02_Computer-rescue_C-Device C 0 10 N Y 1 F N
-F0 "C" 25 100 50 H V L CNN
-F1 "65C02_Computer-rescue_C-Device" 25 -100 50 H V L CNN
-F2 "" 38 -150 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- C_*
-$ENDFPLIST
-DRAW
-P 2 0 1 20 -80 -30 80 -30 N
-P 2 0 1 20 -80 30 80 30 N
-X ~ 1 0 150 110 D 50 50 1 1 P
-X ~ 2 0 -150 110 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# 65C02_Computer-rescue_GND-power
-#
-DEF 65C02_Computer-rescue_GND-power #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -250 50 H I C CNN
-F1 "65C02_Computer-rescue_GND-power" 0 -150 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
-X GND 1 0 0 0 D 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
 # Connector_Conn_01x06_Male
 #
 DEF Connector_Conn_01x06_Male J 0 40 Y N 1 F N
@@ -282,6 +236,52 @@ X I4 6 -500 200 150 R 50 50 1 1 I
 X I5 7 -500 100 150 R 50 50 1 1 I
 X I6 8 -500 0 150 R 50 50 1 1 I
 X I7 9 -500 -100 150 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Memory-Decoder-rescue_+5V-power-65C02_Computer-rescue
+#
+DEF Memory-Decoder-rescue_+5V-power-65C02_Computer-rescue #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "Memory-Decoder-rescue_+5V-power-65C02_Computer-rescue" 0 140 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X +5V 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# Memory-Decoder-rescue_C-Device-65C02_Computer-rescue
+#
+DEF Memory-Decoder-rescue_C-Device-65C02_Computer-rescue C 0 10 N Y 1 F N
+F0 "C" 25 100 50 H V L CNN
+F1 "Memory-Decoder-rescue_C-Device-65C02_Computer-rescue" 25 -100 50 H V L CNN
+F2 "" 38 -150 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ C_*
+$ENDFPLIST
+DRAW
+P 2 0 1 20 -80 -30 80 -30 N
+P 2 0 1 20 -80 30 80 30 N
+X ~ 1 0 150 110 D 50 50 1 1 P
+X ~ 2 0 -150 110 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Memory-Decoder-rescue_GND-power-65C02_Computer-rescue
+#
+DEF Memory-Decoder-rescue_GND-power-65C02_Computer-rescue #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -250 50 H I C CNN
+F1 "Memory-Decoder-rescue_GND-power-65C02_Computer-rescue" 0 -150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
+X GND 1 0 0 0 D 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
