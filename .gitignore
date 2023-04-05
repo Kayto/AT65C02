@@ -20,3 +20,5 @@ Software/*.zip
 
 # ignore all .pdf files in the doc/ directory and any of its subdirectories
 #doc/**/*.pdf
+KiCad/Rev003/*.zip
+KiCad/**/*.bak
