@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 7
 Title "AT65C02 Hobby Computer"
-Date "2023-03-29"
+Date "2023-04-05"
 Rev "Rev003"
 Comp "This AT65C02 version by AdamT117. "
 Comment1 "Revisions to Dawid Buchwald design and additions as marked. "

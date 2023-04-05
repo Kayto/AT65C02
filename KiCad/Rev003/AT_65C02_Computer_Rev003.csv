@@ -1,0 +1,165 @@
+Reference, Value, Footprint, Datasheet
+U3,74HC02,Package_DIP:DIP-14_W7.62mm_Socket,http://www.ti.com/lit/gpn/sn74hc02
+U2,74HC00,Package_DIP:DIP-14_W7.62mm_Socket,http://www.ti.com/lit/gpn/sn74hc00
+C3,0.1uF,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm,~
+R7,4K7,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,~
+R6,4K7,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,~
+U8,28C256,Package_DIP:DIP-28_W15.24mm_Socket,http://ww1.microchip.com/downloads/en/DeviceDoc/doc0006.pdf
+U9,62256,Package_DIP:DIP-28_W15.24mm_Socket,http://ww1.microchip.com/downloads/en/DeviceDoc/doc0006.pdf
+U4,NE555,Package_DIP:DIP-8_W7.62mm_Socket,http://www.ti.com/lit/ds/symlink/ne555.pdf
+R2,47K,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,~
+C6,10uF,Capacitor_THT:CP_Radial_D5.0mm_P2.50mm,~
+SW4,SW_SPDT,Button_Switch_THT:SW_PUSH_6mm,~
+C4,0.1uF,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm,~
+R1,1M,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,~
+R3,1k,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,~
+C5,0.1uF,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm,~
+U1,74HC21,Package_DIP:DIP-14_W7.62mm_Socket,http://www.ti.com/lit/gpn/sn74LS21
+C17,0.1uF,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm,~
+C16,0.1uF,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm,~
+C7,0.1uF,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm,~
+C1,0.1uF,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm,~
+C15,0.1uF,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm,~
+C2,0.1uF,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm,~
+C14,0.1uF,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm,~
+C13,0.1uF,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm,~
+C12,0.1uF,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm,~
+J7,Expansion port,Connector_PinSocket_2.54mm:PinSocket_2x16_P2.54mm_Vertical,~
+R4,4K7,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,~
+J1,CLK Jumper,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,~
+R5,4K7,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,~
+U7,65C02S,Package_DIP:DIP-40_W15.24mm_Socket,https://www.westerndesigncenter.com/wdc/documentation/w65c02s.pdf
+JP8,RDY,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,~
+JP9,NMI,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,~
+J29,Decoder Signals,Connector_PinHeader_2.54mm:PinHeader_2x09_P2.54mm_Vertical,~
+X1,1MHz,Oscillator:Oscillator_DIP-14,http://www.conwin.com/datasheets/cx/cx030.pdf
+JP10,RDY,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,~
+JP11,RDY,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,~
+U28,LM393,Package_DIP:DIP-8_W7.62mm_Socket,http://www.ti.com/lit/ds/symlink/lm393.pdf
+C39,100nf,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm,
+R33,680k,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,
+R34,120k,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,
+R35,680k,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,
+R36,100k,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,
+R37,1M,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,
+R38,2k2,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,
+C40,100nF,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm,
+J20,Modem Interface,Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical,~
+J4,AudioJack4,Connector_Audio:Jack_3.5mm_PJ320E_Horizontal,~
+JP4,T,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,~
+JP5,R,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,~
+JP6,R/S,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,~
+JP7,S,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,~
+RN5,47k_Pack05_SIP,Resistor_THT:R_Array_SIP10,http://www.vishay.com/docs/31509/csc.pdf
+C33,470pF,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm,
+C34,470pF,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm,
+C35,470pF,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm,
+C32,100nf,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm,
+C36,470pF,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm,
+C37,100nf,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm,
+Q1,BC547,Package_TO_SOT_THT:TO-92_Inline,https://www.onsemi.com/pub/Collateral/BC550-D.pdf
+R30,470k,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,
+R31,6k8,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,
+C38,100nf,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm,
+R32,nc,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,
+C25,0.1uF,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm,~
+C26,0.1uF,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm,~
+C27,0.1uF,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm,~
+C28,0.1uF,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm,~
+JP1,EN_SIGNAL,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,~
+U21,74HCT573,Package_DIP:DIP-20_W7.62mm_Socket_LongPads,74xx/74hc573.pdf
+JP2,EN_DATA,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,~
+U23,74HCT573,Package_DIP:DIP-20_W7.62mm_Socket_LongPads,74xx/74hc573.pdf
+U22,74HCT573,Package_DIP:DIP-20_W7.62mm_Socket_LongPads,74xx/74hc573.pdf
+JP3,EN_ADDR,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,~
+RN1,2k2x8,Resistor_THT:R_Array_SIP9,http://www.vishay.com/docs/31509/csc.pdf
+RN4,1kx8,Resistor_THT:R_Array_SIP9,http://www.vishay.com/docs/31509/csc.pdf
+RN2,330x8,Resistor_THT:R_Array_SIP9,http://www.vishay.com/docs/31509/csc.pdf
+RN3,1kx8,Resistor_THT:R_Array_SIP9,http://www.vishay.com/docs/31509/csc.pdf
+U20,74HCT540,Package_DIP:DIP-20_W7.62mm_Socket_LongPads,http://www.ti.com/lit/ds/symlink/sn74ls240.pdf
+U26,10_LED_Array (red),Package_DIP:DIP-20_W7.62mm_Socket,
+U27,10_LED_Array (red),Package_DIP:DIP-20_W7.62mm_Socket,
+U24,10_LED_Array (yellow),Package_DIP:DIP-20_W7.62mm_Socket,
+U25,10_LED_Array (green),Package_DIP:DIP-20_W7.62mm_Socket,
+RV3,2k,Potentiometer_THT:Potentiometer_Piher_PT-10-V10_Vertical,
+J27,LED SWITCH,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,
+U19,NE555,Package_DIP:DIP-8_W7.62mm_Socket,http://www.ti.com/lit/ds/symlink/ne555.pdf
+R20,10K,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,~
+R21,330,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,~
+R19,10K,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,~
+D10,GREEN,LED_THT:LED_D3.0mm,~
+C24,0.1uF,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm,~
+C22,1uF,Capacitor_THT:CP_Radial_D5.0mm_P2.50mm,~
+R17,100K,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,~
+R16,1K,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,~
+R18,1K,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,~
+SW3,Mode,Button_Switch_THT:SW_PUSH_6mm,~
+U17,NE555,Package_DIP:DIP-8_W7.62mm_Socket,http://www.ti.com/lit/ds/symlink/ne555.pdf
+C18,1uF,Capacitor_THT:CP_Radial_D5.0mm_P2.50mm,~
+C19,0.1uF,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm,~
+R10,1K,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,~
+R11,1K,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,~
+RV2,1M,Potentiometer_THT:Potentiometer_Piher_PT-10-V10_Vertical,~
+D8,RED,LED_THT:LED_D3.0mm,~
+R12,270,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,~
+U18,NE555,Package_DIP:DIP-8_W7.62mm_Socket,http://www.ti.com/lit/ds/symlink/ne555.pdf
+SW2,Step,Button_Switch_THT:SW_PUSH_6mm,~
+R13,1K,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,~
+C20,0.1uF,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm,~
+D9,BLUE,LED_THT:LED_D3.0mm,~
+R15,6k2,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,~
+C21,0.1uF,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm,~
+R14,1M,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,~
+U15,74LS08,Package_DIP:DIP-14_W7.62mm_Socket,http://www.ti.com/lit/gpn/sn74LS08
+U14,74LS04,Package_DIP:DIP-14_W7.62mm_Socket,http://www.ti.com/lit/gpn/sn74LS04
+R24,330,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,~
+D12,YELLOW,LED_THT:LED_D3.0mm,~
+R23,330,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,~
+D11,GREEN,LED_THT:LED_D3.0mm,~
+U16,74LS32,Package_DIP:DIP-14_W7.62mm_Socket,http://www.ti.com/lit/gpn/sn74LS32
+J3,Conn_01x06_Female,Connector_PinSocket_2.54mm:PinSocket_2x02_P2.54mm_Vertical,~
+R22,1K,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,~
+C23,1uF,Capacitor_THT:CP_Radial_D5.0mm_P2.50mm,~
+JP22,Clock LED,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,~
+J14,ESP Interface,Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical,~
+C10,0.1uF,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm,
+C9,1000uF,Capacitor_THT:CP_Radial_D10.0mm_P5.00mm,
+J5,Barrel_Jack-Connector,Connector_BarrelJack:BarrelJack_Horizontal,
+SW1,SW_SPDT,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,
+D1,1N5819,Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal,
+U6,Regulator_Linear_L7805,Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown,
+J16,Level_Shifter_LV,Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical,
+J15,Level_Shifter_HV,Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical,
+C31,100uF,Capacitor_THT:CP_Radial_D5.0mm_P2.50mm,
+J18,CPU Signals,Connector_PinSocket_2.54mm:PinSocket_2x07_P2.54mm_Vertical,
+J21,Expansion port #2,Connector_PinSocket_2.54mm:PinSocket_2x16_P2.54mm_Vertical,~
+J22,Expansion port #3,Connector_PinSocket_2.54mm:PinSocket_2x16_P2.54mm_Vertical,~
+J12,System Bus Output port,Connector_PinSocket_2.54mm:PinSocket_2x16_P2.54mm_Vertical,~
+U13,LM3940,Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown,
+J6,Mini-DIN-6,65C02_Computer:mini_din-6,http://service.powerdynamics.com/ec/Catalog17/Section%2011.pdf
+X2,1.8432MHz,Oscillator:Oscillator_DIP-14,http://www.conwin.com/datasheets/cx/cx030.pdf
+U12,65C22S,Package_DIP:DIP-40_W15.24mm_Socket,https://www.westerndesigncenter.com/wdc/documentation/w65c22.pdf
+U11,65C22S,Package_DIP:DIP-40_W15.24mm_Socket,https://www.westerndesigncenter.com/wdc/documentation/w65c22.pdf
+U5,65C51N,Package_DIP:DIP-28_W15.24mm_Socket,https://www.westerndesigncenter.com/wdc/documentation/w65c51n.pdf
+J11,LCD Connector,Connector_PinSocket_2.54mm:PinSocket_1x16_P2.54mm_Vertical,~
+RV1,10K,Potentiometer_THT:Potentiometer_Piher_PT-10-V10_Vertical,~
+U10,ATtiny4313-PU,Package_DIP:DIP-20_W7.62mm_Socket,http://ww1.microchip.com/downloads/en/DeviceDoc/doc8246.pdf
+D4,BLINK,LED_THT:LED_D3.0mm,~
+R8,270,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,~
+J2,Optional UART Port,Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical,~
+J8,AVR-ISP-10,Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical, ~
+J9,VIA2PB,Connector_PinSocket_2.54mm:PinSocket_1x12_P2.54mm_Vertical,
+JP12,VIA2_CS2,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,~
+JP14,A_CS0,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,~
+RV4,2k,Potentiometer_THT:Potentiometer_Piher_PT-10-V10_Vertical,
+JP13,VIA1_CS1,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,~
+J33,VIA2PA,Connector_PinSocket_2.54mm:PinSocket_1x12_P2.54mm_Vertical,
+H1,MountingHole,MountingHole:MountingHole_3mm_Pad,~
+H2,MountingHole,MountingHole:MountingHole_3mm_Pad,~
+H3,MountingHole,MountingHole:MountingHole_3mm_Pad,~
+H4,MountingHole,MountingHole:MountingHole_3mm_Pad,~
+H5,MountingHole,MountingHole:MountingHole_3mm_Pad,~
+H6,MountingHole,MountingHole:MountingHole_3mm_Pad,~
+J31,Memory Decoder Expansion,Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical,~
+J32,Decoder Expansion,Connector_PinSocket_2.54mm:PinSocket_2x02_P2.54mm_Vertical,~
+J30,Standard Decoder Jumpers,Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical,~
