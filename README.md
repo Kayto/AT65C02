@@ -1,6 +1,6 @@
 # AT65C02
 
-**Latest News - Rev003 board undergoing testing.**
+**Latest News - Rev003 board undergoing testing. I am sure there are some errors lurking so watch updates on Twitter before commiting!**
 
 ## Introduction
 
