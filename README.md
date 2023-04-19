@@ -39,6 +39,8 @@ Some of these are really down to personal preference and perhaps held back a lit
 
 ## Final Features
 
+![](https://github.com/Kayto/AT65C02/blob/main/KiCad/Rev003/AT_65C02_Computer_Rev003.jpg)
+
 In no particular order the main features in the final board are as follows.
 
 - Onboard Step clock with manual and automatic tick. Speeds aprox 1-500Hz.
