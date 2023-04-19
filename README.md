@@ -1,5 +1,7 @@
 # AT65C02
 
+**Rev003 board undergoing testing.**
+
 ## Introduction
 
 Who doesn't want to build an 8 bit computer, if you don't, look away now.
