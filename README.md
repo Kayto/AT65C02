@@ -1,6 +1,6 @@
 # AT65C02
 
-**Rev003 board undergoing testing.**
+**Latest News - Rev003 board undergoing testing.**
 
 ## Introduction
 
@@ -100,7 +100,7 @@ Other minor issues were silkscreen errors, this led me down a rabbit hole on a f
 
 The repository provides the files for you to create your very own AT65C02.
 * [KiCad project files](https://github.com/Kayto/AT65C02/tree/main/KiCad/Rev003)
-* Gerber files
+* [Gerber files](https://github.com/Kayto/AT65C02/tree/main/Gerbers)
 * [BOM](https://github.com/Kayto/AT65C02/blob/main/KiCad/Rev003/AT_65C02_Computer_Rev003.csv)
 
 ## Software
@@ -122,6 +122,6 @@ The only other code requirement is for the ATTiny4313, for the onboard keybard c
 
 Gerbers and KiCad is provided in this repo for an expansion board. This PCB plugs into the expansion port next to the blinkies. It provides hexidecmal display output aligned with the blinkenlights. Look in the software folder for the .jed files for programming the GALs.
 
-### Programmable IO and mmory decoder
+### Programmable IO and memory decoder
 This is now a seperate PCB that plugs into the relevant marked ports. Gerbers and KiCad provided. Allows tinkering with IO and memory maps. The design is based on the DEC-1 so refer to the links to Daryl Rictor's site for the .jed file for the GAL. 
 
