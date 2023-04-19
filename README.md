@@ -78,7 +78,7 @@ VIA2	| 0x8800	|VIA 2 port |
 ACIA |		0x8400	| |
 ROM	 |	0xa000-0xffff	| 24K First 8K of 32K ROM are not accessible |
 
-Given I can be indecisive and to allow some experimentation with alernative memory maps I have included the option of switching to a programmable memory decoder. This uses the DEC-1 design by Daryl Rictor. The default DEC-1 map is as follows but with a bit of programming of the GALV22, you can experiment with other maps.
+Given I can be indecisive and to allow some experimentation with alternative memory maps I have included the option of switching to a programmable memory decoder. This uses the DEC-1 design by Daryl Rictor. The default DEC-1 map is as follows but with a bit of programming of the GALV22, you can experiment with other maps.
 
 | Segment	| DEC-1 | Comment |
 |---------|--------|---------|
@@ -92,7 +92,7 @@ Given I can be indecisive and to allow some experimentation with alernative memo
 | ROM | $8000-$FFFF | 32K |
 
 ## AT65C02 Build
-The final rev003 PCB corrected the errors in my first build. This first (rev002) build was documented on [twitter](https://twitter.com/AdamT117). Feel free to check out those posts. 
+The final rev003 PCB hopefully corrects the errors in my first build. This first (rev002) build was documented on [twitter](https://twitter.com/AdamT117). Feel free to check out those posts. 
 
 Spolier alert -The issues I found were mainly related to incorporating the adjustable address decoder. In trying to incorporate both a fixed and programmable GAL decoder I inadvertently bridged the RAM and ROM OE/CS lines. This was fixed with a trace cut and bodge but rendered the programmable memory decoder useless. Troubleshooting for the rev003 modifications involved temporary wires and jumpers.
 
