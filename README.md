@@ -63,6 +63,8 @@ In no particular order the main features in the final board are as follows.
 - Modem audio interface.
 - CPU extra signal breakout.
 - LED brightness and LCD contrast adjusters - for late night blinky watching.
+- Breakouts for ROM allow programming onboard via an Arduino or see below for ZIF option.
+- Optional ZIF socket for ROM. Its a tight space but PCB ammended to accomodate the option of a ZIF socket at U8. **Please note that the ZIF socket interfers with the HEX expansion board. You will need a greater standoff to fit. The ZIF handle may also need shortening**.
 
 ## Memory Map
 As will become clear when you tinker with 6502 builds, the hardware decisions up front impact the available memory size and locations.
