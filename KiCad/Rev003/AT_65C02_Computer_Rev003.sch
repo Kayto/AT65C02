@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 7
 Title "AT65C02 Hobby Computer"
-Date "2023-04-05"
+Date "2023-05-01"
 Rev "Rev003"
 Comp "This AT65C02 version by AdamT117. "
 Comment1 "Revisions to Dawid Buchwald design and additions as marked. "
@@ -327,7 +327,7 @@ U 1 1 5E3D4005
 P 1550 5000
 F 0 "U8" H 1550 5915 50  0000 C CNN
 F 1 "28C256" H 1550 5824 50  0000 C CNN
-F 2 "Package_DIP:DIP-28_W15.24mm_Socket" H 1500 5800 50  0001 C CNN
+F 2 "Socket:DIP_Socket-28_W11.9_W12.7_W15.24_W17.78_W18.5_3M_228-1277-00-0602J" H 1500 5800 50  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/doc0006.pdf" H 1550 5000 50  0001 C CNN
 	1    1550 5000
 	1    0    0    -1  
@@ -1645,7 +1645,7 @@ Text GLabel 4825 5525 2    50   Input ~ 0
 ~RAM_OE
 Text Notes 550  3075 0    50   ~ 0
 Breakout all CPU pins to headers\nDefault:NMI and RDY \ndefault tied High
-Text Notes 1800 3825 0    50   ~ 0
+Text Notes 2225 3775 0    50   ~ 0
 RAM and ROM OE CS seperated for adjustable decoder option.\nROM WE breakout for onboard ROM programming
 Text Notes 8350 5150 0    50   ~ 0
 Jumper for 1Mhz \nor onboard step clock
@@ -1939,4 +1939,6 @@ Wire Bus Line
 	1900 2100 1900 3350
 Wire Bus Line
 	5350 4250 5350 5750
+Text Notes 700  3950 0    50   ~ 0
+U8 ZIF socket optional\nHEX Expansion board will need\ngreater standoff if ZIF in use
 $EndSCHEMATC

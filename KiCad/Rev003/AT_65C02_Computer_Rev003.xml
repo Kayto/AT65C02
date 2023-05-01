@@ -2,14 +2,14 @@
 <export version="D">
   <design>
     <source>C:\Users\Adam\Documents\GitHub\AT_65C02\KiCad\Rev003\AT_65C02_Computer_Rev003.sch</source>
-    <date>05/04/2023 14:26:30</date>
+    <date>01/05/2023 09:45:25</date>
     <tool>Eeschema (5.1.9)-1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>AT65C02 Hobby Computer</title>
         <company>This AT65C02 version by AdamT117. </company>
         <rev>Rev003</rev>
-        <date>2023-04-05</date>
+        <date>2023-05-01</date>
         <source>AT_65C02_Computer_Rev003.sch</source>
         <comment number="1" value="Revisions to Dawid Buchwald design and additions as marked. "/>
         <comment number="2" value="Tebl for the Blinkies. Daryl Rictor for the DEC-1 design."/>
@@ -22,7 +22,7 @@
         <title>AT65C02 Hobby Computer</title>
         <company>This AT65C02 version by AdamT117. </company>
         <rev>Rev003</rev>
-        <date>2023-04-05</date>
+        <date>2023-05-01</date>
         <source>Modem.sch</source>
         <comment number="1" value="Revisions to Dawid Buchwald design and additions as marked. "/>
         <comment number="2" value="Tebl for the Blinkies. Daryl Rictor for the DEC-1 design."/>
@@ -35,7 +35,7 @@
         <title>AT65C02 Hobby Computer</title>
         <company>This AT65C02 version by AdamT117. </company>
         <rev>Rev003</rev>
-        <date>2023-04-05</date>
+        <date>2023-05-01</date>
         <source>AT65C02_Blinkenlights.sch</source>
         <comment number="1" value="Revisions to Dawid Buchwald design and additions as marked. "/>
         <comment number="2" value="Tebl for the Blinkies. Daryl Rictor for the DEC-1 design."/>
@@ -48,7 +48,7 @@
         <title>AT65C02 Hobby Computer</title>
         <company>This AT65C02 version by AdamT117. </company>
         <rev>Rev003</rev>
-        <date>2023-04-05</date>
+        <date>2023-05-01</date>
         <source>Clock.sch</source>
         <comment number="1" value="Revisions to Dawid Buchwald design and additions as marked. "/>
         <comment number="2" value="Tebl for the Blinkies. Daryl Rictor for the DEC-1 design."/>
@@ -61,7 +61,7 @@
         <title>AT65C02 Hobby Computer</title>
         <company>This AT65C02 version by AdamT117. </company>
         <rev>Rev003</rev>
-        <date>2023-04-05</date>
+        <date>2023-05-01</date>
         <source>Power_Connectors.sch</source>
         <comment number="1" value="Revisions to Dawid Buchwald design and additions as marked. "/>
         <comment number="2" value="Tebl for the Blinkies. Daryl Rictor for the DEC-1 design."/>
@@ -74,7 +74,7 @@
         <title>AT65C02 Hobby Computer</title>
         <company>This AT65C02 version by AdamT117. </company>
         <rev>Rev003</rev>
-        <date>2023-04-05</date>
+        <date>2023-05-01</date>
         <source>6502_IO.sch</source>
         <comment number="1" value="Revisions to Dawid Buchwald design and additions as marked. "/>
         <comment number="2" value="Tebl for the Blinkies. Daryl Rictor for the DEC-1 design."/>
@@ -87,7 +87,7 @@
         <title>AT65C02 Hobby Computer</title>
         <company>This AT65C02 version by AdamT117. </company>
         <rev>Rev003</rev>
-        <date>2023-04-05</date>
+        <date>2023-05-01</date>
         <source>memory decoder_expansion.sch</source>
         <comment number="1" value="Revisions to Dawid Buchwald design and additions as marked. "/>
         <comment number="2" value="Tebl for the Blinkies. Daryl Rictor for the DEC-1 design."/>
@@ -139,7 +139,7 @@
     </comp>
     <comp ref="U8">
       <value>28C256</value>
-      <footprint>Package_DIP:DIP-28_W15.24mm_Socket</footprint>
+      <footprint>Socket:DIP_Socket-28_W11.9_W12.7_W15.24_W17.78_W18.5_3M_228-1277-00-0602J</footprint>
       <datasheet>http://ww1.microchip.com/downloads/en/DeviceDoc/doc0006.pdf</datasheet>
       <libsource lib="AT_65C02_Computer_Rev003-rescue" part="28C256-6502-AT_65C02_Computer_Rev003_1-rescue" description=""/>
       <sheetpath names="/" tstamps="/"/>
