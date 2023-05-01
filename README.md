@@ -63,6 +63,8 @@ In no particular order the main features in the final board are as follows.
 - Modem audio interface.
 - CPU extra signal breakout.
 - LED brightness and LCD contrast adjusters - for late night blinky watching.
+- Breakouts for ROM allow programming onboard via an Arduino or see below for ZIF option.
+- Optional ZIF socket for ROM. Its a tight space but PCB ammended to accomodate the option of a ZIF socket at U8. **Please note that the ZIF socket interfers with the HEX expansion board. You will need a greater standoff to fit. The ZIF handle may also need shortening**.
 
 ## Memory Map
 As will become clear when you tinker with 6502 builds, the hardware decisions up front impact the available memory size and locations.
@@ -125,3 +127,16 @@ Gerbers and KiCad is provided in this repo for an expansion board. This PCB plug
 ### Programmable IO and memory decoder
 This is now a seperate PCB that plugs into the relevant marked ports. Gerbers and KiCad provided. Allows tinkering with IO and memory maps. The design is based on the DEC-1 so refer to the links to Daryl Rictor's site for the .jed file for the GAL. 
 
+## Future Expansion
+
+I have a number of aspirations for future expansion boards which are part way into development or at least have me thinking about. Most will rely on code development so really have no fixed date for release.
+
+### Floppy Drive controller
+
+Allowing connection and control of a 5.25inch floppy disc drive. There are a few existing examples by some clever folk that could be adapted for use. I envisage a vertical board into an expansion slot - there are also plenty of additional breakouts on the AT65C02 that could be jumper wired if needed. A connector on an expansion board is not that robust. I thought of providing space for a DIN connector on the main board to serve this future item - but will save as just an idea for now.
+
+### Case
+
+This could be an easy one as by some fluke the board size seems to fit some IKEA storage boxes I use. Most of the switches used on the board can be jumpered as I have used header pins. Similarily any expansion could be wired up too.
+
+![](https://github.com/Kayto/AT65C02/blob/main/KiCad/Rev003/AT_65C02_Computer_Rev003.jpg)
