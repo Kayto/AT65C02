@@ -139,4 +139,4 @@ Allowing connection and control of a 5.25inch floppy disc drive. There are a few
 
 This could be an easy one as by some fluke the board size seems to fit some IKEA storage boxes I use. Most of the switches used on the board can be jumpered as I have used header pins. Similarily any expansion could be wired up too.
 
-![](https://github.com/Kayto/AT65C02/blob/main/KiCad/Rev003/AT_65C02_Computer_Rev003.jpg)
+![](https://github.com/Kayto/AT65C02/blob/main/Images/20230501_125532.jpg)
