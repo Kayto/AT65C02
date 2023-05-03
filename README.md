@@ -1,7 +1,7 @@
 # AT65C02
 
 **Latest News - Rev003 board undergoing testing. I am sure there are some errors lurking so watch updates on Twitter before commiting!**
-**ROM and VIA address decoding - tested working. Currently troubleshooting problems with RAM RW...sigh!**
+**ROM and VIA address decoding - tested working. Currently troubleshooting problems with RAM. It's looking like there is some bridging/interference of CS and OE with the Clock signal.**
 ## Introduction
 
 Who doesn't want to build an 8 bit computer, if you don't, look away now.
