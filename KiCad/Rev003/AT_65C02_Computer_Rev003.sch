@@ -1911,6 +1911,8 @@ Text GLabel 4225 825  1    50   Output ~ 0
 BE
 Text Notes 3800 3275 0    50   ~ 0
 Breakout all CPU pins to headers\nDefault:BE and ~SO~ default tied High
+Text Notes 700  3950 0    50   ~ 0
+U8 ZIF socket optional\nHEX Expansion board will need\ngreater standoff if ZIF in use
 Wire Bus Line
 	3100 5450 3100 5650
 Wire Bus Line
@@ -1939,6 +1941,10 @@ Wire Bus Line
 	1900 2100 1900 3350
 Wire Bus Line
 	5350 4250 5350 5750
-Text Notes 700  3950 0    50   ~ 0
-U8 ZIF socket optional\nHEX Expansion board will need\ngreater standoff if ZIF in use
+Text Notes 5875 1100 0    50   ~ 0
+ROM~OE
+Text Notes 4725 1300 0    50   ~ 0
+a15
+Text Notes 5525 1700 0    50   ~ 0
+CLK
 $EndSCHEMATC
