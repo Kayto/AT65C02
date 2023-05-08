@@ -1,7 +1,7 @@
 # AT65C02
 
 **Latest News**
-* **Rev003 board undergoing testing.  Confirming there are some issues lurking so watch updates on Twitter before commiting!**
+* **Rev003 board undergoing testing.  Confirming there are some issues lurking so watch updates on [Twitter](https://twitter.com/AdamT117) before commiting!**
 * **ROM and VIA address decoding - tested working.**
 * **RAM is troublesome. It's looking like there is a short between RAM OE and the RAM CS at the 74HC00 gates. Oddly this occurs with all ICs unpopulated so must be a hidden short or trace damage. The bare PCBs are ok, so ruled that one out. I will need to test assemble another board to be sure. Need parts and time for that.**
 * **Temporarily bodging the 74HC00 (until i can find time to reassemble another board), the Programmable memory decoder works when added to the dedicated expansion port. Tested working alternative map with ROM at $8000.**
