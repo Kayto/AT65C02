@@ -128,7 +128,7 @@ The only other code requirement is for the ATTiny4313, for the onboard keyboard 
 ## Expansion
 
 ### Hex Board
-
+![](https://github.com/Kayto/AT65C02/blob/main/KiCad/Hex%20Display%20Rev003/AT65C02_HEX_rev003.jpg)
 Gerbers and KiCad is provided in this repo for an expansion board. This PCB plugs into the expansion port next to the blinkies. It provides hexidecmal display output aligned with the blinkenlights. Look in the software folder for the .jed files for programming the GALs.
 
 ### Programmable IO and memory decoder
