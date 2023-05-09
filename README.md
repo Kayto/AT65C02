@@ -1,14 +1,8 @@
 # AT65C02
 
 **Latest News**
-* **Rev003 board undergoing testing.  Confirming there are some issues lurking so watch updates on [Twitter](https://twitter.com/AdamT117) before commiting!**
-* **ROM and VIA address decoding - tested working.**
-* **RAM is troublesome. It's looking like there is a short between RAM OE and the RAM CS at the 74HC00 gates. Oddly this occurs with all ICs unpopulated so must be a hidden short or trace damage. The bare PCBs are ok, so ruled that one out. I will need to test assemble another board to be sure. Need parts and time for that.**
-* **Temporarily bodging the 74HC00 (until i can find time to reassemble another board), the Programmable memory decoder works when added to the dedicated expansion port. Tested working alternative map with ROM at $8000.**
-* **OS/1 tested working via wireless serial add ons. There is an issue on loading anything over 1K via wireless serial but this looks to be a software problem.**
-* **Likely that a Rev004 board will be picked up shortly. Deciding whether to put the programmable memory decoder as the primary on the board and remove the default decoder....hmm...decisions eh.**
 
-
+* **Working on the Next Rev004 board - near to send for fabricaton. Watch this space before commiting!**
 
 ## Introduction
 
@@ -102,13 +96,14 @@ Given I can be indecisive and to allow some experimentation with alternative mem
 | ROM | $8000-$FFFF | 32K |
 
 ## AT65C02 Build
-The final rev003 PCB hopefully corrects the errors in my first build. This first (rev002) build was documented on [twitter](https://twitter.com/AdamT117). Feel free to check out those posts. 
 
-Spolier alert -The issues I found were mainly related to incorporating the adjustable address decoder. In trying to incorporate both a fixed and programmable GAL decoder I inadvertently bridged the RAM and ROM OE/CS lines. This was fixed with a trace cut and bodge but rendered the programmable memory decoder useless. Troubleshooting for the rev003 modifications involved temporary wires and jumpers.
+The Final Rev004 PCB is in progress and hopefully corrects the errors in my test builds. This first (Rev002) and second (Rev003) build was documented on [twitter](https://twitter.com/AdamT117). Feel free to check out those posts. 
 
-Other minor issues were silkscreen errors, this led me down a rabbit hole on a few occasions. The UART labels were mixed up, the level shifter pinout order was on the bottom of the board, the oscillator orientation was not clearly marked etc. I also took the opportunity to add in additional breakout headers for some unused CPU lines and for the ROM - allowing onboard ROM programming.
+**Rev003 Spolier Alert** - I had high hopes that Rev003 would be the final but alas things never work out as they should, especially when learning. Rev003 board undergoing testing. ROM and VIA address decoding - tested working. RAM was troublesome. I had a short between RAM OE and the RAM CS at the 74HC00 gates. Oddly this was still there with all ICs unpopulated so must be a hidden short or trace damage. The bare PCBs were ok, so ruled that one out. Given lack of time and parts I couldn't face another full build of a spare board. Temporarily bodging the 74HC00 (until i can find time to reassemble another board), the Programmable memory decoder works when added to the dedicated expansion port. Tested working alternative map with ROM at $8000. OS/1 tested working via wireless serial add ons. There is an issue on loading anything over 1K via wireless serial but this looks to be a software problem.
 
-The repository provides the files for you to create your very own AT65C02.
+**Rev002 Spolier alert** -The issues I found were mainly related to incorporating the adjustable address decoder. In trying to incorporate both a fixed and programmable GAL decoder I inadvertently bridged the RAM and ROM OE/CS lines. This was fixed with a trace cut and bodge but rendered the programmable memory decoder useless. Troubleshooting for the rev003 modifications involved temporary wires and jumpers. Other minor issues were silkscreen errors, this led me down a rabbit hole on a few occasions. The UART labels were mixed up, the level shifter pinout order was on the bottom of the board, the oscillator orientation was not clearly marked etc. I also took the opportunity to add in additional breakout headers for some unused CPU lines and for the ROM - allowing onboard ROM programming.
+
+The repository provides the files for you to create your very own AT65C02. **NOTE - UNTESTED AT THE MOMENT, PLEASE CHECK BACK AGAIN LATER OR ON TWITTER FOR UPDATES**
 * [Schematics](https://github.com/Kayto/AT65C02/blob/main/KiCad/Rev004/AT65C02_Schematic.pdf)
 * [KiCad project files](https://github.com/Kayto/AT65C02/tree/main/KiCad/Rev004)
 * [Gerber files](https://github.com/Kayto/AT65C02/tree/main/Gerbers)
