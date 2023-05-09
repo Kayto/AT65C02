@@ -1,4 +1,0 @@
-(sym_lib_table
-  (lib (name AT_65C02_Computer_Rev003_1-rescue)(type Legacy)(uri ${KIPRJMOD}/AT_65C02_Computer_Rev003_1-rescue.lib)(options "")(descr ""))
-  (lib (name AT_65C02_Computer_Rev003-rescue)(type Legacy)(uri ${KIPRJMOD}/AT_65C02_Computer_Rev003-rescue.lib)(options "")(descr ""))
-)

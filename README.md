@@ -49,7 +49,7 @@ Some of these are really down to personal preference and perhaps held back a lit
 
 ## Final Features
 
-![](https://github.com/Kayto/AT65C02/blob/main/KiCad/Rev003/AT_65C02_Computer_Rev003.jpg)
+![](https://github.com/Kayto/AT65C02/blob/main/KiCad/Rev004/AT_65C02_Computer_Rev004.jpg)
 
 In no particular order the main features in the final board are as follows.
 
@@ -88,7 +88,7 @@ VIA2	| 0x8800	|VIA 2 port |
 ACIA |		0x8400	| |
 ROM	 |	0xa000-0xffff	| 24K First 8K of 32K ROM are not accessible |
 
-Given I can be indecisive and to allow some experimentation with alternative memory maps I have included the option of switching to a programmable memory decoder. This uses the DEC-1 design by Daryl Rictor. The default DEC-1 map is as follows but with a bit of programming of the GALV22, you can experiment with other maps.
+Given I can be indecisive and to allow some experimentation with alternative memory maps I have included the option of switching to a programmable memory decoder. This uses the DEC-1 design by Daryl Rictor. The default DEC-1 map is as follows but with a bit of programming of the GALV22V10, you can experiment with other maps.
 
 | Segment	| DEC-1 | Comment |
 |---------|--------|---------|
@@ -109,22 +109,22 @@ Spolier alert -The issues I found were mainly related to incorporating the adjus
 Other minor issues were silkscreen errors, this led me down a rabbit hole on a few occasions. The UART labels were mixed up, the level shifter pinout order was on the bottom of the board, the oscillator orientation was not clearly marked etc. I also took the opportunity to add in additional breakout headers for some unused CPU lines and for the ROM - allowing onboard ROM programming.
 
 The repository provides the files for you to create your very own AT65C02.
-* [KiCad project files](https://github.com/Kayto/AT65C02/tree/main/KiCad/Rev003)
+* [KiCad project files](https://github.com/Kayto/AT65C02/tree/main/KiCad/Rev004)
 * [Gerber files](https://github.com/Kayto/AT65C02/tree/main/Gerbers)
-* [BOM](https://github.com/Kayto/AT65C02/blob/main/KiCad/Rev003/AT_65C02_Computer_Rev003.csv)
+* [BOM](https://github.com/Kayto/AT65C02/blob/main/KiCad/Rev004/AT_65C02_Computer_Rev004.csv)
 
 ## Software
 
 As stated earlier Dawid Buchwald provides a suite of ROM and loadable sources in his github repo. This will get you on yor way to coding quickly. If you are struggling with a build environment then he also has great tutorial examples and even provides a [docker image](https://github.com/dbuchwald/cc65-tools)! Great work. 
 
-I have created a small repo of code examples I used to test and debug the rev002 board.
+I have created a small repo of code examples I used to test and debug the board.
 
 | Reference | Description | 
 |-----------|-------------|
 | 04b_blink | blinks VIA1 onboard LED and an added LED on VIA2 |
 | 50_mem_read | memory test, lights blink on VIA1 if in error|
 
-The only other code requirement is for the ATTiny4313, for the onboard keybard controller. An explanation of this is in the [Arduino](https://github.com/Kayto/AT65C02/tree/main/Software/Arduino) folder.
+The only other code requirement is for the ATTiny4313, for the onboard keyboard controller. An explanation of this is in the [Arduino](https://github.com/Kayto/AT65C02/tree/main/Software/Arduino) folder.
 
 ## Expansion
 
