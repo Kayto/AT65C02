@@ -1,4 +1,4 @@
-update=05/04/2023 15:58:46
+update=09/05/2023 22:04:14
 version=1
 last_client=kicad
 [general]
@@ -15,7 +15,7 @@ LibDir=
 [pcbnew]
 version=1
 PageLayoutDescrFile=
-LastNetListRead=AT65C02_HEX_rev002.net
+LastNetListRead=AT65C02_HEX_rev003.net
 CopperLayerCount=2
 BoardThickness=1.6
 AllowMicroVias=0

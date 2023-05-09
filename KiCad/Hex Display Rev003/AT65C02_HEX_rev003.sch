@@ -5,8 +5,8 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 1
 Title "AT65C02 HEX Expansion Board"
-Date "2023-04-02"
-Rev "Rev002"
+Date "2023-05-09"
+Rev "Rev003"
 Comp "by AdamT117"
 Comment1 ""
 Comment2 ""
@@ -238,25 +238,6 @@ F 3 "~" H 6175 10075 50  0001 C CNN
 	1    6175 10075
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector_Generic:Conn_02x03_Odd_Even J2
-U 1 1 63F09274
-P 8075 10075
-F 0 "J2" H 8125 10392 50  0000 C CNN
-F 1 "Conn_02x03_Odd_Even" H 8125 10301 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_2x03_P2.54mm_Vertical" H 8075 10075 50  0001 C CNN
-F 3 "~" H 8075 10075 50  0001 C CNN
-	1    8075 10075
-	1    0    0    -1  
-$EndComp
-Text GLabel 8375 9975 2    50   Input ~ 0
-ROM_~OE
-Text GLabel 7875 10075 0    50   Input ~ 0
-RAM_~CS
-Text GLabel 7875 9975 0    50   Input ~ 0
-ROM_~CS
-Text GLabel 8375 10175 2    50   Input ~ 0
-~IRQ
 $Comp
 L power:GND #PWR?
 U 1 1 6384D10D
@@ -1184,14 +1165,14 @@ a7
 Text Label 13525 4875 0    50   ~ 0
 a8
 $Comp
-L Connector_Generic:Conn_02x16_Odd_Even J1
+L Connector_Generic:Conn_02x13_Odd_Even J1
 U 1 1 636992C7
-P 14050 4775
-F 0 "J1" H 14100 5725 50  0000 C CNN
-F 1 "Expansion Connector" H 14100 5650 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x16_P2.54mm_Vertical" H 14050 4775 50  0001 C CNN
-F 3 "~" H 14050 4775 50  0001 C CNN
-	1    14050 4775
+P 14050 4675
+F 0 "J1" H 14100 5625 50  0000 C CNN
+F 1 "Expansion Connector" H 14100 5550 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x13_P2.54mm_Vertical" H 14050 4675 50  0001 C CNN
+F 3 "~" H 14050 4675 50  0001 C CNN
+	1    14050 4675
 	-1   0    0    -1  
 $EndComp
 Entry Wire Line
@@ -1299,18 +1280,16 @@ Wire Wire Line
 Wire Wire Line
 	14250 5175 14700 5175
 Wire Wire Line
-	14250 5575 14950 5575
-Wire Wire Line
-	13300 5575 13750 5575
+	13300 5275 13750 5275
 $Comp
 L power:GND #PWR0110
 U 1 1 63EE1303
-P 13300 5575
-F 0 "#PWR0110" H 13300 5325 50  0001 C CNN
-F 1 "GND" H 13305 5402 50  0000 C CNN
-F 2 "" H 13300 5575 50  0001 C CNN
-F 3 "" H 13300 5575 50  0001 C CNN
-	1    13300 5575
+P 13300 5275
+F 0 "#PWR0110" H 13300 5025 50  0001 C CNN
+F 1 "GND" H 13305 5102 50  0000 C CNN
+F 2 "" H 13300 5275 50  0001 C CNN
+F 3 "" H 13300 5275 50  0001 C CNN
+	1    13300 5275
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1326,14 +1305,6 @@ F 3 "" H 15425 5475 50  0001 C CNN
 	1    15425 5475
 	1    0    0    -1  
 $EndComp
-Text GLabel 14250 5475 2    50   Output ~ 0
-~IRQ
-Text GLabel 14250 5275 2    50   Output ~ 0
-ROM_~OE
-Text GLabel 13750 5275 0    50   Output ~ 0
-ROM_~CS
-Text GLabel 13750 5375 0    50   Output ~ 0
-RAM_~CS
 $Comp
 L Connector_Generic:Conn_01x03 J3
 U 1 1 64254826
@@ -1352,8 +1323,6 @@ Wire Wire Line
 Wire Wire Line
 	15425 5575 15425 5475
 NoConn ~ 15150 5175
-Wire Wire Line
-	14950 5175 14950 5575
 Wire Wire Line
 	5675 2600 5675 3225
 Wire Wire Line
@@ -1775,14 +1744,33 @@ Wire Wire Line
 Connection ~ 7225 850 
 Wire Wire Line
 	7225 850  8625 850 
-Text GLabel 13750 5475 0    50   Output ~ 0
-R~W
-Text GLabel 14250 5375 2    50   Output ~ 0
-RAM_~OE~
-Text GLabel 7875 10175 0    50   Input ~ 0
-R~W
-Text GLabel 8375 10075 2    50   Input ~ 0
-RAM_~OE~
+Wire Notes Line
+	9000 9600 9000 10525
+Wire Notes Line
+	9000 10525 7325 10525
+Wire Notes Line
+	7325 10525 7325 9600
+Wire Notes Line
+	7325 9600 9000 9600
+Text Notes 9225 10175 0    50   ~ 0
+Rev3 - breakouts removed\nROM~CS~, ROM~OE~\nRAM~CS~,RAM~OE\nR~W~,~IRQ~
+Text Notes 14750 6325 0    50   ~ 0
+Rev3 - breakouts removed\nROM~CS~, ROM~OE~\nRAM~CS~,RAM~OE\nR~W~,~IRQ~
+Wire Wire Line
+	14250 5275 14950 5275
+Wire Wire Line
+	14950 5175 14950 5275
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 646F5389
+P 13725 1300
+F 0 "H1" H 13825 1346 50  0000 L CNN
+F 1 "MountingHole" H 13825 1255 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 13725 1300 50  0001 C CNN
+F 3 "~" H 13725 1300 50  0001 C CNN
+	1    13725 1300
+	1    0    0    -1  
+$EndComp
 Wire Bus Line
 	14800 4775 14800 5800
 Wire Bus Line
