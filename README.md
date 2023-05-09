@@ -103,11 +103,14 @@ The Final Rev004 PCB is in progress and hopefully corrects the errors in my test
 
 **Rev002 Spolier alert** -The issues I found were mainly related to incorporating the adjustable address decoder. In trying to incorporate both a fixed and programmable GAL decoder I inadvertently bridged the RAM and ROM OE/CS lines. This was fixed with a trace cut and bodge but rendered the programmable memory decoder useless. Troubleshooting for the rev003 modifications involved temporary wires and jumpers. Other minor issues were silkscreen errors, this led me down a rabbit hole on a few occasions. The UART labels were mixed up, the level shifter pinout order was on the bottom of the board, the oscillator orientation was not clearly marked etc. I also took the opportunity to add in additional breakout headers for some unused CPU lines and for the ROM - allowing onboard ROM programming.
 
-The repository provides the files for you to create your very own AT65C02. **NOTE - UNTESTED AT THE MOMENT, PLEASE CHECK BACK AGAIN LATER OR ON TWITTER FOR UPDATES**
+The repository provides the files for you to create your very own AT65C02. 
+
+**NOTE - UNTESTED AT THE MOMENT, PLEASE CHECK BACK AGAIN LATER OR ON TWITTER FOR UPDATES**
 * [Schematics](https://github.com/Kayto/AT65C02/blob/main/KiCad/Rev004/AT65C02_Schematic.pdf)
 * [KiCad project files](https://github.com/Kayto/AT65C02/tree/main/KiCad/Rev004)
 * [Gerber files](https://github.com/Kayto/AT65C02/tree/main/Gerbers)
 * [BOM](https://github.com/Kayto/AT65C02/blob/main/KiCad/Rev004/AT_65C02_Computer_Rev004.csv)
+![](https://github.com/Kayto/AT65C02/blob/main/Images/AT65C02_PCB_Silkscreen_1.jpg)
 
 ## Software
 
