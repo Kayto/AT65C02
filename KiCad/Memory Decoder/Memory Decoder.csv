@@ -1,30 +1,36 @@
-Individual Components:,,,,,,
-,,,,,,
-Item,Qty,Reference(s),Value,LibPart,Footprint,Datasheet
-,,C1,0.1uF,Memory-Decoder-rescue:C-Device-65C02_Computer-rescue,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm,~
-,,J1,IOCS/Decoder Signals Expansion #5,Connector_Generic:Conn_02x05_Odd_Even,Connector_PinSocket_2.54mm:PinSocket_2x05_P2.54mm_Vertical,~
-,,J2,Conn_02x02_Odd_Even,Connector_Generic:Conn_02x02_Odd_Even,Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical,~
-,,J3,Decoder Signals,Connector_Generic:Conn_01x09,Connector_PinSocket_2.54mm:PinSocket_1x09_P2.54mm_Vertical,~
-,,J4,Conn_02x03_Odd_Even,Connector_Generic:Conn_02x03_Odd_Even,Connector_PinSocket_2.54mm:PinSocket_2x03_P2.54mm_Vertical,~
-,,J5,Memory Decoder Expansion,Connector:Conn_01x06_Male,Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical,~
-,,J6,~IOx,Connector_Generic:Conn_01x05,Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical,~
-,,J7,~IRQx,Connector_Generic:Conn_01x04,Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical,~
-,,SW1,SW_DIP_x04,Switch:SW_DIP_x04,Button_Switch_THT:SW_DIP_SPSTx04_Piano_10.8x11.72mm_W7.62mm_P2.54mm,~
-,,SW2,SW_DIP_x04,Switch:SW_DIP_x04,Button_Switch_THT:SW_DIP_SPSTx04_Piano_10.8x11.72mm_W7.62mm_P2.54mm,~
-,,U1,Flexible Memory Decoder,Logic_Programmable:PAL20RS10,Package_DIP:DIP-24_W7.62mm_Socket,
-,,,,,,
-,,,,,,
-,,,,,,
-Collated Components:,,,,,,
-,,,,,,
-Item,Qty,Reference(s),Value,LibPart,Footprint,Datasheet
-1,1,C1,0.1uF,Memory-Decoder-rescue:C-Device-65C02_Computer-rescue,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm,~
-2,1,J1,IOCS/Decoder Signals Expansion #5,Connector_Generic:Conn_02x05_Odd_Even,Connector_PinSocket_2.54mm:PinSocket_2x05_P2.54mm_Vertical,~
-3,1,J2,Conn_02x02_Odd_Even,Connector_Generic:Conn_02x02_Odd_Even,Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical,~
-4,1,J3,Decoder Signals,Connector_Generic:Conn_01x09,Connector_PinSocket_2.54mm:PinSocket_1x09_P2.54mm_Vertical,~
-5,1,J4,Conn_02x03_Odd_Even,Connector_Generic:Conn_02x03_Odd_Even,Connector_PinSocket_2.54mm:PinSocket_2x03_P2.54mm_Vertical,~
-6,1,J5,Memory Decoder Expansion,Connector:Conn_01x06_Male,Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical,~
-7,1,J6,~IOx,Connector_Generic:Conn_01x05,Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical,~
-8,1,J7,~IRQx,Connector_Generic:Conn_01x04,Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical,~
-9,2,"SW1, SW2",SW_DIP_x04,Switch:SW_DIP_x04,Button_Switch_THT:SW_DIP_SPSTx04_Piano_10.8x11.72mm_W7.62mm_P2.54mm,~
-10,1,U1,Flexible Memory Decoder,Logic_Programmable:PAL20RS10,Package_DIP:DIP-24_W7.62mm_Socket,
+"Source:","C:\Users\Adam\Documents\GitHub\AT_65C02\KiCad\Memory Decoder\Memory Decoder.sch"
+"Date:","10/05/2023 20:40:51"
+"Tool:","Eeschema (5.1.9)-1"
+"Generator:","C:\Program Files\KiCad\bin\scripting\plugins/bom_csv_grouped_by_value.py"
+"Component Count:","11"
+
+"Individual Components:"
+
+"Item","Qty","Reference(s)","Value","LibPart","Footprint","Datasheet"
+"","","C1","0.1uF","Memory-Decoder-rescue:C-Device-65C02_Computer-rescue","Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm","~"
+"","","J1","IOCS/Decoder Signals Expansion #5","Connector_Generic:Conn_02x05_Odd_Even","Connector_PinSocket_2.54mm:PinSocket_2x05_P2.54mm_Vertical","~"
+"","","J2","Conn_02x02_Odd_Even","Connector_Generic:Conn_02x02_Odd_Even","Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical","~"
+"","","J3","Decoder Signals","Connector_Generic:Conn_01x09","Connector_PinSocket_2.54mm:PinSocket_1x09_P2.54mm_Vertical","~"
+"","","J4","Conn_02x03_Odd_Even","Connector_Generic:Conn_02x03_Odd_Even","Connector_PinSocket_2.54mm:PinSocket_2x03_P2.54mm_Vertical","~"
+"","","J5","Memory Decoder Expansion","Connector:Conn_01x06_Male","Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical","~"
+"","","J6","~IOx","Connector_Generic:Conn_01x05","Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical","~"
+"","","J7","~IRQx","Connector_Generic:Conn_01x04","Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical","~"
+"","","SW1","SW_DIP_x04","Switch:SW_DIP_x04","Button_Switch_THT:SW_DIP_SPSTx04_Piano_10.8x11.72mm_W7.62mm_P2.54mm","~"
+"","","SW2","SW_DIP_x04","Switch:SW_DIP_x04","Button_Switch_THT:SW_DIP_SPSTx04_Piano_10.8x11.72mm_W7.62mm_P2.54mm","~"
+"","","U1","Flexible Memory Decoder","Logic_Programmable:PAL20RS10","Package_DIP:DIP-24_W7.62mm_Socket",""
+
+
+
+"Collated Components:"
+
+"Item","Qty","Reference(s)","Value","LibPart","Footprint","Datasheet"
+"1","1","C1","0.1uF","Memory-Decoder-rescue:C-Device-65C02_Computer-rescue","Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm","~"
+"2","1","J1","IOCS/Decoder Signals Expansion #5","Connector_Generic:Conn_02x05_Odd_Even","Connector_PinSocket_2.54mm:PinSocket_2x05_P2.54mm_Vertical","~"
+"3","1","J2","Conn_02x02_Odd_Even","Connector_Generic:Conn_02x02_Odd_Even","Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical","~"
+"4","1","J3","Decoder Signals","Connector_Generic:Conn_01x09","Connector_PinSocket_2.54mm:PinSocket_1x09_P2.54mm_Vertical","~"
+"5","1","J4","Conn_02x03_Odd_Even","Connector_Generic:Conn_02x03_Odd_Even","Connector_PinSocket_2.54mm:PinSocket_2x03_P2.54mm_Vertical","~"
+"6","1","J5","Memory Decoder Expansion","Connector:Conn_01x06_Male","Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical","~"
+"7","1","J6","~IOx","Connector_Generic:Conn_01x05","Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical","~"
+"8","1","J7","~IRQx","Connector_Generic:Conn_01x04","Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical","~"
+"9","2","SW1, SW2","SW_DIP_x04","Switch:SW_DIP_x04","Button_Switch_THT:SW_DIP_SPSTx04_Piano_10.8x11.72mm_W7.62mm_P2.54mm","~"
+"10","1","U1","Flexible Memory Decoder","Logic_Programmable:PAL20RS10","Package_DIP:DIP-24_W7.62mm_Socket",""
