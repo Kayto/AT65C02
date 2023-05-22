@@ -51,7 +51,7 @@ In no particular order the main features in the final board are as follows.
 - Onboard 1mhz fixed clock.
 - Seperate onboard serial clock.
 - Blinky indicators - main signals, data and address, individual on/off switches.
-- UART interface for external USB RS232 serial interface.
+- UART interface for external USB serial interface.
 - ESP interface for wireless UART interface.
 - Level shifter port for 5v and 3.3v signal conversion.
 - Onboard 3.3v power regulator.
