@@ -2,7 +2,7 @@
 
 **Latest News**
 
-* ** Rev004 board - looking good and working well. Latest HEX board and decoder expansion board to assemble and test. Onboard Modem needs assembly, i might struggle for a while with code to test it.**
+* **Rev004 board - looking good and working well. Latest HEX board and decoder expansion board to assemble and test. Onboard Modem needs assembly, i might struggle for a while with code to test it.**
 
 ## Introduction
 
