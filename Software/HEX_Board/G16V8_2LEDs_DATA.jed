@@ -1,7 +1,7 @@
 
 CUPL(WM)        5.0a  Serial# 60008009
 Device          g16v8as  Library DLIB-h-40-2
-Created         Sun Mar 05 21:32:00 2023
+Created         Sun Jun 04 11:52:54 2023
 Name            G16V8_2LEDs
 Partno          GAL1
 Revision        01
@@ -71,4 +71,4 @@ Location        RU
 *L02144 11111111111111111111111111111111
 *L02176 111111111111111110
 *CBA54
-*FFED
+*0003
