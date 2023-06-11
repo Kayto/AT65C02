@@ -128,8 +128,7 @@ I have created a small repo of code examples I used to test and debug the board.
 
 | Reference | Description | 
 |-----------|-------------|
-| 04b_blink | blinks VIA1 onboard LED and an added LED on VIA2 |
-| 50_mem_read | memory test, lights blink on VIA1 if in error|
+| 50_mem_read | RAM test, VIA1 and VIA 2 test blinks |
 
 The only other code requirement is for the ATTiny4313, for the onboard keyboard controller. An explanation of this is in the [Arduino](https://github.com/Kayto/AT65C02/tree/main/Software/Arduino) folder.
 
