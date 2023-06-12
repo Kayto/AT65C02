@@ -12,7 +12,7 @@
 #KiCad/Rev002
 #KiCad/Rev001
 #KiCad/Floppy
-
+Software/SBCOS
 # ignore doc/notes.txt, but not doc/server/arch.txt
 KiCad/*.zip
 Gerbers/*.zip

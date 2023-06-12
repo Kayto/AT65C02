@@ -1,0 +1,32 @@
+ca65 V2.19 - Git 62da869e4
+Main file   : test.s
+Current file: test.s
+
+000000r 1               ;
+000000r 1               ; Simple test program.
+000000r 1               ;
+000000r 1               
+000000r 1               ;.import acia_print_char, shell_newline, sys_exit
+000000r 1               
+000000r 1               acia_print_char                  = $c014
+000000r 1               shell_newline                    = $c11e
+000000r 1               sys_exit                         = $c129
+000000r 1               
+000000r 1               .segment "CODE"
+000000r 1               main:
+000000r 1  A2 00          ldx #0
+000002r 1               @test_char:
+000002r 1  BD rr rr       lda test_string, X
+000005r 1  F0 07          beq @test_done
+000007r 1  20 14 C0       jsr acia_print_char
+00000Ar 1  E8             inx
+00000Br 1  4C rr rr       jmp @test_char
+00000Er 1               @test_done:
+00000Er 1  20 1E C1       jsr shell_newline
+000011r 1  A9 00          lda #0
+000013r 1  4C 29 C1       jmp sys_exit
+000016r 1               
+000016r 1  54 45 53 54  test_string: .asciiz "TEST PROGRAM"
+00001Ar 1  20 50 52 4F  
+00001Er 1  47 52 41 4D  
+000022r 1               

@@ -1,0 +1,29 @@
+Modules list:
+-------------
+test.o:
+    CODE              Offs=000000  Size=000023  Align=00001  Fill=0000
+
+
+Segment list:
+-------------
+Name                   Start     End    Size  Align
+----------------------------------------------------
+CODE                  000400  000422  000023  00001
+
+
+Exports list by name:
+---------------------
+__MAIN_LAST__             000423 RLA    
+
+
+Exports list by value:
+----------------------
+__MAIN_LAST__             000423 RLA    
+
+
+Imports list:
+-------------
+__MAIN_LAST__ ([linker generated]):
+    [linker generated]        program.cfg:9
+    [linker generated]        program.cfg:9
+

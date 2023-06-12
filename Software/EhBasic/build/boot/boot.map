@@ -1,0 +1,30 @@
+Modules list:
+-------------
+boot.o:
+    CODE              Offs=000000  Size=000321  Align=00001  Fill=0000
+    BSS               Offs=000000  Size=000043  Align=00001  Fill=0000
+    VECTORS           Offs=000000  Size=000006  Align=00001  Fill=0000
+
+
+Segment list:
+-------------
+Name                   Start     End    Size  Align
+----------------------------------------------------
+BSS                   000100  000142  000043  00001
+CODE                  00A000  00A320  000321  00001
+VECTORS               00FFFA  00FFFF  000006  00001
+
+
+Exports list by name:
+---------------------
+
+
+
+Exports list by value:
+----------------------
+
+
+
+Imports list:
+-------------
+
