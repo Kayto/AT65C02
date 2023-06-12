@@ -2,7 +2,7 @@
 
 **Latest News**
 
-* **Rev004 board - looking good and working well. Latest HEX board and decoder expansion board to assemble and test. Onboard Modem needs assembly, i might struggle for a while with code to test it.**
+* **Rev004 board - looking good and working well. Latest HEX board and decoder expansion board also tested working. Onboard Modem needs assembly, i might struggle for a while with code to test it.**
 
 ## Introduction
 
@@ -97,31 +97,38 @@ Given I can be indecisive and to allow some experimentation with alternative mem
 
 ## AT65C02 Build
 
-The Final Rev004 PCB is in progress and hopefully corrects the errors in my test builds. This first (Rev002) and second (Rev003) build was documented on [twitter](https://twitter.com/AdamT117). Feel free to check out those posts. 
+The Final Rev004 PCB corrects the errors in my test builds. This first (Rev002) and second (Rev003) and third (Rev004) build was documented on [twitter](https://twitter.com/AdamT117). Feel free to check out those posts. 
 
 **Rev003 Spolier Alert** - I had high hopes that Rev003 would be the final but alas things never work out as they should, especially when learning. Rev003 board undergoing testing. ROM and VIA address decoding - tested working. RAM was troublesome. I had a short between RAM OE and the RAM CS at the 74HC00 gates. Oddly this was still there with all ICs unpopulated so must be a hidden short or trace damage. The bare PCBs were ok, so ruled that one out. Given lack of time and parts I couldn't face another full build of a spare board. Temporarily bodging the 74HC00 (until i can find time to reassemble another board), the Programmable memory decoder works when added to the dedicated expansion port. Tested working alternative map with ROM at $8000. OS/1 tested working via wireless serial add ons. There is an issue on loading anything over 1K via wireless serial but this looks to be a software problem.
 
 **Rev002 Spolier alert** -The issues I found were mainly related to incorporating the adjustable address decoder. In trying to incorporate both a fixed and programmable GAL decoder I inadvertently bridged the RAM and ROM OE/CS lines. This was fixed with a trace cut and bodge but rendered the programmable memory decoder useless. Troubleshooting for the rev003 modifications involved temporary wires and jumpers. Other minor issues were silkscreen errors, this led me down a rabbit hole on a few occasions. The UART labels were mixed up, the level shifter pinout order was on the bottom of the board, the oscillator orientation was not clearly marked etc. I also took the opportunity to add in additional breakout headers for some unused CPU lines and for the ROM - allowing onboard ROM programming.
 
 The repository provides the files for you to create your very own AT65C02. 
-
-**NOTE - UNTESTED AT THE MOMENT, PLEASE CHECK BACK AGAIN LATER OR ON TWITTER FOR UPDATES**
 * [Schematics](https://github.com/Kayto/AT65C02/blob/main/KiCad/Rev004/AT65C02_Schematic.pdf)
 * [KiCad project files](https://github.com/Kayto/AT65C02/tree/main/KiCad/Rev004)
 * [Gerber files](https://github.com/Kayto/AT65C02/tree/main/Gerbers)
 * [BOM](https://github.com/Kayto/AT65C02/blob/main/KiCad/Rev004/AT_65C02_Computer_Rev004.csv)
 ![](https://github.com/Kayto/AT65C02/blob/main/Images/AT65C02_PCB_Silkscreen_1.jpg)
 
+### REVISION STATUS & ISSUES
+**REV 004 - for final issue**
+* Main board, Hex board and Programmable Memory Decoder Tested working.
+* Modem - UNTESTED AT THE MOMENT
+
+**Slight annoyances (which may or may not be investigated)**
+* Hex board - for data FF the low F is very low brightness. It really needs some further balancing of the resistor values and grounding.
+* Blinkies - Data lines have a bit of jitter with the clock. No biggie but OCD spotted it.
+* Wireless Serial - using Xmodem is fine with very small code uploads but the larger files fail. Workaround is to use a wired serial. I am hoping this can be helped with code but might wait until I can acquire the skills to troubleshoot!
+
 ## Software
 
 As stated earlier Dawid Buchwald provides a suite of ROM and loadable sources in his github repo. This will get you on yor way to coding quickly. If you are struggling with a build environment then he also has great tutorial examples and even provides a [docker image](https://github.com/dbuchwald/cc65-tools)! Great work. 
 
-I have created a small repo of code examples I used to test and debug the board.
+For my ease I have duplicated the code here from Dawid Buchwald for now and ammended for his docker build environment. **For upload shortly.**
 
 | Reference | Description | 
 |-----------|-------------|
-| 04b_blink | blinks VIA1 onboard LED and an added LED on VIA2 |
-| 50_mem_read | memory test, lights blink on VIA1 if in error|
+| 50_mem_read | RAM test, VIA1 and VIA 2 test blinks |
 
 The only other code requirement is for the ATTiny4313, for the onboard keyboard controller. An explanation of this is in the [Arduino](https://github.com/Kayto/AT65C02/tree/main/Software/Arduino) folder.
 

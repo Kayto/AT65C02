@@ -22,3 +22,4 @@ Software/*.zip
 #doc/**/*.pdf
 KiCad/Rev003/*.zip
 KiCad/**/*.bak
+Software/**/*.zip
