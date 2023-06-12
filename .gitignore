@@ -1,5 +1,5 @@
 # ignore all .a files
-bak
+*bak
 .7z
 
 # but do track lib.a, even though you're ignoring .a files above
