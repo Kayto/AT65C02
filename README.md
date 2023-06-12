@@ -171,3 +171,7 @@ With the exception of the files noted below, code base © 2021 Michael Billingto
 The files in EhBasic/basic/ are derived from EhBASIC, developed by Lee Davidson. The EhBASIC license allows for non-commerical use only. The most recent release and manual is hosted here, and a mirror of Lee's website can be found here.
 
 EhBASIC is free but not copyright free. For non commercial use there is only one restriction, any derivative work should include, in any binary image distributed, the string "Derived from EhBASIC" and in any distribution that includes human readable files a file that includes the above string in a human readable form e.g. not as a comment in an HTML file.
+
+**DB6502 Code**
+
+OS/1, related code examples and Arduino code is Copyright (c) 2020 Dawid Buchwald and is licensed under a MIT License. 
