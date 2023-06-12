@@ -155,3 +155,19 @@ Allowing connection and control of a 5.25inch floppy disc drive. There are a few
 This could be an easy one as by some fluke the board size seems to fit some IKEA storage boxes I use. Most of the switches used on the board can be jumpered as I have used header pins. Similarily any expansion could be wired up too.
 
 ![](https://github.com/Kayto/AT65C02/blob/main/Images/20230501_125532.jpg)
+
+
+## Licenses & acknowledgement
+Further to the links in the credit section.
+The design is an extension of Ben Eater's 6502 computer tutorial, which is itself based on the work of the 6502.org community.
+
+**6502 KiCad Library**
+
+The PCB files use modified versions of the 6502 KiCad Library. Copyright 2018, Nicholas Parks Young. All Rights Reserved. The 6502 KiCad Library library is licensed under the GNU LGPL v2.1
+
+**EhBASIC**
+
+With the exception of the files noted below, code base © 2021 Michael Billington, and is licensed under a Creative Commons Attribution 4.0 International License.
+The files in EhBasic/basic/ are derived from EhBASIC, developed by Lee Davidson. The EhBASIC license allows for non-commerical use only. The most recent release and manual is hosted here, and a mirror of Lee's website can be found here.
+
+EhBASIC is free but not copyright free. For non commercial use there is only one restriction, any derivative work should include, in any binary image distributed, the string "Derived from EhBASIC" and in any distribution that includes human readable files a file that includes the above string in a human readable form e.g. not as a comment in an HTML file.
