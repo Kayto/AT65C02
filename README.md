@@ -115,10 +115,12 @@ The repository provides the files for you to create your very own AT65C02.
 * Main board, Hex board and Programmable Memory Decoder Tested working.
 * Modem - UNTESTED AT THE MOMENT
 
-**Slight annoyances (which may or may not be investigated)**
+**Slight annoyances (which may or may not be investigated/fixed)**
 * Hex board - for data FF the low F is very low brightness. It really needs some further balancing of the resistor values and grounding.
 * Blinkies - Data lines have a bit of jitter with the clock. No biggie but OCD spotted it.
 * Wireless Serial - using Xmodem is fine with very small code uploads but the larger files fail. Workaround is to use a wired serial. I am hoping this can be helped with code but might wait until I can acquire the skills to troubleshoot!
+* Wired UART Interface - Silkscreen RTS and CTS need swapping. Bit of a mistake as I was looking at a direct FTDI plug in. As FTDI programmers vary its no big issue to use jumper wires.
+* Wireless or wired serial switching - would have been nice to have a jumper to switch out the wireless ESP-12 module rather than unplugging.
 
 ## Software
 
