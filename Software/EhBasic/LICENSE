@@ -11,3 +11,10 @@ The files in `/basic/` are derived from EhBASIC, developed by Lee Davidson. The 
 > the string "Derived from EhBASIC" and in any distribution that includes human
 > readable files a file that includes the above string in a human readable form
 > e.g. not as a comment in an HTML file.
+
+### AT65C02 changes
+
+> Updated hardcoded VIA and ACIA locations
+> Updated cfgs for AT65C02 default memory map
+> For ease of compilation uses Visual Studio Code and the BD6502 docker image [dbuchwald/cc65-tools](https://github.com/dbuchwald/cc65-tools)- includes /common and .vscode directories from Dawid Buchwald.
+> dbuchwald/cc65-tools is licensed under the Apache License 2.0
