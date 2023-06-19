@@ -130,9 +130,9 @@ I am trying to avoid dupication of the original code repos so where possible wil
 
 | Reference | Description | Credit | 
 |-----------|-------------|--------|
-| 50_mem_read | RAM test, VIA1 and VIA 2 test blinks | by me - can be included for compilation with the DB6502 repo |
-| sbc2os | I include here the revised TASS source as it needed changes for the default AT65C02 memory map. A binary is also included for those who may struggle with TASS.  | Original by [Daryl Rictor](https://sbc.rictor.org/sbcos.html). The original author README is included. |
-| EhBasic | converted to use the DB6502 docker image for compilation | refer to the included license file |
+| **[50_mem_read]( | RAM test, VIA1 and VIA 2 test blinks | by me - needs to be combined with the DB6502 repo for compilation. |
+| **[sbc2os](https://github.com/Kayto/AT65C02/tree/main/Software/sbc2os)** | I include here the revised TASS source as it needed changes for the default AT65C02 memory map. A binary is also included for those who may struggle with TASS.  | Original by [Daryl Rictor](https://sbc.rictor.org/sbcos.html). The original author README is included. |
+| **[EhBasic](https://github.com/Kayto/AT65C02/tree/main/Software/EhBasic)** | converted to use the DB6502 docker image for compilation | Refer to the included [license](https://github.com/Kayto/AT65C02/blob/main/Software/EhBasic/LICENSE) file. |
 
 The only other code requirement is for the ATTiny4313, for the onboard keyboard controller. An explanation of this is in the [Arduino](https://github.com/Kayto/AT65C02/tree/main/Software/Arduino) folder.
 
