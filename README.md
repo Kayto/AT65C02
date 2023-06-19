@@ -124,13 +124,15 @@ The repository provides the files for you to create your very own AT65C02.
 
 ## Software
 
-As stated earlier Dawid Buchwald provides a suite of ROM and loadable sources in his github repo. This will get you on yor way to coding quickly. If you are struggling with a build environment then he also has great tutorial examples and even provides a [docker image](https://github.com/dbuchwald/cc65-tools)! Great work. 
+As stated earlier Dawid Buchwald provides a suite of ROM and loadable sources in his github repo. This will get you on yor way to coding quickly. If you are struggling with a build environment then he also has great tutorial examples and even provides a [docker image](https://github.com/dbuchwald/cc65-tools), great work. 
 
-For my ease I have duplicated the code here from Dawid Buchwald for now and ammended for his docker build environment. **For upload shortly.**
+I am trying to avoid dupication of the original code repos so where possible will only include the new or revised code. Please check the original author licence included in the folders and in the acknowledgments.
 
-| Reference | Description | 
-|-----------|-------------|
-| 50_mem_read | RAM test, VIA1 and VIA 2 test blinks |
+| Reference | Description | Credit | 
+|-----------|-------------|--------|
+| **[50_mem_read]( | RAM test, VIA1 and VIA 2 test blinks | by me - needs to be combined with the DB6502 repo for compilation. |
+| **[sbc2os](https://github.com/Kayto/AT65C02/tree/main/Software/sbc2os)** | I include here the revised TASS source as it needed changes for the default AT65C02 memory map. A binary is also included for those who may struggle with TASS.  | Original by [Daryl Rictor](https://sbc.rictor.org/sbcos.html). The original author README is included. |
+| **[EhBasic](https://github.com/Kayto/AT65C02/tree/main/Software/EhBasic)** | converted to use the DB6502 docker image for compilation | Refer to the included [license](https://github.com/Kayto/AT65C02/blob/main/Software/EhBasic/LICENSE) file. |
 
 The only other code requirement is for the ATTiny4313, for the onboard keyboard controller. An explanation of this is in the [Arduino](https://github.com/Kayto/AT65C02/tree/main/Software/Arduino) folder.
 
