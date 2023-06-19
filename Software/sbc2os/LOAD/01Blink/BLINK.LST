@@ -1,0 +1,15 @@
+
+6502/65C02 Turbo Assembler listing file of "blink.asm"
+done on Sat Jun 17 20:46:12 2023
+
+.1000                              init
+
+.1000  a9 ff      lda #$ff         	lda #$ff
+.1002  8d 02 90   sta $9002        	sta Via1DDRB
+.1005                              loop
+.1005  a9 55      lda #$55         	lda #$55
+.1007  8d 00 90   sta $9000        	sta Via1PRB
+.100a  a9 aa      lda #$aa         	lda #$aa
+.100c  8d 00 90   sta $9000        	sta Via1PRB
+.100f  4c 05 10   jmp $1005        	jmp loop
+--- end of code ---
