@@ -4,7 +4,7 @@ SMON is a machine language monitor and direct assembler for the Commodore 64,
 published in 1984 in "64'er" magazine
 
 ## SMON for 6502
-https://github.com/dhansel/smon6502#credits
+
 The version published here is an adaptation of SMON  by 
 [dhansel https://github.com/dhansel/smon6502/blob/main/README.md](https://github.com/dhansel/smon6502/blob/main/README.md)
 
@@ -35,6 +35,9 @@ The [code by dhansel ](https://github.com/dhansel/smon6502/blob/main/uart_6551.a
 
 
 > WIP - need to fix CR issue!
+> 
 > Updated hardcoded memory locations.
+> 
 > For ease of compilation uses Visual Studio Code and the VASM BD6502 docker image [dbuchwald/cc65-tools](https://github.com/dbuchwald/cc65-tools)- includes /common and .vscode directories from Dawid Buchwald.
+> 
 > dbuchwald/cc65-tools is licensed under the Apache License 2.0
