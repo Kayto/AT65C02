@@ -13,7 +13,7 @@ build/
 #KiCad/Rev002
 #KiCad/Rev001
 #KiCad/Floppy
-Software/smon6502
+#Software/smon6502
 
 # ignore doc/notes.txt, but not doc/server/arch.txt
 KiCad/*.zip
