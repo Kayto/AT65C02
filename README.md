@@ -145,6 +145,8 @@ The only other code requirement is for the ATTiny4313, for the onboard keyboard 
 Gerbers and KiCad is provided in this repo for an expansion board. This PCB plugs into the expansion port next to the blinkies. It provides hexidecmal display output aligned with the blinkenlights. Look in the software folder for the .jed files for programming the GALs.
 
 ### Programmable IO and memory decoder
+![](https://github.com/Kayto/AT65C02/blob/main/KiCad/Memory%20Decoder/Memory%20Decoder.jpg)
+
 This is now a seperate PCB that plugs into the relevant marked ports. Gerbers and KiCad provided. Allows tinkering with IO and memory maps. The design is based on the DEC-1 so refer to the links to Daryl Rictor's site for the .jed file for the GAL. 
 
 ## Future Expansion
