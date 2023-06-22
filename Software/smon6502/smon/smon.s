@@ -58,38 +58,64 @@ ENTRY:  lda     #<SMON                        ; set break-vector to program star
         brk
 
         ;; help message
-HLPMSG: .byte   "A xxxx - Assemble starting at x (end assembly with 'f', use Mxx for label)",0
-        .byte   "C xxxx yyyy zzzz aaaa bbbb - Convert (execute V followed by W)",0
-        .byte   "D xxxx (yyyy) - Disassemble from x (to y)",0
-        .byte   "F aa bb cc ..., xxxxx yyyyy - Find byte sequence a b c in x-y",0
-        .byte   "FAaaaa, xxxx yyyy - Find absolute address used in opcode",0
-        .byte   "FRaaaa, xxxx yyyy - Find relative address used in opcode",0
-        .byte   "FTxxxx yyyy - Find table (non-opcode bytes) in x-y",0
-        .byte   "FZaa, xxxx yyyy - Find zero-page address used in opcode",0
-        .byte   "FIaa, xxxx yyyy - Find immediate argument used in opcode",0
-        .byte   "G (xxxx) - Run from x (or current PC)",0
-        .byte   "K xxxx (yyyy) - Dump memory from x (to y) as ASCII",0
-        .byte   "L - Load Intel HEX data from terminal",0
-        .byte   "M xxxx (yyyy) - Dump memory from x (to y) as HEX",0
-        .byte   "MS - Check and print memory size",0
-        .byte   "MT xxxx yyyy (nn) - Test memory x-y (repeat n times)",0
-        .byte   "O xxxx yyyy aa - Fill memory x-y with a",0
+HLPMSG: .byte   "A xxxx - Assemble starting at x (end assembly with 'f', use Mxx for label)"
+        .byte  $0d
+        .byte   "C xxxx yyyy zzzz aaaa bbbb - Convert (execute V followed by W)"
+        .byte  $0d        
+        .byte   "D xxxx (yyyy) - Disassemble from x (to y)"
+                .byte  $0d
+        .byte   "F aa bb cc ..., xxxxx yyyyy - Find byte sequence a b c in x-y"
+                .byte  $0d
+        .byte   "FAaaaa, xxxx yyyy - Find absolute address used in opcode"
+                .byte  $0d
+        .byte   "FRaaaa, xxxx yyyy - Find relative address used in opcode"
+                .byte  $0d
+        .byte   "FTxxxx yyyy - Find table (non-opcode bytes) in x-y"
+                .byte  $0d
+        .byte   "FZaa, xxxx yyyy - Find zero-page address used in opcode"
+                .byte  $0d
+        .byte   "FIaa, xxxx yyyy - Find immediate argument used in opcode"
+                .byte  $0d
+        .byte   "G (xxxx) - Run from x (or current PC)"
+                .byte  $0d
+        .byte   "K xxxx (yyyy) - Dump memory from x (to y) as ASCII"
+                .byte  $0d
+        .byte   "L - Load Intel HEX data from terminal"
+                .byte  $0d
+        .byte   "M xxxx (yyyy) - Dump memory from x (to y) as HEX"
+                .byte  $0d
+        .byte   "MS - Check and print memory size"
+                .byte  $0d
+        .byte   "MT xxxx yyyy (nn) - Test memory x-y (repeat n times)"
+                .byte  $0d
+        .byte   "O xxxx yyyy aa - Fill memory x-y with a"
+                .byte  $0d,$0d
         .if     VIA > 0
-        .byte   "TW xxxx - Trace walk (single step)",0
-        .byte   "TB xxxx nn - Trace break (set break point at x, stop when hit n times)",0
-        .byte   "TQ xxxx - Trace quick (run to break point)",0
-        .byte   "TS xxxx - Trace stop (run to x)",0
+        .byte   "TW xxxx - Trace walk (single step)"
+                .byte  $0d
+        .byte   "TB xxxx nn - Trace break (set break point at x, stop when hit n times)"
+                .byte  $0d
+        .byte   "TQ xxxx - Trace quick (run to break point)"
+                .byte  $0d
+        .byte   "TS xxxx - Trace stop (run to x)"
+                .byte  $0d
         .endif
+                .byte  $0d        
         .byte   "V xxxx yyyy zzzz aaaa bbbb - Within a-b, convert addresses referencing x-y to z",0
-        .byte   "W xxxx yyyy zzzz - Copy memory x-y to z",0
-        .byte   "= xxxx yyyy - compare memory starting at x to memory starting at y",0
-        .byte   "#ddd - convert DEC to HEX and BIN",0
-        .byte   "$xx - convert HEX to DEC and BIN",0
-        .byte   "%bbbbbbbb - convert BIN to DEC and HEX",0
-        .byte   0
+                .byte  $0d
+        .byte   "W xxxx yyyy zzzz - Copy memory x-y to z"
+                .byte  $0d
+        .byte   "= xxxx yyyy - compare memory starting at x to memory starting at y"
+                .byte  $0d
+        .byte   "#ddd - convert DEC to HEX and BIN"
+                .byte  $0d
+        .byte   "$xx - convert HEX to DEC and BIN"
+                .byte  $0d
+        .byte   "%bbbbbbbb - convert BIN to DEC and HEX"
+        .byte $0D
         
         ;; commands
-ICMD:   .byte "'#$%,:;=?ACDFGHKLMORTVW"
+ICMD:   .byte "'#$%,:;=?ACDFGHKLMORTVW",$0d
 ICMDE:  .byte $00,$00,$00,$00,$00
 
         ;; command entry point addresses
