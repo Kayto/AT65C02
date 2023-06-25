@@ -33,9 +33,6 @@ The [code by dhansel ](https://github.com/dhansel/smon6502/blob/main/uart_6551.a
 
 ### AT65C02 changes
 
-
-> WIP - need to fix CR issue!
-> 
 > Updated hardcoded memory locations.
 > 
 > For ease of compilation uses Visual Studio Code and the VASM BD6502 docker image [dbuchwald/cc65-tools](https://github.com/dbuchwald/cc65-tools)- includes /common and .vscode directories from Dawid Buchwald.
