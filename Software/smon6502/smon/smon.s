@@ -48,8 +48,11 @@ STOP            = $FFE1         ; Kernal test STOP routine
 GETIN           = $FFE4         ; Kernal get input routine
 
 
-        .org    $a000   ;AT65C02
+        .org    $8000   ;AT65C02 a000 start 8000 to fill first 8K for 32K bin
         .org    $e000
+
+
+        
 
 ENTRY:  lda     #<SMON                        ; set break-vector to program start
         sta     BRK_LO
@@ -101,7 +104,7 @@ HLPMSG: .byte   "A xxxx - Assemble starting at x (end assembly with 'f', use Mxx
                 .byte  $0d
         .endif
                 .byte  $0d        
-        .byte   "V xxxx yyyy zzzz aaaa bbbb - Within a-b, convert addresses referencing x-y to z",0
+        .byte   "V xxxx yyyy zzzz aaaa bbbb - Within a-b, convert addresses referencing x-y to z"
                 .byte  $0d
         .byte   "W xxxx yyyy zzzz - Copy memory x-y to z"
                 .byte  $0d
@@ -117,6 +120,23 @@ HLPMSG: .byte   "A xxxx - Assemble starting at x (end assembly with 'f', use Mxx
         ;; commands
 ICMD:   .byte "'#$%,:;=?ACDFGHKLMORTVW",$0d
 ICMDE:  .byte $00,$00,$00,$00,$00
+
+      ;; welcome message
+welcome:
+        ldy     #>welmsg
+        lda     #<welmsg
+        jsr     STROUT
+        rts
+welmsg:
+        .byte $0d
+        .byte "AT65C02 Ready"
+        .byte $0D
+        .byte "SMON by Norfried Mann and Dietrich Weineck"
+        .byte $0D
+        .byte "Adapted to a minimal 6502 system by David Hansel (2023)"
+        .byte $0D
+        .byte "Type help for instructions"
+        .byte $00
 
         ;; command entry point addresses
 IOFS:   .byte   <(TICK-1),>(TICK-1)             ; '
@@ -140,7 +160,7 @@ IOFS:   .byte   <(TICK-1),>(TICK-1)             ; '
         .byte   <(OCCUPY-1),>(OCCUPY-1)         ; O
         .byte   <(REGISTER-1),>(REGISTER-1)     ; R
         .byte   <(TRACE-1),>(TRACE-1)           ; T
-        .byte   <(MOVE-1),>(MOVE-1)             ; V
+        .byte   <(MOVE-1),>(MOVE-1)             ; VHLPMSG
         .byte   <(WRITE-1),>(WRITE-1)           ; W
 
         ;; output line start characters
@@ -199,7 +219,8 @@ LC204:  .byte   $08,$84,$81,$22,$21,$26,$20,$80
 LC20C:  .byte   $03,$20,$1C,$14,$14,$10,$04,$0C
 
 ; SMON START
-SMON:   cld
+SMON:   jsr welcome
+        cld
         ldx     #$05
 LC22E:  pla
         sta     PCHSAVE,x       ; save stack
@@ -1967,3 +1988,6 @@ PRL3:   DEY
 PRPOW:  .word 1, 10, 100, 1000, 10000
         
         .include "kernal.s"
+
+ 
+
