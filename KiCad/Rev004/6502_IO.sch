@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 6 7
 Title "AT65C02 Hobby Computer"
-Date "2023-05-09"
+Date "2023-08-06"
 Rev "Rev004"
 Comp "This AT65C02 version by AdamT117. "
 Comment1 "Revisions to Dawid Buchwald design and additions as marked. "
@@ -1156,9 +1156,9 @@ Text GLabel 1550 6100 0    50   Output ~ 0
 RxD
 Text GLabel 1750 6000 0    50   Input ~ 0
 TxD
-Text GLabel 1575 5900 0    50   BiDi ~ 0
-~RTS
 Text GLabel 1550 6300 0    50   BiDi ~ 0
+~RTS
+Text GLabel 1575 5900 0    50   BiDi ~ 0
 ~CTS
 Text GLabel 1750 6400 0    50   Input ~ 0
 GND
@@ -1529,4 +1529,6 @@ Wire Bus Line
 	1950 925  1950 1825
 Wire Bus Line
 	700  6050 700  7600
+Text Notes 1600 6650 0    50   ~ 0
+08/2023\nCTS RTS swapped to better match my FTDI
 $EndSCHEMATC

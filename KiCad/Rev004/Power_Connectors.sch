@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 5 7
 Title "AT65C02 Hobby Computer"
-Date "2023-05-09"
+Date "2023-08-06"
 Rev "Rev004"
 Comp "This AT65C02 version by AdamT117. "
 Comment1 "Revisions to Dawid Buchwald design and additions as marked. "
@@ -14,57 +14,49 @@ Comment3 "Based on Ben Eater's design. AndersBNielsen for the \"Simple Universal
 Comment4 "Original Author: Dawid Buchwald with AT65C02 additions"
 $EndDescr
 Wire Wire Line
-	3850 2000 4075 2000
-Text GLabel 4775 1700 2    50   Input ~ 0
+	2350 2775 2575 2775
+Text GLabel 4175 2475 2    50   Input ~ 0
 +3.3V
-Wire Wire Line
-	4575 1700 4775 1700
-Text GLabel 4575 1900 2    50   Input ~ 0
-+3.3V
-Text GLabel 3850 2000 0    50   Input ~ 0
+Text GLabel 2350 2775 0    50   Input ~ 0
 GND
-NoConn ~ 4075 1900
-Text GLabel 3850 1700 0    50   Output ~ 0
+NoConn ~ 2575 2675
+Text GLabel 2350 2475 0    50   Output ~ 0
 TxD3
 Wire Wire Line
-	4575 2000 4775 2000
-Text GLabel 2525 1600 0    50   Input ~ 0
+	3075 2775 3275 2775
+Text GLabel 2600 1125 0    50   Input ~ 0
 +5V
-Text GLabel 3025 1600 2    50   Input ~ 0
+Text GLabel 3100 1125 2    50   Input ~ 0
 +3.3V
-Text GLabel 2525 2100 0    50   Input ~ 0
+Text GLabel 2600 1625 0    50   Input ~ 0
 GND
-Text GLabel 3025 2100 2    50   Input ~ 0
+Text GLabel 3100 1625 2    50   Input ~ 0
 GND
-NoConn ~ 3025 1900
-NoConn ~ 3025 2000
-NoConn ~ 2525 1900
-NoConn ~ 2525 2000
-Text GLabel 3025 1700 2    50   Output ~ 0
+Text GLabel 3100 1225 2    50   Output ~ 0
 TxD3
-Text GLabel 3025 1800 2    50   Input ~ 0
+Text GLabel 3100 1325 2    50   Input ~ 0
 RxD3
 Wire Wire Line
-	4075 1700 3850 1700
-Text GLabel 4775 2000 2    50   Input ~ 0
+	2575 2475 2350 2475
+Text GLabel 3275 2775 2    50   Input ~ 0
 RxD3
 $Comp
 L AT_65C02_Computer_Rev004-rescue:Conn_02x8_Odd_Even-Connector_Generic_copy-65C02_Computer-rescue-AT_65C02_Computer-rescue-AT_65C02_Computer_Rev003_1-rescue-AT_65C02_Computer_Rev003-rescue J?
 U 1 1 639F2E0D
-P 4325 1850
+P 2825 2625
 AR Path="/5F14295C/639F2E0D" Ref="J?"  Part="1" 
 AR Path="/639F2E0D" Ref="J?"  Part="1" 
 AR Path="/637561AA/639F2E0D" Ref="J14"  Part="1" 
-F 0 "J14" H 4325 2325 50  0000 C CNN
-F 1 "ESP Interface" H 4325 2225 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical" H 4325 1850 50  0001 C CNN
-F 3 "~" H 4325 1850 50  0001 C CNN
-	1    4325 1850
+F 0 "J14" H 2825 3100 50  0000 C CNN
+F 1 "ESP Interface" H 2825 3000 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical" H 2825 2625 50  0001 C CNN
+F 3 "~" H 2825 2625 50  0001 C CNN
+	1    2825 2625
 	-1   0    0    -1  
 $EndComp
-Text GLabel 2525 1800 0    50   Output ~ 0
+Text GLabel 2600 1325 0    50   Output ~ 0
 RxDx
-Text GLabel 2525 1700 0    50   Input ~ 0
+Text GLabel 2600 1225 0    50   Input ~ 0
 TxDx
 Wire Wire Line
 	10250 1450 10250 1200
@@ -254,33 +246,25 @@ Text GLabel 8900 3000 0    50   Input ~ 0
 $Comp
 L AT_65C02_Computer_Rev004-rescue:Level_Shifter_LV-65C02_Computer-rescue-AT_65C02_Computer_Rev003_1-rescue-AT_65C02_Computer_Rev003-rescue J16
 U 1 1 6376099F
-P 2825 2100
-F 0 "J16" H 2975 2875 50  0000 C CNN
-F 1 "Level_Shifter_LV" H 3100 2750 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" H 2825 2400 50  0001 C CNN
-F 3 "" H 2825 2400 50  0001 C CNN
-	1    2825 2100
+P 2900 1625
+F 0 "J16" H 3050 2400 50  0000 C CNN
+F 1 "Level_Shifter_LV" H 3175 2275 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" H 2900 1925 50  0001 C CNN
+F 3 "" H 2900 1925 50  0001 C CNN
+	1    2900 1625
 	1    0    0    -1  
 $EndComp
 $Comp
 L AT_65C02_Computer_Rev004-rescue:Level_Shifter_HV-65C02_Computer-rescue-AT_65C02_Computer_Rev003_1-rescue-AT_65C02_Computer_Rev003-rescue J15
 U 1 1 63762084
-P 2725 2100
-F 0 "J15" H 2400 2875 50  0000 L CNN
-F 1 "Level_Shifter_HV" H 2125 2750 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" H 2725 2400 50  0001 C CNN
-F 3 "" H 2725 2400 50  0001 C CNN
-	1    2725 2100
+P 2800 1625
+F 0 "J15" H 2475 2400 50  0000 L CNN
+F 1 "Level_Shifter_HV" H 2200 2275 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" H 2800 1925 50  0001 C CNN
+F 3 "" H 2800 1925 50  0001 C CNN
+	1    2800 1625
 	1    0    0    -1  
 $EndComp
-Wire Notes Line
-	1950 1200 5225 1200
-Wire Notes Line
-	5225 1200 5225 2250
-Wire Notes Line
-	5225 2250 1950 2250
-Wire Notes Line
-	1950 1200 1950 2250
 Wire Notes Line
 	11075 575  11075 3725
 Wire Notes Line
@@ -336,8 +320,8 @@ F 3 "" H 8875 1450 50  0001 C CNN
 $EndComp
 Text GLabel 10500 1450 2    50   Output ~ 0
 PWR_LED
-NoConn ~ 4575 1800
-NoConn ~ 4075 1800
+NoConn ~ 3075 2575
+NoConn ~ 2575 2575
 Text GLabel 850  7650 2    50   Input ~ 0
 a[0..15]
 Text Label 850  6000 0    50   ~ 0
@@ -443,12 +427,12 @@ d[0..7]
 Wire Bus Line
 	1300 7650 1400 7650
 $Comp
-L Connector_Generic:Conn_02x07_Odd_Even J18
+L Connector_Generic:Conn_02x08_Odd_Even J18
 U 1 1 64939A3B
 P 8675 4675
 F 0 "J18" H 8725 5275 50  0000 C CNN
 F 1 "CPU Signals" H 8750 5200 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_2x07_P2.54mm_Vertical" H 8675 4675 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x08_P2.54mm_Vertical" H 8675 4675 50  0001 C CNN
 F 3 "" H 8675 4675 50  0001 C CNN
 	1    8675 4675
 	1    0    0    -1  
@@ -1052,7 +1036,7 @@ F 3 "~" H 2100 4925 50  0001 C CNN
 $EndComp
 Text Notes 1000 3875 0    50   ~ 0
 Port is via blinky latches for display expansion (HEX board)
-Text Notes 2400 2475 0    50   ~ 0
+Text Notes 2450 1925 0    50   ~ 0
 Level shifter and ESP port
 Text Notes 6650 2775 0    50   ~ 0
 L7805\nCurrent consumption with full blinky \nand HEX display @0.4amps\n\nTemperature 60 degrees C
@@ -1068,9 +1052,9 @@ Wire Notes Line
 	9825 2875 9825 3375
 Text Notes 9600 4150 0    50   ~ 0
 Capacitor C31 100uF\nminimum acording to datasheet is 33uF. \nPlease check output voltage before \nusing as less than this value results\n in 4.8v output.
-Text GLabel 8475 4975 0    50   Input ~ 0
+Text GLabel 8475 5075 0    50   Input ~ 0
 ~SO
-Text GLabel 8975 4975 2    50   Input ~ 0
+Text GLabel 8975 5075 2    50   Input ~ 0
 BE
 $Comp
 L AT_65C02_Computer_Rev004-rescue:L7806-6502-computer-cache-AT_65C02_Computer_Rev003_1-rescue-AT_65C02_Computer_Rev003-rescue U13
@@ -1096,6 +1080,104 @@ Text GLabel 8975 4875 2    50   Input ~ 0
 ROM~WE
 Text Notes 9525 4975 0    50   ~ 0
 ROM WE should be tied \nto 5V for normal operation
+Entry Wire Line
+	2675 5425 2775 5525
+$Comp
+L Connector:Conn_01x04_Female J34
+U 1 1 64A4A140
+P 4150 1250
+F 0 "J34" H 4178 1226 50  0000 L CNN
+F 1 "Conn_01x04_Female" H 4178 1135 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 4150 1250 50  0001 C CNN
+F 3 "~" H 4150 1250 50  0001 C CNN
+	1    4150 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 1525 3650 1525
+Wire Wire Line
+	3650 1525 3650 1450
+Wire Wire Line
+	3650 1450 3950 1450
+Wire Wire Line
+	3100 1425 3575 1425
+Wire Wire Line
+	3575 1425 3575 1350
+Wire Wire Line
+	3575 1350 3950 1350
+Wire Wire Line
+	2600 1525 2075 1525
+Wire Wire Line
+	2075 1525 2075 625 
+Wire Wire Line
+	2075 625  3700 625 
+Wire Wire Line
+	3700 625  3700 1250
+Wire Wire Line
+	3700 1250 3950 1250
+Wire Wire Line
+	2600 1425 2150 1425
+Wire Wire Line
+	2150 1425 2150 700 
+Wire Wire Line
+	2150 700  3775 700 
+Wire Wire Line
+	3775 700  3775 1150
+Wire Wire Line
+	3775 1150 3950 1150
+$Comp
+L Connector:Conn_01x03_Male J35
+U 1 1 64AAAE1E
+P 3600 2100
+F 0 "J35" V 3662 2244 50  0000 L CNN
+F 1 "Conn_01x03_Male" V 3753 2244 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 3600 2100 50  0001 C CNN
+F 3 "~" H 3600 2100 50  0001 C CNN
+	1    3600 2100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3700 2300 3700 2475
+Wire Wire Line
+	3700 2475 4175 2475
+Wire Wire Line
+	3600 2300 3600 2475
+Wire Wire Line
+	3075 2675 3600 2675
+Wire Wire Line
+	3075 2475 3600 2475
+Connection ~ 3600 2475
+Wire Wire Line
+	3600 2475 3600 2675
+Wire Wire Line
+	3500 2300 3350 2300
+Text GLabel 3350 2300 0    50   Input ~ 0
+GND
+Text GLabel 8550 5900 0    50   Input ~ 0
+~ROM_OE
+Text GLabel 8550 5700 0    50   Input ~ 0
+~ROM_CS
+NoConn ~ 8475 4975
+NoConn ~ 8975 4975
+$Comp
+L Connector:Conn_01x02_Female J36
+U 1 1 64B6BA7A
+P 8925 5750
+F 0 "J36" H 8953 5726 50  0000 L CNN
+F 1 "Conn_01x02_Female" H 8953 5635 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 8925 5750 50  0001 C CNN
+F 3 "~" H 8925 5750 50  0001 C CNN
+	1    8925 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 5700 8725 5700
+Wire Wire Line
+	8725 5700 8725 5750
+Wire Wire Line
+	8550 5900 8725 5900
+Wire Wire Line
+	8725 5900 8725 5850
 Wire Bus Line
 	2775 5225 2775 5800
 Wire Bus Line
@@ -1114,6 +1196,10 @@ Wire Bus Line
 	1275 4225 1275 5800
 Wire Bus Line
 	750  6100 750  7650
-Entry Wire Line
-	2675 5425 2775 5525
+Text Notes 4850 2375 0    50   ~ 0
+08/2023\nSwitch for wireless
+Text Notes 4675 1000 0    50   ~ 0
+08/2023\nAdded breakouts for spares on level shifter
+Text Notes 9575 4575 0    50   ~ 0
+08/2023\nChanged JP18 to standard header size
 $EndSCHEMATC
