@@ -119,8 +119,9 @@ The repository provides the files for you to create your very own AT65C02.
 * Hex board - for data FF the low F is very low brightness. It really needs some further balancing of the resistor values and grounding.
 * Blinkies - Data lines have a bit of jitter with the clock. No biggie but OCD spotted it.
 * Wireless Serial - using Xmodem is fine with very small code uploads but the larger files fail. Workaround is to use a wired serial. I am hoping this can be helped with code but might wait until I can acquire the skills to troubleshoot!
-* Wired UART Interface - Silkscreen RTS and CTS need swapping. Bit of a mistake as I was looking at a direct FTDI plug in. As FTDI programmers vary its no big issue to use jumper wires.
-* Wireless or wired serial switching - would have been nice to have a jumper to switch out the wireless ESP-12 module rather than unplugging.
+* Wired UART Interface - Silkscreen RTS and CTS need swapping. Bit of a mistake as I was looking at a direct FTDI plug in. As FTDI programmers vary its no big issue to use jumper wires.**Fixed 08/2023**
+* Wireless or wired serial switching - would have been nice to have a jumper to switch out the wireless ESP-12 module rather than unplugging.**Fixed 08/2023**
+* Breakouts for x2 spare level shifter channels.**Fixed 08/2023**
 
 ## Software
 
@@ -134,6 +135,7 @@ I am trying to avoid dupication of the original code repos so where possible wil
 | **[sbc2os](https://github.com/Kayto/AT65C02/tree/main/Software/sbc2os)** | I include here the revised TASS source as it needed changes for the default AT65C02 memory map. A binary is also included for those who may struggle with TASS.  | Original by [Daryl Rictor](https://sbc.rictor.org/sbcos.html). The original author README is included. |
 | **[EhBasic](https://github.com/Kayto/AT65C02/tree/main/Software/EhBasic)** | Using the DB6502 docker image for compilation | Refer to the included [license](https://github.com/Kayto/AT65C02/blob/main/Software/EhBasic/LICENSE) file. |
 | **[smon6502](https://github.com/Kayto/AT65C02/tree/main/Software/smon6502)** | [dhansel smon6502](https://github.com/dhansel/smon6502) Using the DB6502 VASM docker image for compilation. | Refer to the included [Readme](https://github.com/Kayto/AT65C02/blob/main/Software/smon6502/readme.md) file. |
+| **[sysmon65](https://github.com/Kayto/AT65C02/tree/main/Software/SYSMON65-main)** | [jdimeglio sysmon65](https://github.com/jdimeglio/SYSMON65)  | Binary only ATM. Will include the relevant modified source files shortly. Use original source and replace files that have been modified. Compilation requires the Michal Kowalski assembler/simulator  |
 
 The only other code requirement is for the ATTiny4313, for the onboard keyboard controller. An explanation of this is in the [Arduino](https://github.com/Kayto/AT65C02/tree/main/Software/Arduino) folder.
 
