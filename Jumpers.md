@@ -1,7 +1,8 @@
 ## Jumpers
 
 There are numerous jumpers/headers/sockets on the board to adjust the function and provide expansion. It was worthy of more explanation - hence a fresh page of explanation.
-Note that all on/off switches have been substituted for 2.54mm pitch male pin headers that require shunts to bridge for on/off etc. . Similariy this applies to chip select/enables and all LEDs on the board with the exception of the power light. This approach was mainly to save cost but there is something about slide switches that never last that long. If you dont want to waste the headers you can just default bridge the through holes.
+
+Note that all on/off switches have been substituted for 2.54mm pitch male pin headers that require shunts to bridge for on/off etc.Similariy this applies to chip select/enables and all LEDs on the board with the exception of the power light. This approach was mainly to save cost but there is something about slide switches that never last that long. If you dont want to waste the headers you can just default bridge the through holes.
 
 Personally I find it useful that you can enable/disable the blinkies - given that at clock speeds over 500Hz they really cannot be read and waste power - carbon saving bonus. 
 
