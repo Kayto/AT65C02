@@ -23,7 +23,7 @@ The following **ports** are located on the board with a brief explanation.
 | J14 | ESP Interface |Wireless (ESP) port |
 | J15 | HV Level Shifter port H1, H2 |HV Level Shifter port |
 | J16 | LV Level shifter port L1, L2 |LV Level shifter port |
-| J18 | CPU Signal Port |Breakout port for various CPU signals. **note that ROM WE needs wire to +5V or else all hell breaks loose**|
+| J18 | CPU Signal Port |Breakout port for various CPU signals. **Note - ROM WE needs wire jumper to +5V or else all hell breaks loose!**|
 | J20 | Modem Interface |- |
 | J21 | Expansion port #2 |- |
 | J22 | Expansion port #3 |- |
