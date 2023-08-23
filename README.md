@@ -4,7 +4,6 @@
 
 * **Rev004 board - looking good and working well. Latest HEX board and decoder expansion board also tested working. Onboard Modem needs assembly, i might struggle for a while with code to test it.**
 * **Minor fixes/additions to PCB to address some of the issues (see below revisions section).**
-* **Coming Soon - A plug in board to allow degugging and onboard ROM programming via an Arduino.**
 
 ## Introduction
 
