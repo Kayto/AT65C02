@@ -1,6 +1,6 @@
 ## Jumpers
 
-There are numerous jumpers/headers/sockets on the board to adjust the function and provide expansion. It was worthy of more explanation - hence a fresh page of explanation.
+There are numerous jumpers/headers/sockets on the board to adjust the function and provide expansion. It was worthy of more explanation - hence a fresh page.
 
 Note that all on/off switches have been substituted for 2.54mm pitch male pin headers that require shunts to bridge for on/off etc. Similarily this applies to chip select/enables and all LEDs on the board with the exception of the power light. This approach was mainly to save cost but there is something about slide switches that never last that long. If you dont want to waste the headers you can just default bridge the through holes.
 
@@ -23,7 +23,7 @@ The following **ports** are located on the board with a brief explanation.
 | J14 | ESP Interface |Wireless (ESP) port |
 | J15 | HV Level Shifter port H1, H2 |HV Level Shifter port |
 | J16 | LV Level shifter port L1, L2 |LV Level shifter port |
-| J18 | CPU Signal Port |Breakout port for various CPU signals |
+| J18 | CPU Signal Port |Breakout port for various CPU signals. **note that ROM WE needs wire to +5V or else all hell breaks loose**|
 | J20 | Modem Interface |- |
 | J21 | Expansion port #2 |- |
 | J22 | Expansion port #3 |- |
@@ -64,4 +64,4 @@ The following **switch headers** are located on the board with a brief explanati
 
 Default jumper setting are shown below.
 
-![](https://github.com/Kayto/AT65C02/blob/main/Images/20230823_182843.jpg)https://github.com/Kayto/AT65C02/blob/main/Images/20230823_182843.jpg)
+![](https://github.com/Kayto/AT65C02/blob/main/Images/20230823_182843.jpg)
