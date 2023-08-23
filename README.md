@@ -128,7 +128,7 @@ The repository provides the files for you to create your very own AT65C02.
 ##JUMPERS
 
 There are a number of jumpers/headers on the PCB which may need some explanation?
-I have created a separate page [here](https://github.com/Kayto/AT65C02/blob/main/KiCad/Rev004/AT65C02_Schematic.pdf) to explain them.
+I have created a separate page [here]([https://github.com/Kayto/AT65C02/blob/main/KiCad/Rev004/AT65C02_Schematic.pdf](https://github.com/Kayto/AT65C02/blob/main/Jumpers.md) to explain them.
 
 
 ## Software
