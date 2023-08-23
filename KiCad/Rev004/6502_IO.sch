@@ -1493,6 +1493,8 @@ F 3 "" H 2550 1525 50  0001 C CNN
 	1    2550 1525
 	1    0    0    -1  
 $EndComp
+Text Notes 1600 6650 0    50   ~ 0
+08/2023\nCTS RTS swapped to better match my FTDI
 Wire Bus Line
 	5250 3000 5250 3400
 Wire Bus Line
@@ -1529,6 +1531,4 @@ Wire Bus Line
 	1950 925  1950 1825
 Wire Bus Line
 	700  6050 700  7600
-Text Notes 1600 6650 0    50   ~ 0
-08/2023\nCTS RTS swapped to better match my FTDI
 $EndSCHEMATC

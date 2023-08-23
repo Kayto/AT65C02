@@ -125,6 +125,12 @@ The repository provides the files for you to create your very own AT65C02.
 * Breakouts for x2 spare level shifter channels. **Fixed 08/2023**.
 * Standardise some headers to even sizes. **Fixed 08/2023**.
 
+###.JUMPERS
+
+There are a number of jumpers/headers on the PCB which may need some explanation?
+I have created a separate page here to explain them.
+
+
 ## Software
 
 As stated earlier Dawid Buchwald provides a suite of ROM and loadable sources in his github repo. This will get you on yor way to coding quickly. If you are struggling with a build environment then he also has great tutorial examples and even provides a [docker image](https://github.com/dbuchwald/cc65-tools), great work. 

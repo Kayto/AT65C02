@@ -1178,6 +1178,12 @@ Wire Wire Line
 	8550 5900 8725 5900
 Wire Wire Line
 	8725 5900 8725 5850
+Text Notes 4850 2375 0    50   ~ 0
+08/2023\nSwitch for wireless
+Text Notes 4675 1000 0    50   ~ 0
+08/2023\nAdded breakouts for spares on level shifter
+Text Notes 9575 4575 0    50   ~ 0
+08/2023\nChanged JP18 to standard header size
 Wire Bus Line
 	2775 5225 2775 5800
 Wire Bus Line
@@ -1196,10 +1202,6 @@ Wire Bus Line
 	1275 4225 1275 5800
 Wire Bus Line
 	750  6100 750  7650
-Text Notes 4850 2375 0    50   ~ 0
-08/2023\nSwitch for wireless
-Text Notes 4675 1000 0    50   ~ 0
-08/2023\nAdded breakouts for spares on level shifter
-Text Notes 9575 4575 0    50   ~ 0
-08/2023\nChanged JP18 to standard header size
+Text Notes 9450 5675 0    50   ~ 0
+08/2023\nAdded ROMCS ROM OE Breakouts
 $EndSCHEMATC
