@@ -6,6 +6,8 @@ Note that all on/off switches have been substituted for 2.54mm pitch male pin he
 
 Personally I find it useful that you can enable/disable the blinkies - given that at clock speeds over 500Hz they really cannot be read and waste power - carbon saving bonus. 
 
+![](https://github.com/Kayto/AT65C02/blob/main/Images/20230823_182843.jpg)
+
 The following **ports** are located on the board with a brief explanation.
 
 | PCB Reference| Description | Comment |
