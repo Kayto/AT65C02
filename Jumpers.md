@@ -64,4 +64,4 @@ The following **switch headers** are located on the board with a brief explanati
 
 Default jumper setting are shown below.
 
-![](https://github.com/Kayto/AT65C02/blob/main/Images/AT65C02_PCB_Silkscreen_1.jpg)
+![](https://github.com/Kayto/AT65C02/blob/main/Images/20230823_182843.jpg)https://github.com/Kayto/AT65C02/blob/main/Images/20230823_182843.jpg)
