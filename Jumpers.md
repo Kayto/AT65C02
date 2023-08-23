@@ -62,3 +62,6 @@ The following **switch headers** are located on the board with a brief explanati
 | SW3 | Mode selector button - step or continuous |Mode selector button - step or continuous |
 | SW4 | Reset push button |Reset push button |
 
+Default jumper setting are shown below.
+
+![](https://github.com/Kayto/AT65C02/blob/main/Images/AT65C02_PCB_Silkscreen_1.jpg)
