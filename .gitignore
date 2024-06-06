@@ -14,7 +14,7 @@ build/
 #KiCad/Rev001
 #KiCad/Floppy
 #Software/smon6502
-debugger/
+Debugger/
 ATOS/
 
 # ignore doc/notes.txt, but not doc/server/arch.txt
