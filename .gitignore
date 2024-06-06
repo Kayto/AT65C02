@@ -15,7 +15,7 @@ build/
 #KiCad/Floppy
 #Software/smon6502
 Debugger/
-ATOS/
+ATOS1/
 
 # ignore doc/notes.txt, but not doc/server/arch.txt
 KiCad/*.zip
