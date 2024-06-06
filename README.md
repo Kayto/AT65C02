@@ -4,6 +4,7 @@
 
 * **Rev004 board - looking good and working well. Latest HEX board and decoder expansion board also tested working. Onboard Modem needs assembly, i might struggle for a while with code to test it.**
 * **Minor fixes/additions to PCB to address some of the issues (see below revisions section).**
+* **I am likely to pick up a futher revision 005 to address and consolidate some of the outstanding issues.**
 
 ## Introduction
 
@@ -119,9 +120,9 @@ The repository provides the files for you to create your very own AT65C02.
 **Slight annoyances (which may or may not be investigated/fixed)**
 * Hex board - for data FF the low F is very low brightness. It really needs some further balancing of the resistor values and grounding.
 * Blinkies - Data lines have a bit of jitter with the clock. No biggie but OCD spotted it.
-* Wireless Serial - using Xmodem is fine with very small code uploads but the larger files fail. Workaround is to use a wired serial. I am hoping this can be helped with code but might wait until I can acquire the skills to troubleshoot!
+* Wireless Serial - using Xmodem is fine with very small code uploads but the larger files fail. Workaround is to use a wired serial. I am hoping this can be helped with code but might wait until I can acquire the skills to troubleshoot! **Update 06/2024. Rather stupidly I forgot that the ESP-01 does not have flow control. Therefore anything bigger than the buffer (like large file transfers) fails. The ESP-01 therefore provides a useful serial input but its use is limited.**
 * Wired UART Interface - Silkscreen RTS and CTS need swapping. Bit of a mistake as I was looking at a direct FTDI plug in. As FTDI programmers vary its no big issue to use jumper wires. **Fixed 08/2023**.
-* Wireless or wired serial switching - would have been nice to have a jumper to switch out the wireless ESP-12 module rather than unplugging. **Fixed 08/2023**.
+* Wireless or wired serial switching - would have been nice to have a jumper to switch out the wireless ESP-01 module rather than unplugging. **Fixed 08/2023**.
 * Breakouts for x2 spare level shifter channels. **Fixed 08/2023**.
 * Standardise some headers to even sizes. **Fixed 08/2023**.
 
