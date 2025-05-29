@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name AT65C02_HEX_rev003-rescue)(type Legacy)(uri ${KIPRJMOD}/AT65C02_HEX_rev003-rescue.lib)(options "")(descr ""))
+)

@@ -438,7 +438,7 @@ $EndComp
 Wire Wire Line
 	6525 5500 6600 5500
 $Comp
-L Display_Character:LuckyLight_KWI-561AVB U?
+L AT65C02_HEX_rev003-rescue:LuckyLight_KWI-561AVB-Display_Character U?
 U 1 1 638AF080
 P 4925 5100
 AR Path="/63CBA9EA/638AF080" Ref="U?"  Part="1" 
@@ -451,7 +451,7 @@ F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/sc39-11gwa.pdf" H 4925 510
 	1    0    0    -1  
 $EndComp
 $Comp
-L Display_Character:LuckyLight_KWI-561AVB U?
+L AT65C02_HEX_rev003-rescue:LuckyLight_KWI-561AVB-Display_Character U?
 U 1 1 638AF08A
 P 6225 5100
 AR Path="/63CBA9EA/638AF08A" Ref="U?"  Part="1" 
@@ -869,7 +869,7 @@ $EndComp
 Wire Wire Line
 	6500 7775 6575 7775
 $Comp
-L Display_Character:LuckyLight_KWI-561AVB U?
+L AT65C02_HEX_rev003-rescue:LuckyLight_KWI-561AVB-Display_Character U?
 U 1 1 64070BE8
 P 4900 7375
 AR Path="/63CBA9EA/64070BE8" Ref="U?"  Part="1" 
@@ -882,7 +882,7 @@ F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/sc39-11gwa.pdf" H 4900 737
 	1    0    0    -1  
 $EndComp
 $Comp
-L Display_Character:LuckyLight_KWI-561AVB U?
+L AT65C02_HEX_rev003-rescue:LuckyLight_KWI-561AVB-Display_Character U?
 U 1 1 64070BF2
 P 6200 7375
 AR Path="/63CBA9EA/64070BF2" Ref="U?"  Part="1" 
@@ -1459,7 +1459,7 @@ F 3 "" H 2725 2300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Display_Character:LuckyLight_KWI-561AVB U?
+L AT65C02_HEX_rev003-rescue:LuckyLight_KWI-561AVB-Display_Character U?
 U 1 1 6384D0C2
 P 5300 2200
 AR Path="/63CBA9EA/6384D0C2" Ref="U?"  Part="1" 
@@ -1472,7 +1472,7 @@ F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/sc39-11gwa.pdf" H 5300 220
 	1    0    0    -1  
 $EndComp
 $Comp
-L Display_Character:LuckyLight_KWI-561AVB U?
+L AT65C02_HEX_rev003-rescue:LuckyLight_KWI-561AVB-Display_Character U?
 U 1 1 6384D0C8
 P 6725 2200
 AR Path="/63CBA9EA/6384D0C8" Ref="U?"  Part="1" 
