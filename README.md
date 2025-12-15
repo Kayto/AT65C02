@@ -150,7 +150,7 @@ I have created a separate page [here](https://github.com/Kayto/blob/main/Jumpers
 
 ### ATOS - Primary Software Suite (RECOMMENDED)
 
-**[Software_ATOS](Software/Software_ATOS/)** is the main firmware and software suite for the AT65C02. It provides a complete operating environment with ROM-based SMON monitor, interactive shell, comprehensive debugging tools, and loadable program support.
+**[Software_ATOS](Software/Software _ATOS)** is the main firmware and software suite for the AT65C02. It provides a complete operating environment with ROM-based SMON monitor, interactive shell, comprehensive debugging tools, and loadable program support.
 
 **Key Features:**
 - ROM-based SMON monitor with full debugging capabilities
