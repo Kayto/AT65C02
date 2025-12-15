@@ -150,7 +150,7 @@ I have created a separate page [here](https://github.com/Kayto/blob/main/Jumpers
 
 ### ATOS - Primary Software Suite (RECOMMENDED)
 
-**[Software_ATOS](Software/Software _ATOS)** is the main firmware and software suite for the AT65C02. It provides a complete operating environment with ROM-based SMON monitor, interactive shell, comprehensive debugging tools, and loadable program support.
+**[Software_ATOS](https://github.com/Kayto/AT65C02/tree/main/Software/Software%20_ATOS)** is the main firmware and software suite for the AT65C02. It provides a complete operating environment with ROM-based SMON monitor, interactive shell, comprehensive debugging tools, and loadable program support.
 
 **Key Features:**
 - ROM-based SMON monitor with full debugging capabilities
@@ -169,7 +169,7 @@ cd Software_ATOS
 docker run --rm -v '${PWD}:/mnt/project' dawidbuchwald/cc65-tools-make all
 ```
 
-See the [ATOS README](Software_ATOS/README.md) for complete documentation.
+See the [ATOS README]([Software_ATOS](https://github.com/Kayto/AT65C02/tree/main/Software/Software%20_ATOS)/README.md) for complete documentation.
 
 ### Alternative Software Options
 
