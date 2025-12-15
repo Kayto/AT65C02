@@ -1,0 +1,55 @@
+# Third-Party Components and Attributions
+
+This software incorporates code from multiple sources. See LICENSE.txt for detailed license terms.
+
+## SMON Machine Language Monitor
+
+**Original Authors:** Norfried Mann and Dietrich Weineck  
+**Published:** 64er Magazine (November 1984, December 1984, January 1985)  
+**Adaptation:** David Hansel (2023)  
+**Source:** https://github.com/dhansel/SMON  
+**License:** No explicit restriction (published magazine code)
+
+Original SMON was designed for the Commodore 64. This version has been adapted for minimal 6502 systems with significant modifications for AT65C02 hardware.
+
+## EhBASIC
+
+**Author:** Lee Davidson  
+**License:** Non-commercial use only  
+**Full License:** See load/ehbasic/LICENSE  
+**Required Attribution:** "Derived from EhBASIC"  
+**Source:** https://github.com/Klaus2m5/6502_EhBASIC_V2.22
+
+EhBASIC components are located in load/ehbasic/ directory.
+
+## Base Framework
+
+**Author:** Dawid Buchwald  
+**License:** MIT License  
+**Source:** https://github.com/dbuchwald/6502  
+**Components:** Build system, common libraries, configuration framework
+
+## Build Tools
+
+**Tool:** cc65 cross-compiler toolchain  
+**Docker Image:** dawidbuchwald/cc65-tools  
+**License:** Apache License 2.0  
+**Source:** https://github.com/dbuchwald/cc65-tools
+
+## AT65C02 Modifications
+
+**Author:** kayto@github.com  
+**License:** MIT License  
+**Year:** 2025
+
+Custom modifications include:
+- Shell mode integration with SMON monitor
+- BRK handler improvements with separate entry points (SMON/SMON_SHELL)
+- Enhanced trace command functionality (TW, TB, TQ, TS)
+- AT65C02-specific hardware adaptations
+- LCD and VIA interface implementations
+- trace_test validation program and comprehensive testing documentation
+
+---
+
+For complete license texts and terms, refer to LICENSE.txt in the project root.

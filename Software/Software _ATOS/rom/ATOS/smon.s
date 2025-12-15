@@ -26,10 +26,51 @@
 ;;;     at address $8200 is expected. However, this can easily
 ;;;     be adapted by modifying the code in file "uart.asm"
 ;;;
-;;; This code is based on the SMON disassembly found at:
-;;; https://github.com/cbmuser/smon-reassembly
+;;;
+;;; Modifications by kayto@github.com for AT65C02:
+;;; 2025-11-30 - Added I command in shell to display system information
+;;; 2025-11-30 - Added Q command to exit monitor and return to shell
+;;; 2025-11-30 - Added shell mode with > prompt; M command enters monitor
+;;; 2025-11-30 - Reorganized help text with category headers for better readability
+;;; 2025-11-30 - Modified uart_6551.s UAGET to be truly non-blocking (returns 0 if no char)
+;;; 2025-11-30 - Converted from vasm to ca65/ld65 toolchain for linker symbol support
+;;; 2025-11-30 - Enhanced INFO command to display dynamic memory usage using linker symbols
 
- .include "config.s"        
+ .include "config.s"
+
+        .export STROUT
+        .export CHROUT
+        .export CHRIN
+        .export UCASE
+        .export SMON
+        .export SMON_SHELL
+        .export PRTINT
+        .export LC323
+        .export LC32A
+        .export _delay_ms
+        .export LOAD
+        .export GO
+
+        .import boot_animation
+        .import __RAMSTART_START__
+        .import __RAMTOP_START__
+        .import __SYS_RAM_START__
+        .import __SYS_RAM_SIZE__
+        .import __USERRAM_START__
+        .import __USERRAM_SIZE__
+        .import __ROM_START__
+        .import __ROM_SIZE__
+        .import __CODE_SIZE__
+        .import __RODATA_SIZE__
+        .import __JUMPTABLE_SIZE__
+        .import __VIA1_START__
+        .import __VIA2_START__
+        .import __ACIA_START__
+        .import __SYS_RAM_LAST__
+        .import __USERRAM_LAST__
+        .import SHELL
+        .import SHELLCMD
+        .import BLINK_LED
 
 PCHSAVE         = $02A8         ; PC hi
 PCLSAVE         = $02A9         ; PC lo
@@ -46,79 +87,154 @@ CHRIN           = $FFCF         ; Kernal input routine
 CHROUT          = $FFD2         ; Kernal output routine
 STOP            = $FFE1         ; Kernal test STOP routine
 GETIN           = $FFE4         ; Kernal get input routine
+MON_BANNER      = $02AF         ; Monitor banner flag (0=not shown, 1=shown)
 
+        .segment "CODE"
 
-        .org    $8000   ;AT65C02 a000 start 8000 to fill first 8K for 32K bin
-        .org    $e000
-
-
-        
-
-ENTRY:  lda     #<SMON                        ; set break-vector to program start
+ENTRY:  ; Boot initialization - only runs on RESET
+        jsr     boot_animation  ; Run boot animation on LCD
+        ; Don't show SMON banner yet - save it for first monitor entry
+        lda     #<SMON          ; set break-vector to SMON
         sta     BRK_LO
         lda     #>SMON    
         sta     BRK_HI
-        brk
+        lda     #$00            ; Initialize banner flag (not shown)
+        sta     MON_BANNER
+        jmp     SHELLCMD        ; Go to shell mode instead of monitor
 
-        ;; help message
-HLPMSG: .byte   "A xxxx - Assemble starting at x (end assembly with 'f', use Mxx for label)"
+        ;; help message - summary
+HLPMSG: .byte   "SMON Monitor Commands - Type H <category> for details"
+        .byte  $0d,$0d
+        .byte   "H A - Assembly:     A D"
         .byte  $0d
-        .byte   "C xxxx yyyy zzzz aaaa bbbb - Convert (execute V followed by W)"
-        .byte  $0d        
-        .byte   "D xxxx (yyyy) - Disassemble from x (to y)"
-                .byte  $0d
-        .byte   "F aa bb cc ..., xxxxx yyyyy - Find byte sequence a b c in x-y"
-                .byte  $0d
-        .byte   "FAaaaa, xxxx yyyy - Find absolute address used in opcode"
-                .byte  $0d
-        .byte   "FRaaaa, xxxx yyyy - Find relative address used in opcode"
-                .byte  $0d
-        .byte   "FTxxxx yyyy - Find table (non-opcode bytes) in x-y"
-                .byte  $0d
-        .byte   "FZaa, xxxx yyyy - Find zero-page address used in opcode"
-                .byte  $0d
-        .byte   "FIaa, xxxx yyyy - Find immediate argument used in opcode"
-                .byte  $0d
-        .byte   "G (xxxx) - Run from x (or current PC)"
-                .byte  $0d
-        .byte   "K xxxx (yyyy) - Dump memory from x (to y) as ASCII"
-                .byte  $0d
-        .byte   "L - Load Intel HEX data from terminal"
-                .byte  $0d
-        .byte   "M xxxx (yyyy) - Dump memory from x (to y) as HEX"
-                .byte  $0d
-        .byte   "MS - Check and print memory size"
-                .byte  $0d
-        .byte   "MT xxxx yyyy (nn) - Test memory x-y (repeat n times)"
-                .byte  $0d
-        .byte   "O xxxx yyyy aa - Fill memory x-y with a"
-                .byte  $0d,$0d
+        .byte   "H M - Memory:       M K : O W = MS MT"
+        .byte  $0d
+        .byte   "H F - Find/Search:  F FA FR FZ FI FT ' ,"
+        .byte  $0d
+        .byte   "H E - Execution:    G"
         .if     VIA > 0
-        .byte   "TW xxxx - Trace walk (single step)"
-                .byte  $0d
-        .byte   "TB xxxx nn - Trace break (set break point at x, stop when hit n times)"
-                .byte  $0d
-        .byte   "TQ xxxx - Trace quick (run to break point)"
-                .byte  $0d
-        .byte   "TS xxxx - Trace stop (run to x)"
-                .byte  $0d
+        .byte   " TW TB TQ TS"
         .endif
-                .byte  $0d        
-        .byte   "V xxxx yyyy zzzz aaaa bbbb - Within a-b, convert addresses referencing x-y to z"
-                .byte  $0d
-        .byte   "W xxxx yyyy zzzz - Copy memory x-y to z"
-                .byte  $0d
-        .byte   "= xxxx yyyy - compare memory starting at x to memory starting at y"
-                .byte  $0d
-        .byte   "#ddd - convert DEC to HEX and BIN"
-                .byte  $0d
-        .byte   "$xx - convert HEX to DEC and BIN"
-                .byte  $0d
-        .byte   "%bbbbbbbb - convert BIN to DEC and HEX"
-        .byte $0D
+        .byte  $0d
+        .byte   "H C - Conversion:   # $ % ?"
+        .byte  $0d
+        .byte   "H R - Registers:    R ;"
+        .byte  $0d
+        .byte   "H O - Other:        L S C V X H"
+        .byte  $00,$00
+
+HLPMSG_ASM:
+        .byte   "=== ASSEMBLY & DISASSEMBLY ==="
+        .byte  $0d
+        .byte   "A xxxx          - Assemble at xxxx (end with 'f', Mxx for label)"
+        .byte  $0d
+        .byte   "D xxxx (yyyy)   - Disassemble from xxxx (to yyyy)"
+        .byte  $00,$00
+
+HLPMSG_MEM:
+        .byte   "=== MEMORY OPERATIONS ==="
+        .byte  $0d
+        .byte   "M xxxx (yyyy)    - Dump memory as HEX"
+        .byte  $0d
+        .byte   "K xxxx (yyyy)    - Dump memory as ASCII"
+        .byte  $0d
+        .byte   ": xxxx aa bb cc  - Edit memory (type hex bytes)"
+        .byte  $0d
+        .byte   "O xxxx yyyy aa   - Fill memory with aa"
+        .byte  $0d
+        .byte   "W xxxx yyyy zzzz - Copy memory to zzzz"
+        .byte  $0d
+        .byte   "= xxxx yyyy      - Compare memory blocks"
+        .byte  $0d
+        .byte   "MS               - Check RAM size"
+        .byte  $0d
+        .byte   "MT xxxx yyyy (n) - Test memory (repeat n times)"
+        .byte  $00,$00
+
+HLPMSG_FIND:
+        .byte   "=== SEARCH & FIND ==="
+        .byte  $0d
+        .byte   "F aa bb..., xx yy - Find byte sequence"
+        .byte  $0d
+        .byte   "FA aaaa, xxxx yy  - Find absolute address in opcode"
+        .byte  $0d
+        .byte   "FR aaaa, xxxx yy  - Find relative address in opcode"
+        .byte  $0d
+        .byte   "FZ aa, xxxx yyyy  - Find zero-page address"
+        .byte  $0d
+        .byte   "FI aa, xxxx yyyy  - Find immediate value"
+        .byte  $0d
+        .byte   "FT xxxx yyyy      - Find table (non-opcode)"
+        .byte  $0d
+        .byte   "' xxxx text       - Write ASCII to memory (max 72 chars)"
+        .byte  $0d
+        .byte   ", xxxx            - Assemble single line"
+        .byte  $00,$00
+
+HLPMSG_EXEC:
+        .byte   "=== EXECUTION & CONTROL ==="
+        .byte  $0d
+        .byte   "G (xxxx)        - Run from xxxx or PC"
+        .byte  $0d
+        .if     VIA > 0
+        .byte   "TW xxxx         - Trace walk (single step)"
+        .byte  $0d
+        .byte   "TB xxxx nn      - Breakpoint (stop after nn hits)"
+        .byte  $0d
+        .byte   "TQ xxxx         - Run to breakpoint"
+        .byte  $0d
+        .byte   "TS xxxx         - Run until xxxx"
+        .byte  $0d
+        .endif
+        .byte  $00,$00
+
+HLPMSG_CONV:
+        .byte   "=== DATA CONVERSION ==="
+        .byte  $0d
+        .byte   "#ddd            - Convert DEC to HEX/BIN"
+        .byte  $0d
+        .byte   "$xx             - Convert HEX to DEC/BIN"
+        .byte  $0d
+        .byte   "%bbbbbbbb       - Convert BIN to DEC/HEX"
+        .byte  $0d
+        .byte   "? xxxx+yyyy     - Add two hex numbers"
+        .byte  $0d
+        .byte   "? xxxx-yyyy     - Subtract two hex numbers"
+        .byte  $0d
+        .byte  $00,$00
+
+HLPMSG_REG:
+        .byte   "=== REGISTER OPERATIONS ==="
+        .byte  $0d
+        .byte   "R - Display all registers"
+        .byte  $0d
+        .byte   "    PC SR AC XR YR SP NV-BDIZC"
+        .byte  $0d
+        .byte   ";   aa bb cc dd ee ff - Edit registers"
+        .byte  $0d
+        .byte   "   (PC SR AC XR YR SP)"
+        .byte  $00,$00
+
+HLPMSG_OTHER:
+        .byte   "=== OTHER COMMANDS ==="
+        .byte  $0d
+        .byte   "L               - Load Intel HEX from terminal"
+        .byte  $0d
+        .byte   "S xxxx yyyy     - Save memory as Intel HEX"
+        .byte  $0d
+        .byte   "C xxxx yyyy zzzz aaaa bbbb - Convert (V then W)"
+        .byte  $0d
+        .byte   "V xxxx yyyy zzzz aaaa bbbb - Convert addresses"
+        .byte  $0d
+        .byte   "X               - Exit to shell mode"
+        .byte  $0d
+        .byte   "H               - Display help summary"
+        .byte  $0d
+        .byte   "H <letter>      - Detailed help (A M F E C R O)"
+        .byte  $00,$00
         
         ;; commands
-ICMD:   .byte "'#$%,:;=?ACDFGHKLMORTVW",$0d
+ICMD:   .byte "'#$%,:;=?ACDFGHKLMORSTW X",$0d
 ICMDE:  .byte $00,$00,$00,$00,$00
 
       ;; welcome message
@@ -127,15 +243,113 @@ welcome:
         lda     #<welmsg
         jsr     STROUT
         rts
+
+      ;; delay_ms - delay for specified milliseconds
+      ;; Input: A = number of milliseconds to delay
+_delay_ms:
+        tax                     ; Save ms count in X
+@outer_loop:
+        ldy     #$FA            ; Inner loop count (~1ms at 1MHz)
+@inner_loop:
+        dey
+        bne     @inner_loop
+        dex
+        bne     @outer_loop
+        rts
+
 welmsg:
-        .byte $0d
-        .byte "AT65C02 Ready"
         .byte $0D
         .byte "SMON by Norfried Mann and Dietrich Weineck"
         .byte $0D
         .byte "Adapted to a minimal 6502 system by David Hansel (2023)"
         .byte $0D
-        .byte "Type help for instructions"
+        .byte "Type H for help"
+        .byte $0d
+        .byte "Type X to enter shell mode"
+        .byte $00
+
+MONMSG:
+        .byte $0D
+        .byte "Entering monitor mode. Type H for monitor commands."
+        .byte $0D
+        .byte $00
+
+INFOMSG:
+        .byte $0D
+        .byte "=== AT65C02 SYSTEM INFORMATION ==="
+        .byte $0D
+        .byte $00
+
+INFO_CLOCK:
+        .byte "CPU:         WDC 65C02 @ 1.0 MHz"
+        .byte $0D
+        .byte $00
+
+INFO_SYSTEM_RAM:
+        .byte "System RAM:  "
+        .byte $00
+
+INFO_USER_RAM:
+        .byte "User RAM:    "
+        .byte $00
+
+INFO_ROM_HDR:
+        .byte "ROM:         "
+        .byte $00
+
+INFO_MON_HDR:
+        .byte "Monitor:     "
+        .byte $00
+
+INFO_AT:
+        .byte " at 0x"
+        .byte $00
+
+INFO_USED:
+        .byte ", used: "
+        .byte $00
+
+INFO_OF:
+        .byte " of "
+        .byte $00
+
+INFO_SIZE:
+        .byte ", size: "
+        .byte $00
+
+INFO_BYTES:
+        .byte " bytes"
+        .byte $0D
+        .byte $00
+
+INFO_CODE:
+        .byte "Code size:   "
+        .byte $00
+
+INFO_DATA:
+        .byte "Data size:   "
+        .byte $00
+
+INFO_JTBL:
+        .byte "Jump table:  "
+        .byte $00
+
+INFO_HW_HDR:
+        .byte $0D
+        .byte "Hardware:"
+        .byte $0D
+        .byte $00
+
+INFO_UART:
+        .byte "ACIA:        0x"
+        .byte $00
+
+INFO_VIA1:
+        .byte "VIA1:        0x"
+        .byte $00
+
+INFO_VIA2:
+        .byte "VIA2:        0x"
         .byte $00
 
         ;; command entry point addresses
@@ -147,7 +361,7 @@ IOFS:   .byte   <(TICK-1),>(TICK-1)             ; '
         .byte   <(COLON-1),>(COLON-1)           ; :     
         .byte   <(SEMI-1),>(SEMI-1)             ; ; 
         .byte   <(EQUALS-1),>(EQUALS-1)         ; =
-        .byte   <(ADDSUB-1),>(ADDSUB-1)         ; ?
+        .byte   <(ADDSUB-1),>(ADDSUB-1)         ; ? (arithmetic)
         .byte   <(ASSEMBLER-1),>(ASSEMBLER-1)   ; A
         .byte   <(CONVERT-1),>(CONVERT-1)       ; C
         .byte   <(DISASS-1),>(DISASS-1)         ; D
@@ -159,9 +373,11 @@ IOFS:   .byte   <(TICK-1),>(TICK-1)             ; '
         .byte   <(MEMDUMP-1),>(MEMDUMP-1)       ; M
         .byte   <(OCCUPY-1),>(OCCUPY-1)         ; O
         .byte   <(REGISTER-1),>(REGISTER-1)     ; R
+        .byte   <(SAVE-1),>(SAVE-1)             ; S
         .byte   <(TRACE-1),>(TRACE-1)           ; T
-        .byte   <(MOVE-1),>(MOVE-1)             ; VHLPMSG
+        .byte   <(MOVE-1),>(MOVE-1)             ; V
         .byte   <(WRITE-1),>(WRITE-1)           ; W
+        .byte   <(SHELLCMD_MON-1),>(SHELLCMD_MON-1) ; X
 
         ;; output line start characters
 LC061:  .byte   "':;,()!"
@@ -218,22 +434,72 @@ OPMN3:   .byte "LRLRRACAYXAPDCYXCCXYTPRCSQIELCSIKCDIVXYXYPAPAPISXYXASACD"
 LC204:  .byte   $08,$84,$81,$22,$21,$26,$20,$80
 LC20C:  .byte   $03,$20,$1C,$14,$14,$10,$04,$0C
 
-; SMON START
-SMON:   jsr welcome
+; SMON START - Entry point for BRK instruction ONLY
+SMON:   cld
+        jmp     ENTER_MON       ; Go directly to monitor
+
+        ;; Shell mode is in shell.s module
+        ;; Commands: M (monitor), B (blink), I (info), H (help)
+        ;; Entry point: SHELLCMD (X command from monitor)
+        ;; Note: I (INFO) command removed from monitor, only available in shell
+
+; SMON_SHELL - Entry point from shell M command
+; Initializes registers to sensible defaults instead of pulling from stack
+SMON_SHELL:
         cld
+        ;; Check if first entry to monitor
+        lda     MON_BANNER
+        bne     @skip_banner
+        jsr     welcome         ; Show banner first time only
+        lda     #$01
+        sta     MON_BANNER
+@skip_banner:
+        ;; Initialize registers to sensible defaults for shell entry
+        lda     #$10            ; PCH (high byte of $1000)
+        sta     PCHSAVE
+        lda     #$00            ; PCL (low byte of $1000)
+        sta     PCLSAVE
+        lda     #$30            ; Status register (default)
+        sta     SRSAVE
+        lda     #$00            ; A register
+        sta     AKSAVE
+        lda     #$00            ; X register
+        sta     XRSAVE
+        lda     #$00            ; Y register
+        sta     YSAVE
+        tsx                     ; Save current stack pointer
+        stx     SPSAVE
+        lda     #'R'            ; execute 'R' command
+        jmp     LC2FF           ; jump to SMON command loop
+
+        ;; Enter monitor mode - original SMON code for BRK entry
+ENTER_MON:
+        ;; Initialize SMON registers from stack (for BRK entry)
         ldx     #$05
-LC22E:  pla
+SMON_INIT:
+        pla
         sta     PCHSAVE,x       ; save stack
         dex
-        bpl     LC22E
+        bpl     SMON_INIT
         lda     PCLSAVE
-        bne     LC23D
+        bne     SMON_SK1
         dec     PCHSAVE         ; PC high
-LC23D:  dec     PCLSAVE         ; PC low  
+SMON_SK1:
+        dec     PCLSAVE         ; PC low  
         tsx
         stx     SPSAVE
         lda     #'R'            ; execute 'R' command
-        jmp     LC2FF           ; jump to main loop
+        jmp     LC2FF           ; jump to SMON command loop
+
+        ;; SHELLCMD_MON - Exit monitor and return to shell (X command)
+        ;; Clears banner flag so next M entry shows banner again
+SHELLCMD_MON:
+        lda     #$00
+        sta     MON_BANNER      ; Clear banner flag
+        jmp     SHELLCMD        ; Return to shell
+
+LB7B2:  lda     SPSAVE
+        tax
         
 LC249:  jsr     PEEKCH
         beq     LC259
@@ -439,11 +705,107 @@ LC367:  inc     $FB
         inc     $FC
 LC36D:  rts
 
-        ;; HELP (H)
-HELP:   lda     #<HLPMSG        ; get help message start addr
-        sta     $BB             ; into $BB/$BC
+        ;; HELP (H) - summary or detailed help
+HELP:   jsr     CHRIN           ; get next character (don't error on CR)
+        jsr     UCASE           ; convert to uppercase
+        cmp     #$20            ; is it space?
+        beq     HELP            ; skip spaces
+        cmp     #$0D            ; is it CR?
+        beq     HELP_SUMMARY    ; show summary if no parameter
+        cmp     #'?'            ; is it ?
+        beq     HELP_SUMMARY    ; show summary for H?
+        ; Check for category letter (uppercase)
+        cmp     #'A'
+        beq     HELP_ASM
+        cmp     #'M'
+        beq     HELP_MEM
+        cmp     #'F'
+        beq     HELP_FIND
+        cmp     #'E'
+        beq     HELP_EXEC
+        cmp     #'C'
+        beq     HELP_CONV
+        cmp     #'R'
+        beq     HELP_REG
+        cmp     #'O'
+        beq     HELP_OTHER
+        ; Check for lowercase letters
+        cmp     #'a'
+        beq     HELP_ASM
+        cmp     #'m'
+        beq     HELP_MEM
+        cmp     #'f'
+        beq     HELP_FIND
+        cmp     #'e'
+        beq     HELP_EXEC
+        cmp     #'c'
+        beq     HELP_CONV
+        cmp     #'r'
+        beq     HELP_REG
+        cmp     #'o'
+        beq     HELP_OTHER
+        ; Unknown category, show summary
+        jmp     HELP_SUMMARY
+        
+HELP_SUMMARY:
+        lda     #<HLPMSG
+        sta     $BB
         lda     #>HLPMSG
         sta     $BC
+        jsr     HELP_PRINT
+        rts
+HELP_ASM:
+        lda     #<HLPMSG_ASM
+        sta     $BB
+        lda     #>HLPMSG_ASM
+        sta     $BC
+        jsr     HELP_PRINT
+        rts
+HELP_MEM:
+        lda     #<HLPMSG_MEM
+        sta     $BB
+        lda     #>HLPMSG_MEM
+        sta     $BC
+        jsr     HELP_PRINT
+        rts
+HELP_FIND:
+        lda     #<HLPMSG_FIND
+        sta     $BB
+        lda     #>HLPMSG_FIND
+        sta     $BC
+        jsr     HELP_PRINT
+        rts
+HELP_EXEC:
+        lda     #<HLPMSG_EXEC
+        sta     $BB
+        lda     #>HLPMSG_EXEC
+        sta     $BC
+        jsr     HELP_PRINT
+        rts
+HELP_CONV:
+        lda     #<HLPMSG_CONV
+        sta     $BB
+        lda     #>HLPMSG_CONV
+        sta     $BC
+        jsr     HELP_PRINT
+        rts
+HELP_REG:
+        lda     #<HLPMSG_REG
+        sta     $BB
+        lda     #>HLPMSG_REG
+        sta     $BC
+        jsr     HELP_PRINT
+        rts
+HELP_OTHER:
+        lda     #<HLPMSG_OTHER
+        sta     $BB
+        lda     #>HLPMSG_OTHER
+        sta     $BC
+        jsr     HELP_PRINT
+        rts
+        
+        ;; Print help message at $BB/$BC
+HELP_PRINT:
         ldy     #$00
 HLPL1:  lda     #$0D            ; output CR
         jsr     CHROUT
@@ -522,7 +884,7 @@ LC3EC:  lda     $01AE,x
         ;; LOAD (L)
 LOAD:   lda     #13
         jsr     CHROUT
-LDNXT:  jsr     UAGET          ; get character from UART
+LDNXT:  jsr     LAB_WAIT_Rx     ; get character from UART
         cmp     #' '
         beq     LDNXT           ; ignore space at beginning of line
         cmp     #13
@@ -595,6 +957,124 @@ LDEIC:  lda     #'I'            ; input character error
 LDEM:   lda     #'M'            ; memory error
         jsr     CHROUT
 LDERR:  jmp     ERROR
+
+;;; SAVE (S) - Output memory as Intel HEX format
+SAVE:   jsr     GETDW           ; get start (FB/FC) and end (FD/FE) address
+        jsr     LC351           ; print CR
+        
+        ; Output Intel HEX records (16 bytes per record)
+SAVE_LOOP:
+        ; Check if we've reached end address
+        jsr     LC466           ; check if at end
+        bcc     SAVE_CONT       ; continue if not at end
+        jmp     SAVE_EOF        ; if so, output EOF record
+
+SAVE_CONT:
+        ; Calculate bytes in this record (max 16, or remaining bytes)
+        sec
+        lda     $FD
+        sbc     $FB
+        sta     $B4             ; Low byte of remaining
+        lda     $FE
+        sbc     $FC             ; High byte of remaining
+        bne     SAVE_16         ; More than 256 bytes left
+        lda     $B4
+        bne     SAVE_CHK        ; Some bytes left
+        jmp     SAVE_EOF        ; Zero bytes left
+
+SAVE_CHK:
+        cmp     #16
+        bcc     SAVE_COUNT      ; Less than 16 bytes
+        
+SAVE_16:
+        lda     #16             ; Output 16 bytes
+        
+SAVE_COUNT:
+        sta     $B4             ; Store byte count
+        
+        ; Output record start marker
+        lda     #':'
+        jsr     CHROUT
+        
+        ; Output byte count as HEX
+        lda     $B4
+        jsr     LC32A
+        
+        ; Initialize checksum with byte count
+        sta     $B5             ; Checksum
+        
+        ; Output address (FB/FC)
+        lda     $FC             ; High byte
+        jsr     LC32A
+        clc
+        adc     $B5
+        sta     $B5             ; Add to checksum
+        
+        lda     $FB             ; Low byte
+        jsr     LC32A
+        clc
+        adc     $B5
+        sta     $B5             ; Add to checksum
+        
+        ; Output record type (00 = data)
+        lda     #$00
+        jsr     LC32A
+        ; checksum unchanged (adding 0)
+        
+        ; Output data bytes
+        ldy     #$00
+SAVE_DATA:
+        lda     ($FB),y
+        jsr     LC32A           ; Output byte as HEX
+        clc
+        adc     $B5
+        sta     $B5             ; Add to checksum
+        iny
+        cpy     $B4             ; Done with all bytes?
+        bne     SAVE_DATA
+        
+        ; Output checksum (two's complement)
+        lda     $B5
+        eor     #$FF
+        clc
+        adc     #$01
+        jsr     LC32A
+        
+        ; Print CR/LF
+        lda     #$0D
+        jsr     CHROUT
+        lda     #$0A
+        jsr     CHROUT
+        
+        ; Advance address by byte count
+        clc
+        lda     $FB
+        adc     $B4
+        sta     $FB
+        lda     $FC
+        adc     #$00
+        sta     $FC
+        
+        ; Continue with next record
+        jmp     SAVE_LOOP
+        
+SAVE_EOF:
+        ; Output EOF record (:00000001FF)
+        lda     #':'
+        jsr     CHROUT
+        lda     #$00
+        jsr     LC32A           ; Byte count = 00
+        jsr     LC32A           ; Address high = 00
+        jsr     LC32A           ; Address low = 00
+        lda     #$01
+        jsr     LC32A           ; Record type = 01 (EOF)
+        lda     #$FF
+        jsr     LC32A           ; Checksum = FF
+        lda     #$0D
+        jsr     CHROUT
+        lda     #$0A
+        jsr     CHROUT
+        rts
         
         ;; get HEX byte from UART
 LDBYT:  jsr     LDNIB           ; get high nibble
@@ -607,17 +1087,20 @@ LDBYT:  jsr     LDNIB           ; get high nibble
         ora     $B4             ; combine
         rts
         ;; get HEX character from UART, convert to 0-15
-LDNIB:  jsr     UAGET          ; get character from UART
+LDNIB:  jsr     LAB_WAIT_Rx     ; get character from UART
         jsr     UCASE           ; convert to uppercase
         cmp     #'0'
-        bcc     LDEIC
-        cmp     #'F'+1
-        bcs     LDEIC
-        cmp     #'9'+1
+        bcs     :+
+        jmp     LDEIC
+:       cmp     #'F'+1
+        bcc     :+
+        jmp     LDEIC
+:       cmp     #'9'+1
         bcc     LDBYT2
         cmp     #'A'
-        bcc     LDEIC
-        adc     #$08
+        bcs     :+
+        jmp     LDEIC
+:       adc     #$08
 LDBYT2: and     #$0F
         rts
                 
@@ -1691,7 +2174,7 @@ MTL7:   tya
         rts
         
 ; TRACE (Tx)
-TRACE:  .if     VIA == 0
+TRACE:  .if     (.not VIA)
         jmp     ERROR           ; can only do trace if we have a VIA
         .endif
         pla
@@ -1778,7 +2261,7 @@ TWINT:  lda     #$40            ; clear VIA timer 1 interrupt flag
         sta     VIA_IFR
         jsr     LCDE5           ; restore IRQ vector
         cld                     ; make sure "decimal" flag is not set
-        .if UART_TYPE==6522     ; if VIA is also used as UART
+        .if     (UART_TYPE = 6522)      ; if VIA is also used as UART
         lda     #$40            ; set T1 free run, T2 clock ?2
         sta     VIA_ACR         ; set VIA 1 ACR
         lda	#$40		; disable VIA timer 1 interrupt
@@ -1883,7 +2366,7 @@ LCD60:  sta     $02BC
         jsr     LCC65
         lda     $02BC
         beq     LCDA9
-LCD72:  .if UART_TYPE==6522     ; if VIA is also used as UART
+LCD72:  .if     (UART_TYPE = 6522)      ; if VIA is also used as UART
         lda     VIA_IER         ; get enabled VIA interrupts
         and     #$60            ; isolate T1 and T2 interrupts
         bne     LCD72           ; wait until both disabled (UART is idle)
@@ -1894,7 +2377,7 @@ LCD72:  .if UART_TYPE==6522     ; if VIA is also used as UART
         lda     #$C0
         sta     VIA_IER         ; enable VIA timer 1 interrupt
         lda     #$00
-        sta     VIA_ACR         ; VIA timer 1 single-shot mode
+        sta     VIA_ACR         ; VIA timer 1 one-shot mode
         ldx     #0
         lda     #73             ; 73 cycles until timer expires
         sta     VIA_T1LL        ; set VIA timer 1 low-order latch 
@@ -1961,6 +2444,8 @@ SUPPRESS_NP     = 0             ; do not suppress any characters on output
         ;; print 16-bit integer in $62/$63 as decimal value, adapted from:
         ;; https://beebwiki.mdfs.net/Number_output_in_6502_machine_code#16-bit_decimal
 PRTINT: LDY #8                  ; offset to powers of ten
+        LDA #$00
+        STA $64                 ; $64 = flag: 0=no digits printed yet
 PRL1:   LDX #$FF
         SEC                     ; start with digit=-1
 PRL2:   LDA $63
@@ -1978,16 +2463,30 @@ PRL2:   LDA $63
         ADC PRPOW+1,Y
         STA $62
         TXA
-        BEQ PRL3                ; leading zero => skip
+        BNE PRL4                ; non-zero digit => always print
+        CPY #0                  ; Y=0 means last digit (ones)
+        BEQ PRL4                ; always print last digit
+        LDA $64                 ; check if we've printed any digits
+        BEQ PRL3                ; skip leading zeros
+PRL4:   TXA
         ORA #'0'                ; convert to 0-9 digit
         JSR CHROUT              ; output character
+        LDA #$01
+        STA $64                 ; mark that we've printed a digit
 PRL3:   DEY
         DEY
         BPL PRL1                ; Loop for next digit
         RTS
 PRPOW:  .word 1, 10, 100, 1000, 10000
+
+;;; ============================================================================
+;;; XMODEM/CRC Receiver Implementation
+;;; ============================================================================
+        
+        .segment "CODE"
         
         .include "kernal.s"
+
 
  
 

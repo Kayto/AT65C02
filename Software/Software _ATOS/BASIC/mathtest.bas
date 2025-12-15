@@ -1,0 +1,23 @@
+10 REM Math and Loop Test
+20 PRINT "MATH AND LOOP TEST"
+30 PRINT
+40 REM Test basic math
+50 PRINT "2 + 2 = "; 2+2
+60 PRINT "10 * 5 = "; 10*5
+70 PRINT "100 / 4 = "; 100/4
+80 PRINT
+90 REM Test FOR loop
+100 PRINT "COUNTING TO 10:"
+110 FOR I = 1 TO 10
+120 PRINT I;
+130 NEXT I
+140 PRINT
+150 PRINT
+160 REM Test variables
+170 A = 42
+180 B = 58
+190 C = A + B
+200 PRINT "A = "; A
+210 PRINT "B = "; B
+220 PRINT "A + B = "; C
+230 END

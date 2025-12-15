@@ -1,0 +1,71 @@
+# EhBASIC License and Attribution
+
+## EhBASIC - Non-Commercial Use Only
+
+**Original Author:** Lee Davidson  
+**License:** Non-commercial use only  
+**Source Code:** https://github.com/Klaus2m5/6502_EhBASIC_V2.22  
+**Documentation:** http://retro.hansotten.nl/6502-sbc/lee-davison-web-site/
+
+### License Terms
+
+EhBASIC is free but not copyright free. For non-commercial use there is only one restriction:
+
+**Any derivative work must include, in any binary image distributed, the string "Derived from EhBASIC"**
+
+In any distribution that includes human readable files, this attribution must appear in a human readable form (not as a comment in an HTML file or similar).
+
+### Files Covered
+
+All files in the `/basic/` directory are derived from EhBASIC.
+
+---
+
+## AT65C02 Adaptations - MIT License
+
+**Author:** kayto@github.com  
+**Year:** 2025
+
+### Modifications for AT65C02 System
+
+- Updated hardcoded VIA and ACIA memory locations for AT65C02 hardware
+- Modified memory map configurations (cfgs) for AT65C02 default layout
+- Integration with SMON monitor and shell system
+- Loadable module implementation for AT65C02 architecture
+
+### Build System
+
+Uses Visual Studio Code with Docker-based cc65 toolchain:
+- **Docker Image:** dbuchwald/cc65-tools
+- **Source:** https://github.com/dbuchwald/cc65-tools
+- **License:** Apache License 2.0
+- Includes /common and .vscode directories from Dawid Buchwald
+
+### License for Modifications
+
+Copyright (c) 2025 kayto@github.com
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## Important Note
+
+**The EhBASIC non-commercial restriction applies to the EhBASIC components only.**  
+AT65C02-specific modifications are under MIT License, but any distribution that includes EhBASIC must comply with Lee Davidson's non-commercial use restriction and attribution requirement.

@@ -1,0 +1,100 @@
+# Licenses for AT65C02 ATOS Software
+
+This project combines multiple components with different licenses and attributions.
+
+================================================================================
+## 1. SMON Monitor - Public Domain / No Restriction
+================================================================================
+
+Originally by Norfried Mann and Dietrich Weineck (1984/85)
+Published in German magazine "64er" (Nov/Dec 1984, Jan 1985)
+- https://archive.org/details/64er_1984_11/page/n59/mode/2up
+- https://archive.org/details/64er_1984_12/page/n59/mode/2up
+- https://archive.org/details/64er_1985_01/page/n68/mode/2up
+
+Adapted to minimal 6502 system by David Hansel (2023)
+- https://github.com/dhansel/SMON
+
+No explicit license restriction. Published code from magazine articles.
+
+================================================================================
+## 2. AT65C02 Modifications and Integration - MIT License
+================================================================================
+
+Copyright (c) 2025 kayto@github.com
+
+Modifications include:
+- Custom shell mode integration with SMON
+- AT65C02-specific hardware adaptations
+- BRK handler improvements and separate entry points
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+## 3. Base Framework - MIT License
+================================================================================
+
+Copyright (c) 2020 Dawid Buchwald
+
+Original framework components:
+- Build system and tooling
+- Common libraries and configurations
+- Base system structure
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+## 4. EhBASIC - Non-Commercial License Only
+================================================================================
+
+See load/ehbasic/LICENSE for full EhBASIC license terms.
+
+Original Author: Lee Davidson
+License: Non-commercial use only
+
+Required attribution in any binary distribution:
+"Derived from EhBASIC"
+
+EhBASIC source and documentation:
+- https://github.com/Klaus2m5/6502_EhBASIC_V2.22
+- http://retro.hansotten.nl/6502-sbc/lee-davison-web-site/
+
+================================================================================
+## 5. Build Tools - Apache 2.0
+================================================================================
+
+cc65 toolchain (Docker image: dawidbuchwald/cc65-tools)
+- https://github.com/dbuchwald/cc65-tools
+- License: Apache License 2.0

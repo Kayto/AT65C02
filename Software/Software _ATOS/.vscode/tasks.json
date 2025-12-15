@@ -1,0 +1,74 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "label": "Build All",
+      "type": "shell",
+      "command": "docker run --rm -v '${workspaceFolder}:/mnt/project' dawidbuchwald/cc65-tools-make all",
+      "problemMatcher": []
+    },
+    {
+      "group": "build",
+      "label": "Clean All",
+      "type": "shell",
+      "command": "docker run --rm -v '${workspaceFolder}:/mnt/project' dawidbuchwald/cc65-tools-make clean",
+      "problemMatcher": []
+    },
+    {
+      "group": "build",
+      "label": "Build ATOS",
+      "type": "shell",
+      "command": "docker run --rm -v '${workspaceFolder}:/mnt/project' dawidbuchwald/cc65-tools-make -C rom/ATOS all",
+      "problemMatcher": []
+    },
+    {
+      "group": "build",
+      "label": "Clean ATOS",
+      "type": "shell",
+      "command": "docker run --rm -v '${workspaceFolder}:/mnt/project' dawidbuchwald/cc65-tools-make -C rom/ATOS clean",
+      "problemMatcher": []
+    },
+    {
+      "group": "build",
+      "label": "Install ATOS to EEPROM",
+      "type": "shell",
+      "command": "docker run --rm -v '${workspaceFolder}:/mnt/project' dawidbuchwald/cc65-tools-make -C rom/ATOS all install",
+      "problemMatcher": []
+    },
+    {
+      "group": "build",
+      "label": "Build Loadable Program",
+      "type": "shell",
+      "command": "docker run --rm -v '${workspaceFolder}:/mnt/project' dawidbuchwald/cc65-tools-make -C load/${input:loadableID} all",
+      "problemMatcher": []
+    },
+    {
+      "group": "build",
+      "label": "Clean Loadable Program",
+      "type": "shell",
+      "command": "docker run --rm -v '${workspaceFolder}:/mnt/project' dawidbuchwald/cc65-tools-make -C load/${input:loadableID} clean",
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "loadableID",
+      "type": "pickString",
+      "description": "Select loadable program",
+      "options": [
+        "lcd_hello",
+        "serial_hello",
+        "trace_test",
+        "via2_led_flash",
+        "via_alternate",
+        "via2_flash_trace",
+        "ehbasic"
+      ],
+      "default": "trace_test"
+    }
+  ]
+}

@@ -1,17 +1,19 @@
 # AT65C02
 
-**Latest News 29/05/2025**
+**Latest News 15/12/2025**
+
+**ATOS Software Released!** The main software suite for AT65C02 is now available in the Software_ATOS directory. ATOS (AT65C02 Operating System) provides a complete ROM-based monitor (SMON), interactive shell, trace/debugging commands, loadable program support, and integrated EhBASIC. The codebase has been extensively cleaned up and optimized with comprehensive documentation. This is now the recommended primary software for the AT65C02 platform.
+
+**Hardware ideas 29/05/2025**
 
 Picking up a few ideas for updates and improvements of the AT65C02.
 
 1. How useful is the modem? Will i ever get around to testing this and integrating code? My vote is swinging to remove it. Opportunity to tidy the layout to better group a pinout for onboard rom programming.
-2. I didn't add the possibility of using a MOS 6502! Looks like a simple jumper addition would allow this. 
+2. I didn't add the possibility of using a MOS 6502! Looks like a simple jumper addition would allow this. 
 3. The wireless UART doesnt have flow control - is there an alternative plug in wireless board that can provide this?
 4. The HEX board resistor values...[sigh]!
 
-**Latest News**
-
-* **Rev004 board - looking good and working well. Latest HEX board and decoder expansion board also tested working. Onboard Modem needs assembly, i might struggle for a while with code to test it.**
+**Previous News**
 * **Minor fixes/additions to PCB to address some of the issues (see below revisions section).**
 * **I am likely to pick up a futher revision 005 to address and consolidate some of the outstanding issues.**
 
@@ -146,9 +148,34 @@ I have created a separate page [here](https://github.com/Kayto/blob/main/Jumpers
 
 ## Software
 
-As stated earlier Dawid Buchwald provides a suite of ROM and loadable sources in his github repo. This will get you on yor way to coding quickly. If you are struggling with a build environment then he also has great tutorial examples and even provides a [docker image](https://github.com/dbuchwald/cc65-tools), great work.
+### ATOS - Primary Software Suite (RECOMMENDED)
 
-I am trying to avoid dupication of the original code repos so where possible will only include the new or revised code. Please check the original author licence included in the folders and in the acknowledgments.
+**[Software_ATOS](Software_ATOS/)** is the main firmware and software suite for the AT65C02. It provides a complete operating environment with ROM-based SMON monitor, interactive shell, comprehensive debugging tools, and loadable program support.
+
+**Key Features:**
+- ROM-based SMON monitor with full debugging capabilities
+- Interactive shell with command history
+- Trace commands: single-step (TW), breakpoints (TB), run-to-address (TQ/TS)
+- Loadable program support via Intel HEX format
+- Integrated EhBASIC interpreter
+- LCD and serial I/O drivers
+- Multiple UART support (6551, 6522, 6850)
+- Complete build system using Docker (cc65 toolchain)
+- VS Code integration with build tasks
+
+**Quick Start:**
+```bash
+cd Software_ATOS
+docker run --rm -v '${PWD}:/mnt/project' dawidbuchwald/cc65-tools-make all
+```
+
+See the [ATOS README](Software_ATOS/README.md) for complete documentation.
+
+### Alternative Software Options
+
+As stated earlier Dawid Buchwald provides a suite of ROM and loadable sources in his github repo. This will get you on your way to coding quickly. If you are struggling with a build environment then he also has great tutorial examples and even provides a [docker image](https://github.com/dbuchwald/cc65-tools), great work.
+
+I am trying to avoid duplication of the original code repos so where possible will only include the new or revised code. Please check the original author licence included in the folders and in the acknowledgments.
 
 | Reference | Description | Credit |
 | --------- | ----------- | ------ |
